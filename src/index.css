@@ -124,3 +124,10 @@ button:focus-visible {
   padding: 50px 20px;
   box-sizing: border-box;
 }
+.carousel-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+  background-color: #f8f8f8; /* Color de fondo opcional */
+}
