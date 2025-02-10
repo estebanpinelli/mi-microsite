@@ -31,7 +31,7 @@ const Carousel = () => {
               objectFit: "cover"  // Se asegura de cubrir sin distorsión
             }}
           >
-            <source src="/video.mp4" type="video/mp4" />
+            <source src="/video1.mp4" type="video/mp4" />
             Tu navegador no soporta videos.
           </video>
         </div>
