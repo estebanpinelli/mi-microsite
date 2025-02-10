@@ -18,8 +18,8 @@ const destinos = [
 
 const Destinos = () => {
     return (
-        <div style={{ padding: "60px 20px", textAlign: "center", backgroundColor: "#f8f8f8" }}>
-            <h2 style={{ fontSize: "2.5rem", marginBottom: "30px" }}>Nuestros Destinos</h2>
+        <div style={{ padding: "60px 20px", textAlign: "center", backgroundColor: "white" }}>
+            <h2 style={{ fontSize: "2.5rem", marginBottom: "30px" }}>Experiencias destacadas</h2>
             <div style={{ 
                 display: "grid", 
                 gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
