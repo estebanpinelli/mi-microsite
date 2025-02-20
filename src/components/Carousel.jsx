@@ -8,7 +8,7 @@ import "slick-carousel/slick/slick-theme.css";
 const Carousel = () => {
   const settings = {
     infinite: true,       // Reproduce en loop
-    speed: 800,           // Velocidad de transición (ms)
+    speed: 1000,           // Velocidad de transición (ms)
     slidesToShow: 1,      // Muestra 1 slide a la vez
     slidesToScroll: 1,    // Desplaza 1 slide a la vez
     autoplay: true,       // Reproducción automática
