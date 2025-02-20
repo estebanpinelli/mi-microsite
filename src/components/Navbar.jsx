@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
+import WhatsAppButton from "../components/BotonWhats";
 
 const Navbar = () => {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -8,11 +9,7 @@ const Navbar = () => {
 
     useEffect(() => {
         const handleScroll = () => {
-            if (window.scrollY > 50) {
-                setScrolled(true);
-            } else {
-                setScrolled(false);
-            }
+            setScrolled(window.scrollY > 50);
         };
 
         window.addEventListener("scroll", handleScroll);
@@ -21,34 +18,45 @@ const Navbar = () => {
 
     return (
         <nav
-            className={`fixed top-0 left-0 w-full px-6 py-4 flex items-center justify-between z-50 transition-all duration-300 ${
-                scrolled ? "bg-white text-black shadow-md" : " text-white"
+            className={`fixed top-0 left-0 w-full px-6 py-0 flex items-center justify-between z-50 transition-all duration-300 ${
+                scrolled ? "bg-[#FF6600] text-black shadow-md" : "text-white"
             }`}
         >
             {/* Logo */}
             <div className="text-2xl font-bold">
-                <img src="/Logo.jpg" alt="" className="h-10" />
+                <img src="/logotr.png" alt="" className="h-20 w-auto" />
             </div>
 
             {/* Menú en móviles */}
             <div className="md:hidden">
-                <button onClick={() => setMenuOpen(!menuOpen)}>
-                    {menuOpen ? <X size={30} className={scrolled ? "text-black" : "text-white"} /> : <Menu size={30} className={scrolled ? "text-black" : "text-white"} />}
+                <button onClick={() => setMenuOpen(!menuOpen)} className="bg-transparent p-2">
+                    {menuOpen ? (
+                        <X size={30} className={scrolled ? "text-white" : "text-white"} />
+                    ) : (
+                        <Menu size={30} className={scrolled ? "text-white" : "text-white"} />
+                    )}
                 </button>
             </div>
 
-            {/* Links */}
+            {/* Links - visibles en escritorio, ocultos en móviles hasta que se abra el menú */}
             <div
-                className={`md:flex gap-8 absolute md:relative top-16 md:top-auto right-0 w-full md:w-auto p-4 md:p-0 transition-all duration-300 ${
-                    menuOpen ? "block" : "hidden"
-                } ${scrolled ? "bg-white text-black" : "bg-black bg-opacity-90 md:bg-transparent text-white"}`}
+                className={`absolute md:relative top-16 md:top-auto right-0 w-full md:w-auto p-4 md:p-0 bg-transparent md:bg-transparent transition-all duration-300 ${
+                    menuOpen ? "flex flex-col items-center" : "hidden md:flex md:flex-row"
+                }`}
             >
-                <Link to="/destinos" className={`text-lg font-serif hover:opacity-70 transition-colors duration-200 ${scrolled ? "text-black" : "text-white"}`}>
+                <Link
+                    to="/destinos"
+                    className="text-white md:text-white text-lg font-serif py-2 px-6 hover:opacity-70 transition-colors duration-200"
+                >
                     Destinos
                 </Link>
-                <Link to="/contacto" className={`text-lg font-serif hover:opacity-70 transition-colors duration-200 ${scrolled ? "text-black" : "text-white"}`}>
+                <Link
+                    to="/contacto"
+                    className="text-white md:text-white text-lg font-serif py-2 px-6 hover:opacity-70 transition-colors duration-200"
+                >
                     Contacto
                 </Link>
+                 <WhatsAppButton />
             </div>
         </nav>
     );

@@ -1,5 +1,5 @@
 import React from "react";
-import { FaFacebookF, FaInstagram } from "react-icons/fa"; // Asegurate de tener react-icons instalado
+import { FaFacebookF, FaInstagram } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -24,22 +24,22 @@ const Footer = () => {
       </div>
 
       {/* Redes sociales */}
-      <div style={{ marginBottom: "10px" }}>
+      <div style={{ marginBottom: "15px", display: "flex", justifyContent: "center", gap: "15px" }}>
         <a
           href="https://facebook.com"
           target="_blank"
           rel="noopener noreferrer"
-          style={{ margin: "0 10px", color: "#3b5998" }}
+          style={{ color: "#3b5998" }}
         >
-          <FaFacebookF size={20} />
+          <FaFacebookF size={28} />
         </a>
         <a
           href="https://instagram.com"
           target="_blank"
           rel="noopener noreferrer"
-          style={{ margin: "0 10px", color: "#E1306C" }}
+          style={{ color: "#E1306C" }}
         >
-          <FaInstagram size={20} />
+          <FaInstagram size={28} />
         </a>
       </div>
 

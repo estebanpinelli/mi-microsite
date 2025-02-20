@@ -23,30 +23,30 @@ const destinos = [
 
 const Destinos = () => {
     return (
-        <div style={{ padding: "40px 20px", backgroundColor: "white", maxWidth: "1200px", margin: "0 auto" }}>
-            <h2 style={{ textAlign: "center", fontSize: "2rem", marginBottom: "30px", color: "#333" }}>Tu próximo viaje</h2>
-            <div style={{ display: "flex", gap: "20px" }}>
-                {/* Foto de la izquierda (Japon1) alargada verticalmente */}
-                <div style={{ flex: "0 0 50%", height: "120vh" }}>
+        <div className="max-w-5xl mx-auto p-6 bg-white">
+            <h2 className="text-center text-3xl font-bold mb-8 text-gray-800">Experiencias Destacadas</h2>
+            <div className="flex flex-col md:flex-row gap-6">
+                {/* Imagen principal (Japón) */}
+                <div className="md:w-1/2 h-[60vh] md:h-[120vh]">
                     <img 
                         src={destinos[0].imagen} 
                         alt={destinos[0].nombre} 
-                        style={{ width: "100%", height: "100%", objectFit: "cover" }} 
+                        className="w-full h-full object-cover rounded-lg"
                     />
-                    <h3 style={{ marginTop: "15px", fontSize: "1.8rem", color: "#333" }}>{destinos[0].nombre}</h3>
-                    <p style={{ color: "#555", fontSize: "1rem" }}>{destinos[0].descripcion}</p>
+                    <h3 className="mt-4 text-xl font-semibold text-gray-800">{destinos[0].nombre}</h3>
+                    <p className="text-gray-600 text-sm">{destinos[0].descripcion}</p>
                 </div>
-                {/* Imágenes de la derecha en columna */}
-                <div style={{ flex: "0 0 50%", display: "flex", flexDirection: "column", gap: "20px" }}>
+                {/* Columnas para el resto de los destinos */}
+                <div className="md:w-1/2 flex flex-col gap-6">
                     {destinos.slice(1).map((destino, index) => (
-                        <div key={index} style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
+                        <div key={index} className="flex flex-col items-center">
                             <img 
                                 src={destino.imagen} 
                                 alt={destino.nombre} 
-                                style={{ width: "100%", height: "250px", objectFit: "cover" }} 
+                                className="w-full h-[250px] object-cover rounded-lg"
                             />
-                            <h4 style={{ fontSize: "1.4rem", color: "#333", marginTop: "10px" }}>{destino.nombre}</h4>
-                            <p style={{ fontSize: "1rem", color: "#555", textAlign: "center" }}>{destino.descripcion}</p>
+                            <h4 className="text-lg font-semibold text-gray-800 mt-3">{destino.nombre}</h4>
+                            <p className="text-gray-600 text-sm text-center">{destino.descripcion}</p>
                         </div>
                     ))}
                 </div>

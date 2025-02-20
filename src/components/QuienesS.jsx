@@ -3,16 +3,16 @@ import React from "react";
 
 const QuienesS = () => {
   return (
-    <div className="quienesS-banner">
+    <div className="quienesS-banner ">
       {/* Contenedor para los dos logos */}
-      <div className="quienesS-logos">
+      <div className="quienesS-logos  ">
         <img
-          src="/logo1.png"
+          src="/Logo.jpg"
           alt="Logo 1"
           className="quienesS-logo"
         />
         <img
-          src="/logo2.png"
+          src="/Logo.jpg"
           alt="Logo 2"
           className="quienesS-logo"
         />

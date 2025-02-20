@@ -1,3 +1,5 @@
+@import "tailwindcss";
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -138,11 +140,10 @@ button:focus-visible {
 /* ------------------------------- */
 /* Contenedor principal del banner */
 .quienesS-banner {
-  background-color: #bf6a31; /* Fondo marrón */
+  background-color: #29272733; /* fondo */
   color: #fff;              /* Texto en blanco */
-  padding: 60px 20px;
+  padding: 100px 100px;
   text-align: center;
-  margin-top: 80px;          /* Mayor separación desde arriba */
 }
 
 /* Contenedor para los dos logos */
@@ -150,8 +151,8 @@ button:focus-visible {
   display: flex;
   justify-content: center;   /* Logos centrados para estar más juntos */
   align-items: center;
-  gap: 10px;                 /* Espacio reducido entre logos */
-  margin-bottom: 30px;
+  gap: 50px;                 /* Espacio reducido entre logos */
+  margin-bottom: 50px;
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;        /* Centra los logos horizontalmente */
@@ -159,7 +160,7 @@ button:focus-visible {
 
 /* Clase para los logos individuales */
 .quienesS-logo {
-  height: 50px;        /* Alto del logo */
+  height: 80px;        /* Alto del logo */
   object-fit: contain; /* Ajuste de imagen */
 }
 
@@ -187,4 +188,17 @@ button:focus-visible {
   font-size: 1.1rem;
   line-height: 1.5;
   margin: 0 10px;
+}
+.navbar-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 16px; /* Ajusta el espacio entre los enlaces */
+  align-items: start; /* Alinea los enlaces a la izquierda */
+}
+
+.navbar-menu a {
+  color: white !important; /* Asegura que el texto sea blanco */
+  text-decoration: none;
+  font-size: 1.2rem;
+  padding: 4px 0; /* Añade espacio arriba y abajo */
 }

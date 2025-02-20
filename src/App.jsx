@@ -3,6 +3,7 @@ import Home from "./pages/Home";
 import Destinos from "./components/Destinos";
 import Navbar from "./components/Navbar";
 
+
 function App() {
     return (
         <div style={{ width: "100vw", minHeight: "100vh", overflowX: "hidden" }}>
