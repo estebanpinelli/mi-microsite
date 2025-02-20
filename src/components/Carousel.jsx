@@ -23,7 +23,8 @@ const Carousel = () => {
         <div>
           <video 
             autoPlay 
-            loop 
+            loop
+            playsInline 
             muted 
             style={{
               width: "100%", 
