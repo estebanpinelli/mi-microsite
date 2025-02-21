@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Destinos from "./components/Destinos";
 import Navbar from "./components/Navbar";
-
+import Contact from "./pages/Contact"; // Importamos el nuevo componente
 
 function App() {
     return (
@@ -12,7 +12,7 @@ function App() {
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/destinos" element={<Destinos />} />
-                    <Route path="/contacto" element={<h2 style={{ textAlign: "center", marginTop: "100px" }}>Página de Contacto</h2>} />
+                    <Route path="/contacto" element={<Contact />} /> {/* Usamos el componente Contact */}
                 </Routes>
             </Router>
         </div>
