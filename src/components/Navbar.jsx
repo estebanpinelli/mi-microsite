@@ -19,7 +19,7 @@ const Navbar = () => {
     return (
         <nav
             className={`fixed top-0 left-0 w-full px-6 py-0 flex items-center justify-between z-50 transition-all duration-300 ${
-                scrolled ? "bg-[#FF6600] text-black shadow-md" : "text-white"
+                scrolled ? "bg-[#FE9E32]/90 text-black shadow-md" : "text-white"
             }`}
         >
             {/* Logo */}

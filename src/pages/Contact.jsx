@@ -1,80 +1,53 @@
-import { useState } from "react";
-import emailjs from "@emailjs/browser";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+import ContactForm from "../components/ContactForm";
+import BotonWhats from "../components/BotonWhats";
 
 const Contact = () => {
-    const [form, setForm] = useState({
-        name: "",
-        email: "",
-        phone: "",
-        passengers: 1,
-        month: "",
-        day: "",
-        message: "",
-    });
+  return (
+    <>
+      <Navbar />
 
-    const handleChange = (e) => {
-        setForm({ ...form, [e.target.name]: e.target.value });
-    };
+      {/* Sección de contacto con imagen de fondo */}
+      <div
+        className="relative h-[75vh] bg-cover bg-center flex flex-col items-center justify-center text-white"
+        style={{ backgroundImage: "url('/contacto.jpg')" }}
+      >
+        {/* Fondo oscuro semi-transparente para mejorar la legibilidad */}
+        <div className="absolute inset-0 bg-black bg-opacity-50"></div>
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
+        {/* Contenido centrado */}
+        <div className="relative text-center">
+          <h1 className="text-4xl md:text-5xl font-bold">Contacta con nosotros</h1>
+          
+          {/* Íconos de contacto */}
+          <div className="flex flex-col items-center mt-6 space-y-4">
+            {/* Botón de WhatsApp */}
+            <div className="w-30 h-30 flex items-center justify-center rounded-full shadow-lg">
+              <BotonWhats />
+            </div>
 
-        const templateParams = {
-            from_name: form.name,
-            from_email: form.email,
-            phone: form.phone,
-            passengers: form.passengers,
-            travel_date: `${form.day} de ${form.month}`,
-            message: form.message,
-        };
-
-        emailjs
-            .send("service_fy6p39e", "template_ns3vbtb", templateParams, "1i5lotGd3gMfy9bmo")
-            .then(() => {
-                toast.success("✅ Mensaje enviado correctamente");
-                setForm({
-                    name: "",
-                    email: "",
-                    phone: "",
-                    passengers: 1,
-                    month: "",
-                    day: "",
-                    message: "",
-                });
-            })
-            .catch((error) => console.error("Error al enviar:", error));
-    };
-
-    return (
-        <div className="max-w-lg mx-auto mt-10 p-6 bg-white shadow-md rounded-lg">
-            <h2 className="text-2xl font-bold mb-4 text-center">Contacto</h2>
-            <form onSubmit={handleSubmit} className="space-y-4">
-                <input type="text" name="name" value={form.name} onChange={handleChange} placeholder="Nombre" required className="w-full p-2 border border-gray-300 rounded" />
-                <input type="email" name="email" value={form.email} onChange={handleChange} placeholder="Correo electrónico" required className="w-full p-2 border border-gray-300 rounded" />
-                <input type="tel" name="phone" value={form.phone} onChange={handleChange} placeholder="Número de teléfono" required className="w-full p-2 border border-gray-300 rounded" />
-                <input type="number" name="passengers" value={form.passengers} onChange={handleChange} min="1" required className="w-full p-2 border border-gray-300 rounded" placeholder="Cantidad de pasajeros" />
-
-                <div className="flex gap-2">
-                    <select name="month" value={form.month} onChange={handleChange} required className="w-1/2 p-2 border border-gray-300 rounded">
-                        <option value="">Mes</option>
-                        {["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"].map((mes) => (
-                            <option key={mes} value={mes}>{mes}</option>
-                        ))}
-                    </select>
-                    <input type="number" name="day" value={form.day} onChange={handleChange} min="1" max="31" required className="w-1/2 p-2 border border-gray-300 rounded" placeholder="Día" />
-                </div>
-
-                <textarea name="message" value={form.message} onChange={handleChange} placeholder="Mensaje" required className="w-full p-2 border border-gray-300 rounded h-24"></textarea>
-
-                <button type="submit" className="w-full bg-[#FF6600] text-white py-2 rounded hover:bg-orange-600 transition">
-                    Enviar
-                </button>
-            </form>
-            <ToastContainer position="top-right" autoClose={3000} hideProgressBar closeOnClick pauseOnHover />
+            {/* Email */}
+            <div className="flex items-center gap-2  px-4 py-2 rounded-lg shadow-lg">
+              <span className="text-white -700 text-lg">
+                exoticos@lomasturismo.com
+              </span>
+            </div>
+          </div>
         </div>
-    );
+      </div>
+
+      {/* Sección de formulario */}
+      <div className="container mx-auto p-8 min-h-screen">
+        <h1 className="text-5xl font-bold text-center mt-16">Contáctanos</h1>
+        <p className="text-center mt-6 mb-12 text-xl">
+          Si tienes alguna consulta, rellena el formulario a continuación.
+        </p>
+        <ContactForm />
+      </div>
+      <Footer />
+    </>
+  );
 };
 
 export default Contact;
