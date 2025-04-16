@@ -21,4 +21,4 @@ const destinos = [
     }
 ];
 
-export { destinos };
+module.exports = { destinos };

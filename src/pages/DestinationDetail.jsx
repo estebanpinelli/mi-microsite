@@ -1,19 +1,35 @@
-import { useParams } from "react-router-dom";
-import destinations from "../data/destinations";
+import { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
 
 const DestinationDetail = () => {
   const { id } = useParams();
-  const destination = destinations.find((dest) => dest.id === id);
+  const [destinos, setDestinos] = useState([]);
 
-  if (!destination) {
-    return <h2>Destino no encontrado</h2>;
-  }
+  useEffect(() => {
+    const fetchDestinos = async () => {
+      try {
+        const res = await fetch('/destinations');
+        const data = await res.json();
+        setDestinos(data.destinos);
+      } catch (error) {
+        console.error('Error fetching destinations:', error);
+      }
+    };
+    fetchDestinos();
+  }, []);
+
+  const index = parseInt(id);
+  const destino = destinos[index];
 
   return (
     <div>
-      <h1>{destination.name}</h1>
-      <img src={destination.image} alt={destination.name} width="300" />
-      <p>{destination.description}</p>
+      {destino ? (
+        <div>
+          <h1>{destino.nombre}</h1>
+          <img src={destino.imagen} alt={destino.nombre} width="300" />
+          <p>{destino.descripcion}</p>
+        </div>
+      ) : (<h2>Destino no encontrado</h2>)}
     </div>
   );
 };

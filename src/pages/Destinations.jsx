@@ -1,14 +1,29 @@
 import { Link } from "react-router-dom";
-import destinations from "../data/destinations";
+import { useState, useEffect } from 'react';
 
 const Destinations = () => {
+  const [destinos, setDestinos] = useState([]);
+
+  useEffect(() => {
+    const fetchDestinos = async () => {
+      try {
+        const res = await fetch('/destinations');
+        const data = await res.json();
+        setDestinos(data.destinos);
+      } catch (error) {
+        console.error('Error fetching destinations:', error);
+      }
+    };
+    fetchDestinos();
+  }, []);
+
   return (
     <div>
       <h1>Destinos</h1>
       <ul>
-        {destinations.map((dest) => (
-          <li key={dest.id}>
-            <Link to={`/destination/${dest.id}`}>
+        {destinos.map((dest,index) => (
+          <li key={index}>
+            <Link to={`/destination/${index}`}>
               <img src={dest.image} alt={dest.name} width="100" />
               <h2>{dest.name}</h2>
             </Link>
