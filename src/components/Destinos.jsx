@@ -7,7 +7,7 @@ const Destinos = () => {
             try {
                 const response = await fetch("/destinations");
                 const data = await response.json();
-                setDestinos(data);
+                setDestinos(data.destinos);
             } catch (error) {
                 console.error("Error fetching destinations:", error);
             }
