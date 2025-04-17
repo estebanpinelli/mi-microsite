@@ -7,9 +7,9 @@ const Destinations = () => {
   useEffect(() => {
     const fetchDestinos = async () => {
       try {
-        const res = await fetch('/destinations');
+        const res = await fetch('https://cuddly-space-guide-v574577xrj7hpw4g-3001.app.github.dev/api/destinations'); // proxy se encarga de redirigir a localhost:3001
         const data = await res.json();
-        setDestinos(data.destinos);
+        setDestinos(data);
       } catch (error) {
         console.error('Error fetching destinations:', error);
       }
@@ -21,7 +21,7 @@ const Destinations = () => {
     <div>
       <h1>Destinos</h1>
       <ul>
-        {destinos.map((dest,index) => (
+        {destinos.map((dest, index) => (
           <li key={index}>
             <Link to={`/destination/${index}`}>
               <img src={dest.image} alt={dest.name} width="100" />

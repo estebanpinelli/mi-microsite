@@ -6,14 +6,17 @@ const { destinos } = require('./data/destinations.js');
 const app = express();
 const port = 3001;
 
+// Middleware
 app.use(cors()); 
 console.log('CORS middleware applied');
 
-app.get('/destinations', (req, res) => {
+// Ruta de API
+app.get('/api/destinations', (req, res) => {
   res.json(destinos); 
   console.log('Sending destinations data');
 });
 
-app.listen(port, () => {
+// Arranque del servidor
+app.listen(port, '0.0.0.0', () => {
   console.log(`Server listening on port ${port}`);
 });
