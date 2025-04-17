@@ -9,7 +9,6 @@ export default defineConfig({
         target: "http://localhost:3001", // Puerto del backend
         changeOrigin: true,
         secure: false,
-        rewrite: (path) => path.replace(/^\/api/, ""), // Elimina el /api del path si es necesario
       },
     },
   },

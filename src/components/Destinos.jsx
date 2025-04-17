@@ -9,7 +9,7 @@ const Destinos = () => {
               const response = await fetch('/api/destinations');
               const data = await response.json();
               console.log("Datos recibidos:", data); // 👈 Añade esto
-              setDestinations(data);
+              setDestinos(data);
             } catch (error) {
               console.error('Error:', error);
             }
