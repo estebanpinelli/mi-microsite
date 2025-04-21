@@ -8,9 +8,9 @@ const DestinationDetail = () => {
   useEffect(() => {
     const fetchDestinos = async () => {
       try {
-        const res = await fetch('/destinations');
+        const res = await fetch('/api/destinations');
         const data = await res.json();
-        setDestinos(data.destinos);
+        setDestinos(data);
       } catch (error) {
         console.error('Error fetching destinations:', error);
       }
@@ -18,10 +18,10 @@ const DestinationDetail = () => {
     fetchDestinos();
   }, []);
 
-  const index = parseInt(id);
-  const destino = destinos[index];
+  const index = parseInt(id, 10);
+  const destino = destinos.length > 0 ? destinos[index] : null;
 
-  return (
+    return (
     <div>
       {destino ? (
         <div>

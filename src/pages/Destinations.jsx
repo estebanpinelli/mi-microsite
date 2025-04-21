@@ -7,7 +7,7 @@ const Destinations = () => {
   useEffect(() => {
     const fetchDestinos = async () => {
       try {
-        const res = await fetch('https://cuddly-space-guide-v574577xrj7hpw4g-3001.app.github.dev/api/destinations'); // proxy se encarga de redirigir a localhost:3001
+        const res = await fetch('/api/destinations'); // proxy se encarga de redirigir a localhost:3001
         const data = await res.json();
         setDestinos(data);
       } catch (error) {
