@@ -7,7 +7,9 @@ const app = express();
 const port = 3001;
 
 // Middleware
-app.use(cors({ origin: 'https://5175-idx-mi-microsite-1744901452102.cluster-23wp6v3w4jhzmwncf7crloq3kw.cloudworkstations.dev' }));
+// En desarrollo: acepta cualquier origen
+app.use(cors());
+app.use(express.json());
 console.log('CORS middleware applied');
 
 // Ruta de API
