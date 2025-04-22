@@ -7,25 +7,35 @@ const app = express();
 const port = 3001;
 
 // Middleware
-// En desarrollo: acepta cualquier origen
 app.use(cors());
 app.use(express.json());
-console.log('CORS middleware applied');
 
-// Ruta de API
+// Ruta de API con filtros
 app.get('/api/destinations', (req, res) => {
-  res.setHeader('Content-Type', 'application/json');
   try {
-    console.log('Destinations data before sending:', destinos);
-    res.json(destinos);
-    console.log('Sending destinations data');
+    const { home, limit } = req.query;
+    let resultados = [...destinos]; // Copiamos el array original
+
+    // Filtro para destinos destacados
+    if (home === 'true') {
+      resultados = resultados.filter(d => d.destacado);
+    }
+
+    // Límite de resultados
+    if (limit && !isNaN(limit)) {
+      resultados = resultados.slice(0, parseInt(limit));
+    }
+
+    console.log('Destinos enviados:', resultados);
+    res.json(resultados);
+
   } catch (error) {
-    console.error('Error sending destinations data:', error);
-    res.status(500).json({ error: 'Failed to retrieve destinations' });
+    console.error('Error:', error);
+    res.status(500).json({ error: 'Error al obtener destinos' });
   }
 });
 
 // Arranque del servidor
 app.listen(port, '0.0.0.0', () => {
-  console.log(`Server listening on port ${port}`);
+  console.log(`Servidor corriendo en http://localhost:${port}`);
 });

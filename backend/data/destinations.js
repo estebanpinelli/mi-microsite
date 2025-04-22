@@ -1,23 +1,52 @@
 const destinos = [
     {
-        nombre: "Japon1",
+        id: 1,  // <- Agregado ID único
+        nombre: "Destino 1",
         descripcion: "Experiencia en Japón, con un diseño vertical alargado.",
-        imagen: "/japon1.jpg"
+        imagen: "/japon1.jpg",
+        destacado: true  // <- Marcado como destacado
     },
     {
-        nombre: "El secreto mejor guardado del Índico",
-        descripcion: "Isla Mauricio: Un destino diseñado para quienes buscan experiencias únicas, donde cada rincón revela aventuras exclusivas y momentos de relajación absoluta.",
-        imagen: "/paris.jpg"
+        id: 2,
+        nombre: "Destino 2",
+        descripcion: "Isla Mauricio: Un destino diseñado para quienes buscan experiencias únicas...",
+        imagen: "/paris.jpg",
+        destacado: true
     },
     {
-        nombre: "¿Qué es para ti la montaña?",
-        descripcion: "Desde los Alpes hasta las cumbres de Canadá, cada detalle está pensado para ofrecerte una experiencia única, donde la exclusividad y la aventura se encuentran en cada instante del recorrido.",
-        imagen: "/patagonia.jpg"
+        id: 3,
+        nombre: "Destino 3",
+        descripcion: "Desde los Alpes hasta las cumbres de Canadá...",
+        imagen: "/patagonia.jpg",
+        destacado: true
     },
     {
-        nombre: "Tarjeta Regalo NUBA",
-        descripcion: "Un regalo de experiencias mágicas y únicas, listas para ser vividas en cualquier rincón del mundo.",
-        imagen: "/desierto.jpg"
+        id: 4,
+        nombre: "Destino 4",
+        descripcion: "Un regalo de experiencias mágicas y únicas...",
+        imagen: "/desierto.jpg",
+        destacado: true
+    },
+    {
+        id: 5,
+        nombre: "Destino 5",
+        descripcion: "Experiencia genérica...",
+        imagen: "/desierto.jpg",
+        destacado: false  // <- No destacado
+    },
+    {
+        id: 6,
+        nombre: "Destino 6",
+        descripcion: "Experiencia genérica...",
+        imagen: "/desierto.jpg",
+        destacado: false
+    },
+    {
+        id: 7,
+        nombre: "Destino 7",
+        descripcion: "Experiencia genérica...",
+        imagen: "/desierto.jpg",
+        destacado: false
     }
 ];
 
