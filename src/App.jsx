@@ -15,6 +15,9 @@ function App() {
           <Route path="/destinos" element={<Destinations />} />
           <Route path="/destino/:id" element={<DestinationDetail />} />
           <Route path="/contacto" element={<Contact />} />
+          
+          {/* Ruta adicional para manejar IDs malformados */}
+          <Route path="/destino/*" element={<h2 className="text-center mt-8">ID de destino inválido</h2>} />
         </Routes>
       </Router>
     </div>

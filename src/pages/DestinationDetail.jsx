@@ -3,33 +3,64 @@ import { useParams } from 'react-router-dom';
 
 const DestinationDetail = () => {
   const { id } = useParams();
-  const [destinos, setDestinos] = useState([]);
+  const [destino, setDestino] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
-    const fetchDestinos = async () => {
+    const fetchDestino = async () => {
       try {
-        const res = await fetch('/api/destinations');
+        const res = await fetch(`/api/destinations/${id}`);
+        
+        if (!res.ok) {
+          if (res.status === 404) throw new Error('Destino no encontrado');
+          throw new Error('Error al cargar el destino');
+        }
+        
         const data = await res.json();
-        setDestinos(data);
+        setDestino(data);
+        
       } catch (error) {
-        console.error('Error fetching destinations:', error);
+        console.error('Error:', error);
+        setError(error.message);
+      } finally {
+        setLoading(false);
       }
     };
-    fetchDestinos();
-  }, []);
 
-  const index = parseInt(id, 10);
-  const destino = destinos.length > 0 ? destinos[index] : null;
+    fetchDestino();
+  }, [id]); // Dependencia del ID para recargar cuando cambie
 
-    return (
-    <div>
-      {destino ? (
-        <div>
-          <h1>{destino.nombre}</h1>
-          <img src={destino.imagen} alt={destino.nombre} width="300" />
-          <p>{destino.descripcion}</p>
+  if (loading) return <p className="text-center mt-8">Cargando destino...</p>;
+  if (error) return <p className="text-center mt-8 text-red-500">Error: {error}</p>;
+  if (!destino) return <p className="text-center mt-8">Destino no encontrado</p>;
+
+  return (
+    <div className="max-w-4xl mx-auto p-6 bg-white min-h-screen">
+      <article className="space-y-6">
+        <h1 className="text-4xl font-bold text-gray-800 mb-4">{destino.nombre}</h1>
+        
+        <div className="relative h-96 rounded-xl overflow-hidden shadow-lg">
+          <img 
+            src={destino.imagen} 
+            alt={destino.nombre} 
+            className="w-full h-full object-cover"
+            loading="lazy"
+          />
         </div>
-      ) : (<h2>Destino no encontrado</h2>)}
+        
+        <p className="text-lg text-gray-700 leading-relaxed">
+          {destino.descripcion}
+        </p>
+
+        {/* Sección adicional para más datos */}
+        {destino.detalles && (
+          <div className="mt-8 p-6 bg-gray-50 rounded-lg">
+            <h2 className="text-2xl font-semibold mb-4">Más información</h2>
+            <p className="text-gray-600">{destino.detalles}</p>
+          </div>
+        )}
+      </article>
     </div>
   );
 };

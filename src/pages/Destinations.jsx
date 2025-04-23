@@ -41,7 +41,7 @@ const Destinations = () => {
         {destinos.map((destino) => (
           <li key={destino.id} className="hover:shadow-lg transition-shadow duration-300">
             <Link 
-              to={`/destination/${destino.id}`} 
+              to={`/destino/${destino.id}`}
               className="block p-4 rounded-lg border border-gray-200"
             >
               <img 
