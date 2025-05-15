@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom"; // 1. Importar Link
 
 const Destinos = () => {
   const [destinos, setDestinos] = useState([]);
@@ -8,23 +9,16 @@ const Destinos = () => {
   useEffect(() => {
     const fetchDestinations = async () => {
       try {
-        // Modifica la URL con parámetros para la home
         const response = await fetch('/api/destinations?home=true&limit=4');
-        
         if (!response.ok) throw new Error('Error en la respuesta del servidor');
-        
         const data = await response.json();
-        console.log("Datos para home:", data);
         setDestinos(data);
-
       } catch (error) {
-        console.error('Error al obtener destinos:', error);
         setError(error.message);
       } finally {
         setLoading(false);
       }
     };
-
     fetchDestinations();
   }, []);
 
@@ -39,8 +33,11 @@ const Destinos = () => {
       <h2 className="text-center text-3xl font-bold mb-8 text-gray-800">Experiencias Destacadas</h2>
 
       <div className="flex flex-col md:flex-row gap-6">
-        {/* Imagen principal (primer destino) */}
-        <div className="md:w-1/2 h-[60vh] md:h-[120vh]">
+        {/* Destino principal */}
+        <Link 
+          to={`/destino/${destinos[0].id}`} // 3. Usar ID en la ruta
+          className="md:w-1/2 h-[60vh] md:h-[120vh] hover:opacity-90 transition-opacity"
+        >
           <img
             src={destinos[0].imagen}
             alt={destinos[0].nombre}
@@ -50,12 +47,16 @@ const Destinos = () => {
             {destinos[0].nombre}
           </h3>
           <p className="text-gray-600 text-sm">{destinos[0].descripcion}</p>
-        </div>
+        </Link>
 
-        {/* Columnas para los otros 3 destinos */}
+        {/* Destinos secundarios */}
         <div className="md:w-1/2 flex flex-col gap-6">
-          {destinos.slice(1).map((destino, index) => (
-            <div key={index} className="flex flex-col items-center">
+          {destinos.slice(1).map((destino) => (
+            <Link 
+              to={`/destino/${destino.id}`} // 3. Usar ID en la ruta
+              key={destino.id} // Mejor usar ID como key
+              className="flex flex-col items-center hover:opacity-90 transition-opacity"
+            >
               <img
                 src={destino.imagen}
                 alt={destino.nombre}
@@ -67,7 +68,7 @@ const Destinos = () => {
               <p className="text-gray-600 text-sm text-center">
                 {destino.descripcion}
               </p>
-            </div>
+            </Link>
           ))}
         </div>
       </div>
