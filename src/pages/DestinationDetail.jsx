@@ -11,7 +11,7 @@ const DestinationDetail = () => {
   useEffect(() => {
     const fetchDestino = async () => {
       try {
-        const res = await fetch(`/api/destinations/${id}`);
+        const res = await fetch(`https://mi-microsite-production.up.railway.app/api/destinations/${id}`);
         if (!res.ok) throw new Error('Error al cargar el destino');
         const data = await res.json();
         setDestino(data);
