@@ -4,7 +4,7 @@ const cors = require('cors');
 const { destinos } = require('./data/destinations.js');
 
 const app = express();
-const port = 3001;
+const port = process.env.PORT || 3001; // CORREGIDO: puerto dinámico
 
 // Middleware
 app.use(cors());
@@ -15,7 +15,6 @@ app.get('/api/destinations/:id', (req, res) => {
   try {
     const destinoId = parseInt(req.params.id);
     
-    // Validar que el ID sea un número válido
     if (isNaN(destinoId)) {
       return res.status(400).json({ error: 'ID de destino inválido' });
     }
@@ -27,7 +26,6 @@ app.get('/api/destinations/:id', (req, res) => {
     }
 
     res.json(destino);
-
   } catch (error) {
     console.error('Error en /api/destinations/:id:', error);
     res.status(500).json({ error: 'Error interno del servidor' });
@@ -49,7 +47,6 @@ app.get('/api/destinations', (req, res) => {
     }
 
     res.json(resultados);
-
   } catch (error) {
     console.error('Error en /api/destinations:', error);
     res.status(500).json({ error: 'Error al obtener destinos' });
