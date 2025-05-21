@@ -22,10 +22,10 @@ const Navbar = () => {
                 scrolled ? "bg-[#FE9E32]/90 text-black shadow-md" : "text-white"
             }`}
         >
-            {/* Logo */}
-            <div className="text-2xl font-bold">
+            {/* Logo - ahora es un enlace a home */}
+            <Link to="/" className="text-2xl font-bold">
                 <img src="/logotr.png" alt="" className="h-20 w-auto" />
-            </div>
+            </Link>
 
             {/* Menú en móviles */}
             <div className="md:hidden">
@@ -56,7 +56,7 @@ const Navbar = () => {
                 >
                     Contacto
                 </Link>
-                 <WhatsAppButton />
+                <WhatsAppButton />
             </div>
         </nav>
     );

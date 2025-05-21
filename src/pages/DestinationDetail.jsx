@@ -11,7 +11,7 @@ const DestinationDetail = () => {
   useEffect(() => {
     const fetchDestino = async () => {
       try {
-        const res = await fetch(`https://mi-microsite-production.up.railway.app/api/destinations/${id}`);
+        const res = await fetch(`/api/destinations/${id}`);
         if (!res.ok) throw new Error('Error al cargar el destino');
         const data = await res.json();
         setDestino(data);
@@ -38,7 +38,23 @@ const DestinationDetail = () => {
 
   return (
     <div className="font-sans antialiased text-gray-800">
-      {/* Hero Section */}
+      <style jsx global>{`
+        @keyframes fadeSlideUp {
+          0% {
+            opacity: 0;
+            transform: translateY(20px);
+          }
+          100% {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+        .animate-fadeSlideUp {
+          animation: fadeSlideUp 0.8s ease-out forwards;
+        }
+      `}</style>
+
+      {/* Hero Section con animación */}
       <div className="relative h-[80vh]">
         <img
           src={destino.imagenBanner}
@@ -47,7 +63,9 @@ const DestinationDetail = () => {
         />
         <div className="absolute inset-0 bg-black/30 flex items-end pb-16">
           <div className="container mx-auto px-4">
-            <h1 className="text-5xl font-light text-white mb-4">{destino.nombre}</h1>
+            <h1 className="text-5xl font-bold text-white mb-4 animate-fadeSlideUp opacity-0">
+              {destino.nombre}
+            </h1>
             <button className="bg-blue-900 text-white px-8 py-3 hover:bg-blue-800 transition">
               Reservar
             </button>
@@ -58,23 +76,43 @@ const DestinationDetail = () => {
       {/* Sección de detalles */}
       <div className="container mx-auto px-4 py-16">
         <div className="grid md:grid-cols-3 gap-8 mb-16">
-          <div className="border-l-4 border-blue-900 pl-4">
-            <h3 className="text-xl font-semibold mb-3">Duración</h3>
-            <p className="text-lg">{destino.duracion}</p>
-          </div>
-          <div className="border-l-4 border-blue-900 pl-4">
-            <h3 className="text-xl font-semibold mb-3">Mejor época</h3>
-            <p className="text-lg">{destino.mejorEpoca || "Todo el año"}</p>
-          </div>
+          {/* Precio */}
           <div className="border-l-4 border-blue-900 pl-4">
             <h3 className="text-xl font-semibold mb-3">Precio desde</h3>
             <p className="text-2xl font-bold text-blue-900">
               ${destino.precio?.toLocaleString()}
             </p>
           </div>
+          
+          {/* Duración */}
+          <div className="border-l-4 border-blue-900 pl-4">
+            <h3 className="text-xl font-semibold mb-3">Duración</h3>
+            <p className="text-lg">{destino.duracion}</p>
+          </div>
+          
+          {/* Modalidad */}
+          <div className="border-l-4 border-blue-900 pl-4">
+            <h3 className="text-xl font-semibold mb-3">Modalidad</h3>
+            <p className="text-lg">{destino.modalidad || "Personalizable"}</p>
+          </div>
         </div>
 
-        {/* Highlights */}
+        {/* Incluye */}
+        <section className="bg-gray-50 py-16 mb-16">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-3xl font-light mb-8">El viaje incluye</h2>
+            <div className="grid md:grid-cols-2 gap-6">
+              {destino.incluye?.map((item, index) => (
+                <div key={index} className="flex items-center gap-3">
+                  <FiCheckCircle className="text-blue-900" />
+                  <span className="text-lg">{item}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Lo más destacado */}
         <section className="mb-16">
           <h2 className="text-3xl font-light mb-8">Lo más destacado</h2>
           <div className="grid md:grid-cols-2 gap-8">
@@ -92,21 +130,6 @@ const DestinationDetail = () => {
           <h2 className="text-3xl font-light mb-8">Descripción del viaje</h2>
           <div className="prose max-w-3xl text-lg leading-relaxed">
             {destino.descriptivoCompleto}
-          </div>
-        </section>
-
-        {/* Incluye */}
-        <section className="bg-gray-50 py-16">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl font-light mb-8">El viaje incluye</h2>
-            <div className="grid md:grid-cols-2 gap-6">
-              {destino.incluye?.map((item, index) => (
-                <div key={index} className="flex items-center gap-3">
-                  <FiCheckCircle className="text-blue-900" />
-                  <span className="text-lg">{item}</span>
-                </div>
-              ))}
-            </div>
           </div>
         </section>
 
