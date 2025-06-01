@@ -9,7 +9,7 @@ const Destinos = () => {
   useEffect(() => {
     const fetchDestinations = async () => {
       try {
-        const response = await fetch('https://mi-microsite-production.up.railway.app/api/destinations?home=true&limit=4');
+        const response = await fetch('/data/destinations.json');
         if (!response.ok) throw new Error('Error en la respuesta del servidor');
         const data = await response.json();
         setDestinos(data);

@@ -11,10 +11,12 @@ const DestinationDetail = () => {
   useEffect(() => {
     const fetchDestino = async () => {
       try {
-        const res = await fetch(`/api/destinations/${id}`);
-        if (!res.ok) throw new Error('Error al cargar el destino');
+        const res = await fetch('/data/destinations.json');
+        if (!res.ok) throw new Error('Error al cargar los destinos');
         const data = await res.json();
-        setDestino(data);
+        const found = data.find(d => String(d.id) === id);
+        if (!found) throw new Error('Destino no encontrado');
+        setDestino(found);
       } catch (error) {
         setError(error.message);
       } finally {
@@ -28,7 +30,6 @@ const DestinationDetail = () => {
   if (error) return <div className="text-center py-20 text-red-500">{error}</div>;
   if (!destino) return <div className="text-center py-20">Destino no encontrado</div>;
 
-  // Función para determinar columnas del grid
   const gridColumns = () => {
     const count = destino.imagenes?.length || 0;
     if (count <= 3) return 'md:grid-cols-3';
@@ -38,7 +39,7 @@ const DestinationDetail = () => {
 
   return (
     <div className="font-sans antialiased text-gray-800">
-      <style jsx global>{`
+      <style jsx="true">{`
         @keyframes fadeSlideUp {
           0% {
             opacity: 0;
@@ -54,7 +55,6 @@ const DestinationDetail = () => {
         }
       `}</style>
 
-      {/* Hero Section con animación */}
       <div className="relative h-[80vh]">
         <img
           src={destino.imagenBanner}
@@ -73,31 +73,26 @@ const DestinationDetail = () => {
         </div>
       </div>
 
-      {/* Sección de detalles */}
       <div className="container mx-auto px-4 py-16">
         <div className="grid md:grid-cols-3 gap-8 mb-16">
-          {/* Precio */}
           <div className="border-l-4 border-blue-900 pl-4">
             <h3 className="text-xl font-semibold mb-3">Precio desde</h3>
             <p className="text-2xl font-bold text-blue-900">
               ${destino.precio?.toLocaleString()}
             </p>
           </div>
-          
-          {/* Duración */}
+
           <div className="border-l-4 border-blue-900 pl-4">
             <h3 className="text-xl font-semibold mb-3">Duración</h3>
             <p className="text-lg">{destino.duracion}</p>
           </div>
-          
-          {/* Modalidad */}
+
           <div className="border-l-4 border-blue-900 pl-4">
             <h3 className="text-xl font-semibold mb-3">Modalidad</h3>
-            <p className="text-lg">{destino.modalidad || "Personalizable"}</p>
+            <p className="text-lg">{destino.modalidad || 'Personalizable'}</p>
           </div>
         </div>
 
-        {/* Incluye */}
         <section className="bg-gray-50 py-16 mb-16">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl font-light mb-8">El viaje incluye</h2>
@@ -112,7 +107,6 @@ const DestinationDetail = () => {
           </div>
         </section>
 
-        {/* Lo más destacado */}
         <section className="mb-16">
           <h2 className="text-3xl font-light mb-8">Lo más destacado</h2>
           <div className="grid md:grid-cols-2 gap-8">
@@ -125,7 +119,6 @@ const DestinationDetail = () => {
           </div>
         </section>
 
-        {/* Descripción */}
         <section className="mb-16">
           <h2 className="text-3xl font-light mb-8">Descripción del viaje</h2>
           <div className="prose max-w-3xl text-lg leading-relaxed">
@@ -133,13 +126,11 @@ const DestinationDetail = () => {
           </div>
         </section>
 
-        {/* Galería de imágenes */}
         <section className="py-16">
           <h2 className="text-3xl font-light mb-8 text-center">Galería del destino</h2>
-          
           <div className={`grid grid-cols-1 ${gridColumns()} gap-4`}>
             {destino.imagenes?.map((img, index) => (
-              <div 
+              <div
                 key={index}
                 className="relative group cursor-zoom-in h-64"
                 onClick={() => window.open(img, '_blank')}

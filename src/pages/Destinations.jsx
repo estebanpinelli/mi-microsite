@@ -19,12 +19,13 @@ const Destinations = () => {
   useEffect(() => {
     const fetchDestinos = async () => {
       try {
-        const res = await fetch('https://mi-microsite-production.up.railway.app/api/destinations');
+        const res = await fetch('/data/destinations.json');
         if (!res.ok) throw new Error('Error en la respuesta del servidor');
         const data = await res.json();
         setDestinos(data);
       } catch (error) {
         setError(error.message);
+        console.error("Fallo al obtener destinos:", error);
       } finally {
         setLoading(false);
       }
@@ -82,7 +83,7 @@ const Destinations = () => {
       {/* Carrusel con flechas */}
       <div className="max-w-full px-4 py-12 relative group">
         <h2 className="text-3xl font-bold mb-8 text-gray-800 text-center">Nuestros Destinos</h2>
-        
+
         {/* Flechas de navegación */}
         <button
           onClick={() => scrollCarousel('left')}
@@ -90,7 +91,7 @@ const Destinations = () => {
         >
           <FiChevronLeft className="w-8 h-8 text-gray-800" />
         </button>
-        
+
         <button
           onClick={() => scrollCarousel('right')}
           className="absolute right-4 top-1/2 -translate-y-1/2 z-20 bg-white/90 hover:bg-white p-3 rounded-full shadow-xl transition-all opacity-0 group-hover:opacity-100"
@@ -116,7 +117,7 @@ const Destinations = () => {
                   alt={destino.nombre}
                   className="w-full h-96 object-cover"
                 />
-                
+
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex flex-col justify-end p-6">
                   <h3 className="text-3xl font-semibold text-white mb-4">{destino.nombre}</h3>
                   <div className="mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
