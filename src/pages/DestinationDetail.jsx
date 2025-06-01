@@ -162,6 +162,24 @@ const DestinationDetail = () => {
             {destino.imagenes?.length} imágenes disponibles - Haz clic para ampliar
           </div>
         </section>
+                <div className="text-center pb-20">
+          <div className="backdrop-blur-md bg-gradient-to-r from-blue-600/20 to-blue-800/20 rounded-3xl p-12 border border-white/30 shadow-xl">
+            <h3 className="text-3xl font-light text-gray-900 mb-6">
+              ¿Listo para vivir esta experiencia?
+            </h3>
+            <p className="text-lg text-gray-700 mb-8 font-light">
+              Contacta con nuestros especialistas en viajes
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-blue-600 to-blue-800 text-white px-8 py-4 rounded-full font-medium hover:shadow-2xl hover:scale-105 transition-all duration-300">
+                Solicitar Cotización
+              </button>
+              <button className="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-full font-medium hover:bg-white hover:shadow-lg transition-all duration-300">
+                Más Información
+              </button>
+            </div>
+            </div>
+          </div>
       </div>
     </div>
   );
