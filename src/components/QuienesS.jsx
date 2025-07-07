@@ -20,14 +20,10 @@ const QuienesS = () => {
 
       {/* Contenido principal: título y texto */}
       <div className="quienesS-content">
-        <h2>WORLD'S LEADING LUXURY TRAVEL 2024</h2>
-        <h3>BEYOND LUXURY</h3>
+        <h3>MÁS ALLÁ DEL VIAJE</h3>
+        <h2>La mirada curiosa, el alma viajera.</h2>
         <p>
-          Vivimos los viajes con corazón de ayer y mirada de hoy, como un artesano
-          que trabaja hasta conseguir la perfección en cada proyecto, sin dejar
-          nunca de aprender. Tenemos la suerte de dedicarnos a aquello que nos
-          apasiona: crear experiencias exclusivas, únicas y a medida a través de
-          las cuales seguir descubriendo las maravillas que esconde el mundo.
+          Formamos parte de Lomas Turismo, una agencia con más de 20 años de experiencia, y desde este espacio me especializo en crear viajes distintos: auténticos, exóticos y con alma. Diseños a medida para quienes no se conforman con lo típico, sino que buscan descubrir el mundo con ojos nuevos. Como un artesano, pienso cada itinerario con dedicación, combinando lo mejor de la experiencia clásica con una mirada fresca y personal.
         </p>
       </div>
     </div>
