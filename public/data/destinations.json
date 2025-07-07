@@ -1,15 +1,16 @@
 [
     {
         "id": 1,
-        "nombre": "Destino 1",
-        "descripcion": "Experiencia en Japón, con un diseño vertical alargado.",
+        "nombre": "Japon, de Tokio a Hiroshima",
+        "descripcion": "Un viaje en grupo reducido por el corazón de Japón . De la energía de Tokio a la tradición de Kioto, pasando por los Alpes Japoneses y la mágica isla de Miyajima. Cultura, paisajes y gastronomía en un recorrido único. ¿Te sumás a la aventura? ",
         "imagen": "/japon1.jpg",
         "destacado": true,
-        "precio": 2500,
-        "duracion": "10 días",
-        "highlight": ["Tour por Tokio", "Visita al Monte Fuji", "Experiencia cultural en Kioto"],
-        "descriptivoCompleto": "Un viaje completo por lo mejor de Japón, combinando modernidad y tradición. Incluye...",
-        "incluye": ["Vuelos internacionales", "Hoteles 4 estrellas", "Desayunos diarios", "Guía turístico"],
+        "modalidad":"Grupo Reducido",
+        "precio": 4990,
+        "duracion": "14 días",
+        "highlight": ["Grupo de hasta 16 personas", "Experiencia en Ryokan con Onsen", "Guia en español durante el viaje y en excursiones"],
+        "descriptivoCompleto": "Descubrí Japón en un recorrido fascinante que combina historia milenaria, arquitectura tradicional, ciudades futuristas y paisajes conmovedores. Desde templos antiguos hasta luces de neón, este viaje te invita a explorar la esencia de un país lleno de contrastes.\n\nTOKIO\nLa vibrante capital de Japón, conocida por su mezcla de tradición y modernidad. Visitaremos barrios emblemáticos como Shibuya, Ginza, Harajuku, y Akihabara. No faltarán los templos tradicionales como el Templo de Asakusa (Senso-ji) y el Santuario Meiji, además del icónico cruce de Shibuya y la moderna isla de Odaiba.\n\nKAMAKURA\nFamosa por sus templos y santuarios, como el Santuario de Tsurugaoka Hachiman y el Gran Buda de Kotoku. Esta ciudad es cuna de la historia de los samuráis y los shogun.\n\nTAKAYAMA\nEn los Alpes Japoneses, famosa por su arquitectura tradicional y su sake. Pasearemos por el casco antiguo y visitaremos destilerías de sake. Además, disfrutaremos de una noche en un ryokan tradicional.\n\nKIOTO\nLa antigua capital de Japón, famosa por su patrimonio cultural. Visitaremos el Castillo de Nijo, el Pabellón de Oro (Kinkakuji), el Pabellón de Plata (Ginkakuji), el Santuario Yasaka y el histórico barrio de Gion, hogar de las geishas.\n\nOSAKA\nLa segunda ciudad más grande, conocida por su vida nocturna y distritos como Shin-sekai y Dotombori, con el famoso castillo de Osaka.\n\nNARA E INARI\nInari es famosa por el santuario Fushimi Inari Taisha, con miles de torii rojos, mientras que Nara destaca por el Templo Todai-ji y el extenso Parque de Nara, lleno de ciervos.\n\nHIROSHIMA Y MIYAJIMA\nVisitaremos el Parque Conmemorativo de la Paz y la isla Miyajima, con su famoso templo Itsukushima-jinja.",
+        "incluye": ["Vuelos internacionales", "Hoteles 4 estrellas", "Desayunos diarios", "Guía en Español.","Todos los traslados y transportes públicos necesarios para las visitas","Envío de maletas desde Tokio a Kioto ","Seguro médico y de asistencia","Teléfono de emergencia"],
         "imagenBanner": "/Japonfotos/japonbanner.jpg",
         "imagenes": [
             "/Japonfotos/japon1.jpg",
@@ -20,8 +21,7 @@
             "/Japonfotos/japon6.jpg",
             "/Japonfotos/japon7.jpg",
             "/Japonfotos/japon8.jpg",
-            "/Japonfotos/japon9.jpg",
-            "/Japonfotos/japon10.jpg"
+            "/Japonfotos/japon9.jpg"
         ]
     },
     {
@@ -45,8 +45,7 @@
             "/tanzania-6.jpg",
             "/tanzania-7.jpg",
             "/tanzania-8.jpg",
-            "/tanzania-9.jpg",
-            "/tanzania-10.jpg"
+            "/tanzania-9.jpg"
         ]
     },
     {
@@ -70,8 +69,7 @@
             "/tanzania-6.jpg",
             "/tanzania-7.jpg",
             "/tanzania-8.jpg",
-            "/tanzania-9.jpg",
-            "/tanzania-10.jpg"
+            "/tanzania-9.jpg"
         ]
     },
     {
@@ -95,8 +93,175 @@
             "/tanzania-6.jpg",
             "/tanzania-7.jpg",
             "/tanzania-8.jpg",
-            "/tanzania-9.jpg",
-            "/tanzania-10.jpg"
+            "/tanzania-9.jpg"
+        ]
+    },
+        {
+        "id": 5,
+        "nombre": "Destino 4",
+        "descripcion": "Un regalo de experiencias mágicas y únicas...",
+        "imagen": "/desierto.jpg",
+        "destacado": true,
+        "precio": 2750,
+        "duracion": "9 días",
+        "highlight": ["Paseo en camello", "Noche en campamento beduino", "Observación de estrellas"],
+        "descriptivoCompleto": "Vive la auténtica experiencia del desierto con comodidades modernas...",
+        "incluye": ["Vuelos domésticos", "Cenas temáticas", "Tour privado"],
+        "imagenBanner": "/tanzania-banner.jpg",
+        "imagenes": [
+            "/tanzania-1.jpg",
+            "/tanzania-2.jpg",
+            "/tanzania-3.jpg",
+            "/tanzania-4.jpg",
+            "/tanzania-5.jpg",
+            "/tanzania-6.jpg",
+            "/tanzania-7.jpg",
+            "/tanzania-8.jpg",
+            "/tanzania-9.jpg"
+        ]
+    },
+        {
+        "id": 6,
+        "nombre": "Destino 4",
+        "descripcion": "Un regalo de experiencias mágicas y únicas...",
+        "imagen": "/desierto.jpg",
+        "destacado": true,
+        "precio": 2750,
+        "duracion": "9 días",
+        "highlight": ["Paseo en camello", "Noche en campamento beduino", "Observación de estrellas"],
+        "descriptivoCompleto": "Vive la auténtica experiencia del desierto con comodidades modernas...",
+        "incluye": ["Vuelos domésticos", "Cenas temáticas", "Tour privado"],
+        "imagenBanner": "/tanzania-banner.jpg",
+        "imagenes": [
+            "/tanzania-1.jpg",
+            "/tanzania-2.jpg",
+            "/tanzania-3.jpg",
+            "/tanzania-4.jpg",
+            "/tanzania-5.jpg",
+            "/tanzania-6.jpg",
+            "/tanzania-7.jpg",
+            "/tanzania-8.jpg",
+            "/tanzania-9.jpg"
+        ]
+    },
+        {
+        "id": 7,
+        "nombre": "Destino 4",
+        "descripcion": "Un regalo de experiencias mágicas y únicas...",
+        "imagen": "/desierto.jpg",
+        "destacado": true,
+        "precio": 2750,
+        "duracion": "9 días",
+        "highlight": ["Paseo en camello", "Noche en campamento beduino", "Observación de estrellas"],
+        "descriptivoCompleto": "Vive la auténtica experiencia del desierto con comodidades modernas...",
+        "incluye": ["Vuelos domésticos", "Cenas temáticas", "Tour privado"],
+        "imagenBanner": "/tanzania-banner.jpg",
+        "imagenes": [
+            "/tanzania-1.jpg",
+            "/tanzania-2.jpg",
+            "/tanzania-3.jpg",
+            "/tanzania-4.jpg",
+            "/tanzania-5.jpg",
+            "/tanzania-6.jpg",
+            "/tanzania-7.jpg",
+            "/tanzania-8.jpg",
+            "/tanzania-9.jpg"
+        ]
+    },
+        {
+        "id": 8,
+        "nombre": "Destino 4",
+        "descripcion": "Un regalo de experiencias mágicas y únicas...",
+        "imagen": "/desierto.jpg",
+        "destacado": true,
+        "precio": 2750,
+        "duracion": "9 días",
+        "highlight": ["Paseo en camello", "Noche en campamento beduino", "Observación de estrellas"],
+        "descriptivoCompleto": "Vive la auténtica experiencia del desierto con comodidades modernas...",
+        "incluye": ["Vuelos domésticos", "Cenas temáticas", "Tour privado"],
+        "imagenBanner": "/tanzania-banner.jpg",
+        "imagenes": [
+            "/tanzania-1.jpg",
+            "/tanzania-2.jpg",
+            "/tanzania-3.jpg",
+            "/tanzania-4.jpg",
+            "/tanzania-5.jpg",
+            "/tanzania-6.jpg",
+            "/tanzania-7.jpg",
+            "/tanzania-8.jpg",
+            "/tanzania-9.jpg"
+        ]
+    },
+        {
+        "id": 9,
+        "nombre": "Destino 4",
+        "descripcion": "Un regalo de experiencias mágicas y únicas...",
+        "imagen": "/desierto.jpg",
+        "destacado": true,
+        "precio": 2750,
+        "duracion": "9 días",
+        "highlight": ["Paseo en camello", "Noche en campamento beduino", "Observación de estrellas"],
+        "descriptivoCompleto": "Vive la auténtica experiencia del desierto con comodidades modernas...",
+        "incluye": ["Vuelos domésticos", "Cenas temáticas", "Tour privado"],
+        "imagenBanner": "/tanzania-banner.jpg",
+        "imagenes": [
+            "/tanzania-1.jpg",
+            "/tanzania-2.jpg",
+            "/tanzania-3.jpg",
+            "/tanzania-4.jpg",
+            "/tanzania-5.jpg",
+            "/tanzania-6.jpg",
+            "/tanzania-7.jpg",
+            "/tanzania-8.jpg",
+            "/tanzania-9.jpg"
+        ]
+    },
+        {
+        "id": 10,
+        "nombre": "Destino 4",
+        "descripcion": "Un regalo de experiencias mágicas y únicas...",
+        "imagen": "/desierto.jpg",
+        "destacado": true,
+        "precio": 2750,
+        "duracion": "9 días",
+        "highlight": ["Paseo en camello", "Noche en campamento beduino", "Observación de estrellas"],
+        "descriptivoCompleto": "Vive la auténtica experiencia del desierto con comodidades modernas...",
+        "incluye": ["Vuelos domésticos", "Cenas temáticas", "Tour privado"],
+        "imagenBanner": "/tanzania-banner.jpg",
+        "imagenes": [
+            "/tanzania-1.jpg",
+            "/tanzania-2.jpg",
+            "/tanzania-3.jpg",
+            "/tanzania-4.jpg",
+            "/tanzania-5.jpg",
+            "/tanzania-6.jpg",
+            "/tanzania-7.jpg",
+            "/tanzania-8.jpg",
+            "/tanzania-9.jpg"
+        ]
+    },
+        {
+        "id": 11,
+        "nombre": "Destino 4",
+        "descripcion": "Un regalo de experiencias mágicas y únicas...",
+        "imagen": "/desierto.jpg",
+        "destacado": true,
+        "precio": 2750,
+        "duracion": "9 días",
+        "highlight": ["Paseo en camello", "Noche en campamento beduino", "Observación de estrellas"],
+        "descriptivoCompleto": "Vive la auténtica experiencia del desierto con comodidades modernas...",
+        "incluye": ["Vuelos domésticos", "Cenas temáticas", "Tour privado"],
+        "imagenBanner": "/tanzania-banner.jpg",
+        "imagenes": [
+            "/tanzania-1.jpg",
+            "/tanzania-2.jpg",
+            "/tanzania-3.jpg",
+            "/tanzania-4.jpg",
+            "/tanzania-5.jpg",
+            "/tanzania-6.jpg",
+            "/tanzania-7.jpg",
+            "/tanzania-8.jpg",
+            "/tanzania-9.jpg"
         ]
     }
 ]

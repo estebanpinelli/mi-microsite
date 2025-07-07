@@ -1,6 +1,10 @@
 import { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import { FiCheckCircle, FiZoomIn, FiCalendar, FiDollarSign, FiMapPin } from 'react-icons/fi';
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
+import Footer from '../components/Footer'; // 
 
 const DestinationDetail = () => {
   const { id } = useParams();
@@ -30,157 +34,164 @@ const DestinationDetail = () => {
   if (error) return <div className="text-center py-10 text-red-500">{error}</div>;
   if (!destino) return <div className="text-center py-10">Destino no encontrado</div>;
 
-  const gridColumns = () => {
-    const count = destino.imagenes?.length || 0;
-    if (count <= 3) return 'md:grid-cols-3';
-    if (count <= 4) return 'md:grid-cols-2 lg:grid-cols-4';
-    return 'md:grid-cols-2 lg:grid-cols-3';
+  const sliderSettings = {
+    dots: true,
+    infinite: true,
+    speed: 100,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    autoplay: true,
+    autoplaySpeed: 3500,
   };
 
   return (
     <div className="font-sans antialiased text-gray-800">
-      <style jsx="true">{`
-        @keyframes fadeSlideUp {
-          0% {
-            opacity: 0;
-            transform: translateY(20px);
-          }
-          100% {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-        .animate-fadeSlideUp {
-          animation: fadeSlideUp 0.8s ease-out forwards;
-        }
-      `}</style>
-
-      {/* Banner con tamaño original y animación */}
-      <div className="relative h-[80vh]">
+      <div className="relative h-[70vh]">
         <img
           src={destino.imagenBanner}
           alt={destino.nombre}
           className="w-full h-full object-cover absolute inset-0"
         />
-        <div className="absolute inset-0 bg-black/30 flex items-end pb-16">
+        <div className="absolute inset-0 bg-black/40 flex items-end pb-16">
           <div className="container mx-auto px-4">
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 animate-fadeSlideUp opacity-0">
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
               {destino.nombre}
             </h1>
-            <button className="bg-blue-900 text-white px-8 py-3 hover:bg-blue-800 transition">
+            <Link
+              to="/contacto"
+              className="inline-block bg-blue-900 text-white px-6 py-2 rounded-md hover:bg-blue-800 transition"
+            >
               Reservar
-            </button>
+            </Link>
           </div>
         </div>
       </div>
 
-      {/* Contenido compacto */}
-      <div className="container mx-auto px-4 py-8">
-        <div className="grid md:grid-cols-3 gap-6 mb-8 bg-gray-50 p-6 rounded-lg">
-          <div className="flex items-center gap-4">
-            <FiDollarSign className="text-blue-900 text-xl" />
-            <div>
-              <h3 className="text-sm font-medium text-gray-500">Precio desde</h3>
-              <p className="text-xl font-bold text-blue-900">
-                ${destino.precio?.toLocaleString()}
-              </p>
-            </div>
-          </div>
+      <div className="container mx-auto px-4 py-10 space-y-8">
 
-          <div className="flex items-center gap-4">
-            <FiCalendar className="text-blue-900 text-xl" />
-            <div>
-              <h3 className="text-sm font-medium text-gray-500">Duración</h3>
-              <p className="text-lg">{destino.duracion}</p>
+        {/* Datos clave */}
+        <section className="bg-white border rounded-xl px-6 py-4 shadow-sm">
+          <div className="flex flex-col sm:flex-row flex-wrap justify-around gap-6 text-gray-800 text-base sm:text-lg font-medium">
+            <div className="flex items-center gap-3">
+              <FiDollarSign className="text-blue-800 text-2xl" />
+              <span>
+                Desde <strong className="text-blue-800">USD {destino.precio?.toLocaleString()}</strong>
+              </span>
             </div>
-          </div>
-
-          <div className="flex items-center gap-4">
-            <FiMapPin className="text-blue-900 text-xl" />
-            <div>
-              <h3 className="text-sm font-medium text-gray-500">Modalidad</h3>
-              <p className="text-lg">{destino.modalidad || 'Personalizable'}</p>
+            <div className="flex items-center gap-3">
+              <FiCalendar className="text-blue-800 text-2xl" />
+              <span>Duración: {destino.duracion}</span>
             </div>
-          </div>
-        </div>
-
-        <div className="grid md:grid-cols-2 gap-8 mb-8">
-          <section className="bg-white p-6 rounded-lg shadow-sm">
-            <h2 className="text-xl font-semibold mb-4">El viaje incluye</h2>
-            <div className="space-y-3">
-              {destino.incluye?.map((item, index) => (
-                <div key={index} className="flex items-start gap-3">
-                  <FiCheckCircle className="text-blue-900 mt-0.5 flex-shrink-0" />
-                  <span>{item}</span>
-                </div>
-              ))}
+            <div className="flex items-center gap-3">
+              <FiMapPin className="text-blue-800 text-2xl" />
+              <span>Modalidad: {destino.modalidad || 'Personalizable'}</span>
             </div>
-          </section>
-
-          <section className="bg-white p-6 rounded-lg shadow-sm">
-            <h2 className="text-xl font-semibold mb-4">Lo más destacado</h2>
-            <div className="space-y-3">
-              {destino.highlight?.map((item, index) => (
-                <div key={index} className="flex items-start gap-3">
-                  <FiCheckCircle className="text-blue-900 mt-0.5 flex-shrink-0" />
-                  <p>{item}</p>
-                </div>
-              ))}
-            </div>
-          </section>
-        </div>
-
-        <section className="mb-8 bg-white p-6 rounded-lg shadow-sm">
-          <h2 className="text-xl font-semibold mb-4">Descripción del viaje</h2>
-          <div className="prose max-w-none text-gray-700">
-            {destino.descriptivoCompleto}
           </div>
         </section>
 
-        <section className="py-8">
-          <h2 className="text-2xl font-semibold mb-6 text-center">Galería del destino</h2>
-          <div className={`grid grid-cols-1 ${gridColumns()} gap-4`}>
-            {destino.imagenes?.map((img, index) => (
-              <div
-                key={index}
-                className="relative group cursor-zoom-in h-64"
-                onClick={() => window.open(img, '_blank')}
-              >
-                <img
-                  src={img}
-                  alt={`Galería ${index + 1}`}
-                  className="w-full h-full object-cover rounded-lg transition-transform group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                  <FiZoomIn className="text-white w-8 h-8" />
-                </div>
-              </div>
-            ))}
-          </div>
-
-          <div className="mt-4 text-center text-sm text-gray-500">
-            {destino.imagenes?.length} imágenes disponibles - Haz clic para ampliar
+        {/* Detalles del viaje */}
+        <section className="bg-white p-6 rounded-lg border">
+          <h2 className="text-xl font-semibold mb-4">Detalles del viaje</h2>
+          <div className="grid md:grid-cols-2 gap-6">
+            <div>
+              <h3 className="text-gray-500 font-medium mb-2">Incluye:</h3>
+              <ul className="space-y-1 text-sm text-gray-700">
+                {destino.incluye?.map((item, i) => (
+                  <li key={i} className="flex items-start gap-2">
+                    <FiCheckCircle className="text-blue-900 mt-0.5" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-gray-500 font-medium mb-2">Lo más destacado:</h3>
+              <ul className="space-y-1 text-sm text-gray-700">
+                {destino.highlight?.map((item, i) => (
+                  <li key={i} className="flex items-start gap-2">
+                    <FiCheckCircle className="text-blue-900 mt-0.5" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </section>
-                <div className="text-center pb-20">
-          <div className="backdrop-blur-md bg-gradient-to-r from-blue-600/20 to-blue-800/20 rounded-3xl p-12 border border-white/30 shadow-xl">
-            <h3 className="text-3xl font-light text-gray-900 mb-6">
+
+        {/* Descripción + Carrusel al lado */}
+<section className="grid md:grid-cols-2 gap-8 items-start">
+  {/* Carrusel vertical al lado izquierdo */}
+  <div className="w-full h-[500px] overflow-hidden rounded-xl shadow border">
+    <Slider
+      {...{
+        dots: false,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        vertical: true,
+        verticalSwiping: true,
+        autoplay: true,
+        autoplaySpeed: 4000,
+        arrows: true
+      }}
+      className="h-full"
+    >
+      {destino.imagenes?.map((img, index) => (
+        <div key={index} className="h-[500px]">
+          <img
+            src={img}
+            alt={`Imagen ${index + 1}`}
+            className="w-full h-full object-cover rounded-xl cursor-pointer"
+            onClick={() => window.open(img, "_blank")}
+          />
+        </div>
+      ))}
+    </Slider>
+  </div>
+
+  {/* Descripción + botón */}
+  <div className="flex flex-col justify-between h-full space-y-6">
+    <div>
+      <h2 className="text-3xl font-semibold mb-4">{destino.nombre}</h2>
+      <div className="text-base text-gray-700 leading-relaxed whitespace-pre-line">
+        {destino.descriptivoCompleto}
+      </div>
+    </div>
+
+    <div>
+    </div>
+  </div>
+</section>
+
+        {/* CTA final */}
+        <div className="text-center pt-10 pb-20">
+          <div className="bg-gradient-to-r from-blue-600/10 to-blue-800/10 rounded-3xl p-10 border border-blue-100 shadow-md">
+            <h3 className="text-2xl font-light text-gray-900 mb-4">
               ¿Listo para vivir esta experiencia?
             </h3>
-            <p className="text-lg text-gray-700 mb-8 font-light">
+            <p className="text-base text-gray-700 mb-6">
               Contacta con nuestros especialistas en viajes
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-blue-600 to-blue-800 text-white px-8 py-4 rounded-full font-medium hover:shadow-2xl hover:scale-105 transition-all duration-300">
+              <Link
+                to="/contacto"
+                className="bg-blue-700 text-white px-6 py-3 rounded-full font-medium hover:shadow-lg hover:scale-105 transition-all duration-300 text-center"
+              >
                 Solicitar Cotización
-              </button>
-              <button className="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-full font-medium hover:bg-white hover:shadow-lg transition-all duration-300">
+              </Link>
+              <Link
+                to="/contacto"
+                className="border border-gray-300 text-gray-700 px-6 py-3 rounded-full font-medium hover:bg-white hover:shadow transition-all duration-300 text-center"
+              >
                 Más Información
-              </button>
-            </div>
+              </Link>
             </div>
           </div>
+        </div>
       </div>
+       <Footer />
     </div>
   );
 };

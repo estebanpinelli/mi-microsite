@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { useState, useEffect, useRef } from 'react';
 import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
+import Footer from '../components/Footer'; // 
 
 const Destinations = () => {
   const [destinos, setDestinos] = useState([]);
@@ -131,6 +132,9 @@ const Destinations = () => {
           ))}
         </div>
       </div>
+
+      {/* Footer */}
+      <Footer />
     </div>
   );
 };
