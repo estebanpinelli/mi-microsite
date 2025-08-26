@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import Contact from "./pages/Contact";
 import Destinations from "./pages/Destinations";
 import DestinationDetail from "./pages/DestinationDetail";
+import Mundial from "./components/Mundial";          //
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path="/destinos" element={<Destinations />} />
           <Route path="/destino/:id" element={<DestinationDetail />} />
           <Route path="/contacto" element={<Contact />} />
+          <Route path="/mundial" element={<Mundial />} />   {/* ✅ AÑADIR */}
           
           {/* Ruta adicional para manejar IDs malformados */}
           <Route path="/destino/*" element={<h2 className="text-center mt-8">ID de destino inválido</h2>} />
