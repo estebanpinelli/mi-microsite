@@ -46,13 +46,13 @@ const Navbar = () => {
             >
                 <Link
                     to="/destinos"
-                    className="text-white md:text-white text-lg font-serif py-2 px-6 hover:opacity-70 transition-colors duration-200"
+                    className="text-white md:text-white text-lg font-sans  py-2 px-6 hover:opacity-70 transition-colors duration-200"
                 >
                     Destinos
                 </Link>
                 <Link
                     to="/contacto"
-                    className="text-white md:text-white text-lg font-serif py-2 px-6 hover:opacity-70 transition-colors duration-200"
+                    className="text-white md:text-white text-lg font-sans  py-2 px-6 hover:opacity-70 transition-colors duration-200"
                 >
                     Contacto
                 </Link>
