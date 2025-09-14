@@ -47,12 +47,6 @@ const MundialBanner = () => {
             >
               Descubrir
             </Link>
-            <button
-              onClick={() => setMinimized(true)}
-              className="text-gray-300 hover:text-white p-1.5 rounded-full hover:bg-white/10 transition-all"
-            >
-              ✕
-            </button>
           </div>
         </div>
       ) : (

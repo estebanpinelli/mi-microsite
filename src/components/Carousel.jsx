@@ -2,6 +2,7 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { FaWhatsapp } from "react-icons/fa";
 
 const Carousel = () => {
   const settings = {
@@ -11,8 +12,8 @@ const Carousel = () => {
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 5000,
-    arrows: false, // opcional: ocultar flechas
-    dots: false,   // opcional: ocultar puntitos
+    arrows: false,
+    dots: false
   };
 
   return (
@@ -27,21 +28,17 @@ const Carousel = () => {
           textAlign: "center",
           color: "#fff",
           zIndex: 2,
-          textShadow: "2px 2px 10px rgba(0,0,0,0.7)",
+          textShadow: "2px 2px 10px rgba(0,0,0,0.7)"
         }}
       >
         <h1 style={{ fontSize: "2.5rem", fontWeight: "bold" }}>
           ¿Estás preparado para nuevas experiencias?
         </h1>
-        <p style={{ fontSize: "1.2rem", marginTop: "10px" }}>
-          Descubrí nuestros destinos
-        </p>
-        <button
-          onClick={() => {
-            // 👇 hace scroll hasta la sección de destinos
-            const destinoSection = document.querySelector(".destinos-container");
-            if (destinoSection) destinoSection.scrollIntoView({ behavior: "smooth" });
-          }}
+      
+        <a
+          href="https://wa.me/+5491152615566"
+          target="_blank"
+          rel="noopener noreferrer"
           style={{
             marginTop: "20px",
             padding: "12px 24px",
@@ -52,10 +49,15 @@ const Carousel = () => {
             border: "none",
             borderRadius: "8px",
             cursor: "pointer",
+            display: "inline-flex",
+            alignItems: "center",
+            gap: "10px",
+            textDecoration: "none"
           }}
         >
-          Ver destinos
-        </button>
+          Hablemos!
+         <FaWhatsapp style={{ fontSize: "1.5em" }} />
+        </a>
       </div>
 
       {/* Carrusel de fondo */}
@@ -68,7 +70,7 @@ const Carousel = () => {
             muted
             style={{ width: "100%", height: "100vh", objectFit: "cover" }}
           >
-            <source src="https://res.cloudinary.com/dtcjnhb0v/video/upload/v1757344442/V%C3%ADdeo_sin_t%C3%ADtulo_wv8s9a.mp4" type="video/mp4" />
+            <source src="https://res.cloudinary.com/dtcjnhb0v/video/upload/v1757843580/HOme_ro2ukk.mp4" type="video/mp4" />
             Tu navegador no soporta videos.
           </video>
         </div>

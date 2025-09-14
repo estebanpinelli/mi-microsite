@@ -181,12 +181,6 @@ const DestinationDetail = () => {
               >
                 Solicitar Cotización
               </Link>
-              <Link
-                to="/contacto"
-                className="border border-gray-300 text-gray-700 px-6 py-3 rounded-full font-medium hover:bg-white hover:shadow transition-all duration-300 text-center"
-              >
-                Más Información
-              </Link>
             </div>
           </div>
         </div>

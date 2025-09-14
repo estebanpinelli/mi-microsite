@@ -26,7 +26,7 @@ const Footer = () => {
       {/* Redes sociales */}
       <div style={{ marginBottom: "15px", display: "flex", justifyContent: "center", gap: "15px" }}>
         <a
-          href="https://facebook.com"
+          href="https://www.facebook.com/profile.php?id=61551028650874"
           target="_blank"
           rel="noopener noreferrer"
           style={{ color: "#3b5998" }}
@@ -34,7 +34,7 @@ const Footer = () => {
           <FaFacebookF size={28} />
         </a>
         <a
-          href="https://instagram.com"
+          href="https://www.instagram.com/lomasturismoexoticos/?next=%2F"
           target="_blank"
           rel="noopener noreferrer"
           style={{ color: "#E1306C" }}
