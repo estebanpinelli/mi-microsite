@@ -128,7 +128,7 @@ const Mundial = () => {
         <section>
           <h2 className="text-3xl font-bold mb-4 text-center">Observaciones</h2>
           <ul className="list-disc list-inside space-y-1">
-            <li>Categoria de TIKCETS 1 y 2 a eleccion para partidos de ARGENTINA</li>
+            <li>Categoria de TIKCETS 1, 2 y 3 a eleccion para partidos de ARGENTINA</li>
             <li>Hoteles 4 o 5 estrallas a eleccion SIN desayuno</li>
             <li>Sujeto a disponibilidad.</li>
             <li>No incluye el vuelo internacional</li>
