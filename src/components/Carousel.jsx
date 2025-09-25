@@ -55,7 +55,7 @@ const Carousel = () => {
             textDecoration: "none"
           }}
         >
-          Hablemos!
+          LAURE!
          <FaWhatsapp style={{ fontSize: "1.5em" }} />
         </a>
       </div>
