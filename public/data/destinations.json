@@ -189,26 +189,18 @@
     },
         {
         "id": 6,
-        "nombre": "Destino 4",
-        "descripcion": "Un viaje privado por el corazón del Gigante Asiático. De la Ciudad Prohibida y la Gran Muralla a los Guerreros de Terracota, pasando por un crucero por el Yangtsé y los paisajes kársticos de Guilin. Historia milenaria, modernidad deslumbrante y contrastes únicos en un recorrido de Beijing a Hong Kong. ¿Te sumás a descubrir China?",
-        "imagen": "/desierto.jpg",
+        "nombre": "PROXIMAMENTE NUEVOS DESTINOS",
+        "descripcion": "1",
+        "imagen": "https://res.cloudinary.com/dtcjnhb0v/image/upload/v1758270953/Nuevos_viajes_ugjpda.jpg",
         "destacado": true,
-        "precio": 5990,
-        "duracion": "9 días",
-        "highlight": ["Paseo en camello", "Noche en campamento beduino", "Observación de estrellas"],
-        "descriptivoCompleto": "Vive la auténtica experiencia del desierto con comodidades modernas...",
-        "incluye": ["Vuelos domésticos", "Cenas temáticas", "Tour privado"],
-        "imagenBanner": "/tanzania-banner.jpg",
+        "precio": 0,
+        "duracion": "0",
+        "highlight": [""],
+        "descriptivoCompleto": "-",
+        "incluye": [""],
+        "imagenBanner": "https://res.cloudinary.com/dtcjnhb0v/image/upload/v1758271518/Proximamente1_k1bf2k.jpg",
         "imagenes": [
-            "/tanzania-1.jpg",
-            "/tanzania-2.jpg",
-            "/tanzania-3.jpg",
-            "/tanzania-4.jpg",
-            "/tanzania-5.jpg",
-            "/tanzania-6.jpg",
-            "/tanzania-7.jpg",
-            "/tanzania-8.jpg",
-            "/tanzania-9.jpg"
+            "https://res.cloudinary.com/dtcjnhb0v/image/upload/v1758271305/Proximamente_f1ht7u.jpg"
         ]
     }
 ]

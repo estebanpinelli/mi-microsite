@@ -1,3 +1,4 @@
+
 import React from "react";
 
 
@@ -7,15 +8,17 @@ const QuienesS = () => {
       {/* Contenedor para los dos logos */}
       <div className="quienesS-logos  ">
         <img
-          src="/Logo.jpg"
-          alt="Logo 1"
-          className="quienesS-logo"
-        />
-        <img
-          src="/Logo.jpg"
-          alt="Logo 2"
-          className="quienesS-logo"
-        />
+  src="/Logo1.png"
+  alt="Logo 1"
+  className="quienesS-logo w-25 h-25"
+  style={{ width: "180px", height: "auto" }}
+/>
+<img
+  src="/Logo2.png"
+  alt="Logo 2"
+  className="quienesS-logo w-25 h-25"
+  style={{ width: "180px", height: "auto" }}
+/>
       </div>
 
       {/* Contenido principal: título y texto */}

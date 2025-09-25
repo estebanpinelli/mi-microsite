@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { useState, useEffect, useRef } from 'react';
 import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
 import Footer from '../components/Footer'; // 
+import MundialBanner from '../components/MundialBanner'; // 
 
 const Destinations = () => {
   const [destinos, setDestinos] = useState([]);
@@ -80,7 +81,7 @@ const Destinations = () => {
           </div>
         ))}
       </div>
-
+        <MundialBanner />
       {/* Carrusel con flechas */}
       <div className="max-w-full px-4 py-12 relative group">
         <h2 className="text-3xl font-bold mb-8 text-gray-800 text-center">Nuestros Destinos</h2>
@@ -131,9 +132,11 @@ const Destinations = () => {
             </div>
           ))}
         </div>
+
       </div>
 
       {/* Footer */}
+      
       <Footer />
     </div>
   );

@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { FiCheckCircle, FiZoomIn, FiCalendar, FiDollarSign, FiMapPin } from 'react-icons/fi';
+import { FiCheckCircle, FiCalendar, FiDollarSign, FiMapPin } from 'react-icons/fi';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
@@ -120,50 +120,50 @@ const DestinationDetail = () => {
         </section>
 
         {/* Descripción + Carrusel al lado */}
-<section className="grid md:grid-cols-2 gap-8 items-start">
-  {/* Carrusel vertical al lado izquierdo */}
-  <div className="w-full h-[500px] overflow-hidden rounded-xl shadow border">
-    <Slider
-      {...{
-        dots: false,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        vertical: true,
-        verticalSwiping: true,
-        autoplay: true,
-        autoplaySpeed: 4000,
-        arrows: true
-      }}
-      className="h-full"
-    >
-      {destino.imagenes?.map((img, index) => (
-        <div key={index} className="h-[500px]">
-          <img
-            src={img}
-            alt={`Imagen ${index + 1}`}
-            className="w-full h-full object-cover rounded-xl cursor-pointer"
-            onClick={() => window.open(img, "_blank")}
-          />
-        </div>
-      ))}
-    </Slider>
-  </div>
+        <section className="grid md:grid-cols-2 gap-8 items-start">
+          {/* Carrusel vertical al lado izquierdo */}
+          <div className="w-full h-[500px] overflow-hidden rounded-xl shadow border">
+            <Slider
+              {...{
+                dots: false,
+                infinite: true,
+                speed: 500,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                vertical: true,
+                verticalSwiping: true,
+                autoplay: true,
+                autoplaySpeed: 4000,
+                arrows: true
+              }}
+              className="h-full"
+            >
+              {destino.imagenes?.map((img, index) => (
+                <div key={index} className="h-[500px]">
+                  <img
+                    src={img}
+                    alt={`Imagen ${index + 1}`}
+                    className="w-full h-full object-cover rounded-xl cursor-pointer"
+                    onClick={() => window.open(img, "_blank")}
+                  />
+                </div>
+              ))}
+            </Slider>
+          </div>
 
-  {/* Descripción + botón */}
-  <div className="flex flex-col justify-between h-full space-y-6">
-    <div>
-      <h2 className="text-3xl font-semibold mb-4">{destino.nombre}</h2>
-      <div className="text-base text-gray-700 leading-relaxed whitespace-pre-line">
-        {destino.descriptivoCompleto}
-      </div>
-    </div>
+          {/* Descripción + botón */}
+          <div className="flex flex-col justify-between h-full space-y-6">
+            <div>
+              <h2 className="text-3xl font-semibold mb-4">{destino.nombre}</h2>
+              <div className="text-base text-gray-700 leading-relaxed whitespace-pre-line text-justify pr-9">
+                {destino.descriptivoCompleto}
+              </div>
+            </div>
 
-    <div>
-    </div>
-  </div>
-</section>
+            <div>
+            </div>
+          </div>
+        </section>
 
         {/* CTA final */}
         <div className="text-center pt-10 pb-20">
@@ -185,7 +185,7 @@ const DestinationDetail = () => {
           </div>
         </div>
       </div>
-       <Footer />
+      <Footer />
     </div>
   );
 };
