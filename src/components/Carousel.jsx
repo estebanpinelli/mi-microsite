@@ -36,7 +36,7 @@ const Carousel = () => {
         </h1>
       
         <a
-          href="https://wa.me/+5491152615566"
+          href="https://wa.me/+5491166194844"
           target="_blank"
           rel="noopener noreferrer"
           style={{
