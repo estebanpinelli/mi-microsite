@@ -18,33 +18,44 @@ const Contact = () => {
 
         {/* Contenido centrado */}
         <div className="relative text-center">
-          <h1 className="text-4xl md:text-5xl font-bold">Contacta con nosotros</h1>
-          
+          <h1 className="text-4xl md:text-5xl font-bold">
+            Contacta con nosotros
+          </h1>
+
           {/* Íconos de contacto */}
           <div className="flex flex-col items-center mt-6 space-y-4">
+            
             {/* Botón de WhatsApp */}
             <div className="w-30 h-30 flex items-center justify-center rounded-full shadow-lg">
               <BotonWhats />
             </div>
 
             {/* Email */}
-            <div className="flex items-center gap-2  px-4 py-2 rounded-lg shadow-lg">
-              <span className="text-white -700 text-lg">
+            <div className="flex items-center gap-2 px-4 py-2 rounded-lg shadow-lg">
+              <span className="text-lg">
                 exoticos@lomasturismo.com
               </span>
             </div>
+
           </div>
         </div>
       </div>
 
       {/* Sección de formulario */}
-      <div className="container mx-auto p-8 min-h-screen">
-        <h1 className="text-5xl font-bold text-center mt-16">Contáctanos</h1>
-        <p className="text-center mt-6 mb-12 text-xl">
+      <div className="container mx-auto p-8 min-h-screen text-gray-800">
+        
+        <h1 className="text-5xl font-bold text-center mt-16">
+          Contáctanos
+        </h1>
+
+        <p className="text-center mt-6 mb-12 text-xl max-w-2xl mx-auto">
           Si tienes alguna consulta, rellena el formulario a continuación.
         </p>
+
         <ContactForm />
+
       </div>
+
       <Footer />
     </>
   );

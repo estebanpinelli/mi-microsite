@@ -3,58 +3,78 @@ import emailjs from "@emailjs/browser";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-const ContactForm = () => {
-  const [form, setForm] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    passengers: "",
-    destination: "", // Nuevo campo para el destino
-    month: "",
-    day: "",
-    message: "",
-  });
+const MONTHS = [
+  "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio",
+  "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"
+];
 
-  const handleChange = (e) => {
-    setForm({ ...form, [e.target.name]: e.target.value });
+const initialForm = {
+  name: "",
+  email: "",
+  phone: "",
+  passengers: 1,
+  destination: "",
+  month: "",
+  day: "",
+  message: "",
+};
+
+const ContactForm = () => {
+  const [isSending, setIsSending] = useState(false);
+  const [form, setForm] = useState(initialForm);
+
+  const handleChange = ({ target: { name, value } }) => {
+    setForm((prev) => ({
+      ...prev,
+      [name]: name === "passengers" || name === "day" ? value : value,
+    }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    if (isSending) return;
 
-    const passengersValue = form.passengers ? form.passengers : 1;
+    const dayNumber = Number(form.day);
+    const passengersNumber = Number(form.passengers);
+
+    if (!Number.isInteger(dayNumber) || dayNumber < 1 || dayNumber > 31) {
+      toast.error("Revisa el día del viaje.");
+      return;
+    }
+
+    if (!Number.isInteger(passengersNumber) || passengersNumber < 1) {
+      toast.error("Revisa el número de pasajeros.");
+      return;
+    }
+
+    setIsSending(true);
 
     const templateParams = {
-      from_name: form.name,
-      from_email: form.email,
-      phone: form.phone,
-      passengers: passengersValue,
-      destination: form.destination, // Incluimos el destino en los parámetros
+      from_name: form.name.trim(),
+      from_email: form.email.trim(),
+      phone: form.phone.trim(),
+      passengers: passengersNumber,
+      destination: form.destination.trim(),
       travel_date: `${form.day} de ${form.month}`,
-      message: form.message,
+      message: form.message.trim(),
     };
 
-    emailjs
-      .send(
-        "service_fy6p39e",
-        "template_ns3vbtb",
+    try {
+      await emailjs.send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
         templateParams,
-        "1i5lotGd3gMfy9bmo"
-      )
-      .then(() => {
-        toast.success("✅ Mensaje enviado correctamente");
-        setForm({
-          name: "",
-          email: "",
-          phone: "",
-          passengers: "",
-          destination: "",
-          month: "",
-          day: "",
-          message: "",
-        });
-      })
-      .catch((error) => console.error("Error al enviar:", error));
+        { publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY }
+      );
+
+      toast.success("✅ Mensaje enviado correctamente");
+      setForm(initialForm);
+    } catch (error) {
+      console.error("Error al enviar:", error);
+      toast.error("❌ Error al enviar el mensaje.");
+    } finally {
+      setIsSending(false);
+    }
   };
 
   return (
@@ -67,7 +87,8 @@ const ContactForm = () => {
           onChange={handleChange}
           placeholder="Nombre"
           required
-          className="w-full p-2 border border-gray-300 rounded"
+          autoComplete="name"
+          className="w-full p-2 border border-gray-400 rounded bg-white text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#FE9E32]"
         />
 
         <input
@@ -77,7 +98,8 @@ const ContactForm = () => {
           onChange={handleChange}
           placeholder="Correo electrónico"
           required
-          className="w-full p-2 border border-gray-300 rounded"
+          autoComplete="email"
+          className="w-full p-2 border border-gray-400 rounded bg-white text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#FE9E32]"
         />
 
         <input
@@ -87,7 +109,8 @@ const ContactForm = () => {
           onChange={handleChange}
           placeholder="Número de teléfono"
           required
-          className="w-full p-2 border border-gray-300 rounded"
+          autoComplete="tel"
+          className="w-full p-2 border border-gray-400 rounded bg-white text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#FE9E32]"
         />
 
         <input
@@ -95,9 +118,9 @@ const ContactForm = () => {
           name="destination"
           value={form.destination}
           onChange={handleChange}
-          placeholder="Donde quieres viajar?"
+          placeholder="¿A dónde quieres viajar?"
           required
-          className="w-full p-2 border border-gray-300 rounded"
+          className="w-full p-2 border border-gray-400 rounded bg-white text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#FE9E32]"
         />
 
         <input
@@ -106,9 +129,10 @@ const ContactForm = () => {
           value={form.passengers}
           onChange={handleChange}
           min="1"
+          step="1"
           required
-          className="w-full p-2 border border-gray-300 rounded"
           placeholder="Cantidad de pasajeros"
+          className="w-full p-2 border border-gray-400 rounded bg-white text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#FE9E32]"
         />
 
         <div className="flex gap-2">
@@ -117,12 +141,12 @@ const ContactForm = () => {
             value={form.month}
             onChange={handleChange}
             required
-            className="w-1/2 p-2 border border-gray-300 rounded"
+            className="w-1/2 p-2 border border-gray-400 rounded bg-white text-gray-900 focus:outline-none focus:ring-2 focus:ring-[#FE9E32]"
           >
             <option value="">Mes</option>
-            {["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"].map((mes) => (
-              <option key={mes} value={mes}>
-                {mes}
+            {MONTHS.map((month) => (
+              <option key={month} value={month}>
+                {month}
               </option>
             ))}
           </select>
@@ -134,9 +158,10 @@ const ContactForm = () => {
             onChange={handleChange}
             min="1"
             max="31"
+            step="1"
             required
-            className="w-1/2 p-2 border border-gray-300 rounded"
             placeholder="Día"
+            className="w-1/2 p-2 border border-gray-400 rounded bg-white text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#FE9E32]"
           />
         </div>
 
@@ -146,17 +171,22 @@ const ContactForm = () => {
           onChange={handleChange}
           placeholder="Mensaje"
           required
-          className="w-full p-2 border border-gray-300 rounded h-24"
-        ></textarea>
+          rows={5}
+          className="w-full p-2 border border-gray-400 rounded bg-white text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#FE9E32]"
+        />
 
         <button
           type="submit"
-          className="w-full bg-[#FE9E32] text-white py-2 rounded hover:bg-orange-600 transition"
+          disabled={isSending}
+          className={`w-full text-white py-2 rounded transition font-bold shadow-sm ${
+            isSending ? "bg-gray-400 cursor-not-allowed" : "bg-[#FE9E32] hover:bg-orange-600 active:scale-95"
+          }`}
         >
-          Enviar
+          {isSending ? "Enviando..." : "Solicitar Presupuesto"}
         </button>
       </form>
-      <ToastContainer position="top-right" autoClose={3000} hideProgressBar closeOnClick pauseOnHover />
+
+      <ToastContainer position="top-right" autoClose={3000} theme="light" />
     </div>
   );
 };
