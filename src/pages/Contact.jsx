@@ -1,4 +1,3 @@
-import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import ContactForm from "../components/ContactForm";
 import BotonWhats from "../components/BotonWhats";
@@ -6,8 +5,6 @@ import BotonWhats from "../components/BotonWhats";
 const Contact = () => {
   return (
     <>
-      <Navbar />
-
       {/* Sección de contacto con imagen de fondo */}
       <div
         className="relative h-[75vh] bg-cover bg-center flex flex-col items-center justify-center text-white"
@@ -44,9 +41,9 @@ const Contact = () => {
       {/* Sección de formulario */}
       <div className="container mx-auto p-8 min-h-screen text-gray-800">
         
-        <h1 className="text-5xl font-bold text-center mt-16">
+        <h2 className="text-5xl font-bold text-center mt-16">
           Contáctanos
-        </h1>
+        </h2>
 
         <p className="text-center mt-6 mb-12 text-xl max-w-2xl mx-auto">
           Si tienes alguna consulta, rellena el formulario a continuación.

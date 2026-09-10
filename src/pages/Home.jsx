@@ -1,9 +1,7 @@
-import React from "react";
 import Carousel from "../components/Carousel";
 import Destinos from "../components/Destinos";
 import Footer from "../components/Footer";
 import QuienesS from "../components/QuienesS";
-import MundialBanner from "../components/MundialBanner";
 
 const Home = () => {
   return (
