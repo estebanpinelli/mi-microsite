@@ -189,6 +189,7 @@
     },
         {
         "id": 6,
+        "publicado": false,
         "nombre": "PROXIMAMENTE NUEVOS DESTINOS",
         "descripcion": "1",
         "imagen": "https://res.cloudinary.com/dtcjnhb0v/image/upload/v1758270953/Nuevos_viajes_ugjpda.jpg",

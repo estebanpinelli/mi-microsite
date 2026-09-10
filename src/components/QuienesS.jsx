@@ -1,5 +1,3 @@
-import React from "react";
-
 const QuienesS = () => {
   return (
     <section className="relative overflow-hidden rounded-2xl border border-slate-200 bg-gradient-to-br from-white to-slate-50">
