@@ -23,12 +23,16 @@ const Navbar = () => {
     >
       {/* Logo */}
       <Link to="/" className="text-2xl font-bold">
-        <img src="/logotr.png" alt="" className="h-20 w-auto" />
+        <img src="/logotr.png" alt="Exóticos" className="h-20 w-auto" />
       </Link>
 
       {/* Menú en móviles */}
       <div className="md:hidden">
-        <button onClick={() => setMenuOpen(true)} className="bg-transparent p-2">
+        <button
+          onClick={() => setMenuOpen(true)}
+          className="bg-transparent p-2"
+          aria-label="Abrir menú"
+        >
           <Menu size={30} className={scrolled ? "text-white" : "text-white"} />
         </button>
       </div>
@@ -52,7 +56,7 @@ const Navbar = () => {
 
       {/* Drawer menú móvil */}
       {menuOpen && (
-        <div className="fixed inset-0 z-50 bg-black bg-opacity-70 flex flex-col">
+        <div className="fixed inset-0 z-50 bg-black/70 flex flex-col">
           <div className="absolute top-6 right-6">
             <button
               onClick={() => setMenuOpen(false)}
