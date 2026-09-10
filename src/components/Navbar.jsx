@@ -23,16 +23,12 @@ const Navbar = () => {
     >
       {/* Logo */}
       <Link to="/" className="text-2xl font-bold">
-        <img src="/logotr.png" alt="Exóticos" className="h-20 w-auto" />
+        <img src="/logotr.png" alt="" className="h-20 w-auto" />
       </Link>
 
       {/* Menú en móviles */}
       <div className="md:hidden">
-        <button
-          onClick={() => setMenuOpen(true)}
-          className="bg-transparent p-2"
-          aria-label="Abrir menú"
-        >
+        <button onClick={() => setMenuOpen(true)} className="bg-transparent p-2">
           <Menu size={30} className={scrolled ? "text-white" : "text-white"} />
         </button>
       </div>

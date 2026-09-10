@@ -12,7 +12,7 @@ const Destinos = () => {
         const response = await fetch("/data/destinations.json");
         if (!response.ok) throw new Error("Error en la respuesta del servidor");
         const data = await response.json();
-        setDestinos(data.filter((d) => d.publicado !== false));
+        setDestinos(data);
       } catch (error) {
         setError(error.message);
       } finally {
@@ -45,7 +45,6 @@ const Destinos = () => {
           <img
             src={destinosVisibles[0].imagen}
             alt={destinosVisibles[0].nombre}
-            loading="lazy"
             className="w-full h-full object-cover rounded-lg"
           />
 
@@ -76,7 +75,6 @@ const Destinos = () => {
               <img
                 src={destino.imagen}
                 alt={destino.nombre}
-                loading="lazy"
                 className="w-full h-[250px] object-cover rounded-lg"
               />
               <h4 className="text-lg font-semibold text-gray-800 mt-3">

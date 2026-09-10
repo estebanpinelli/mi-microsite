@@ -169,7 +169,6 @@ const DestinationDetail = () => {
                     <img
                       src={img}
                       alt={`${destino.nombre} - imagen ${index + 1}`}
-                      loading={index === 0 ? "eager" : "lazy"}
                       className="h-full w-full object-cover"
                     />
                     <button
