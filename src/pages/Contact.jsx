@@ -11,7 +11,7 @@ const Contact = () => {
         style={{ backgroundImage: "url('/contacto.jpg')" }}
       >
         {/* Fondo oscuro semi-transparente para mejorar la legibilidad */}
-        <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+        <div className="absolute inset-0 bg-black/50"></div>
 
         {/* Contenido centrado */}
         <div className="relative text-center">

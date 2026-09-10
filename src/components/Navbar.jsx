@@ -56,7 +56,7 @@ const Navbar = () => {
 
       {/* Drawer menú móvil */}
       {menuOpen && (
-        <div className="fixed inset-0 z-50 bg-black bg-opacity-70 flex flex-col">
+        <div className="fixed inset-0 z-50 bg-black/70 flex flex-col">
           <div className="absolute top-6 right-6">
             <button
               onClick={() => setMenuOpen(false)}
