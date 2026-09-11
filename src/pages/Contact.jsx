@@ -7,8 +7,7 @@ const Contact = () => {
     <>
       {/* Sección de contacto con imagen de fondo */}
       <div
-        className="relative h-[75vh] bg-cover bg-center flex flex-col items-center justify-center text-white"
-        style={{ backgroundImage: "url('/contacto.jpg')" }}
+        className="bg-contacto relative h-[75vh] bg-cover bg-center flex flex-col items-center justify-center text-white"
       >
         {/* Fondo oscuro semi-transparente para mejorar la legibilidad */}
         <div className="absolute inset-0 bg-black/50"></div>

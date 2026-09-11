@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import WhatsAppButton from "../components/BotonWhats";
+import { toWebp } from "../utils/images";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -23,7 +24,10 @@ const Navbar = () => {
     >
       {/* Logo */}
       <Link to="/" className="text-2xl font-bold">
-        <img src="/logotr.png" alt="Exóticos" className="h-20 w-auto" />
+        <picture>
+          <source srcSet={toWebp("/logotr.png")} type="image/webp" />
+          <img src="/logotr.png" alt="Exóticos" className="h-20 w-auto" />
+        </picture>
       </Link>
 
       {/* Menú en móviles */}

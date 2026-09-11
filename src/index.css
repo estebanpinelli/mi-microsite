@@ -51,6 +51,17 @@ button:focus-visible {
 }
 
 
+/* Foto de fondo de /contacto: JPG por defecto (compatible con todo),
+   y WebP en los navegadores que lo soportan (la gran mayoría en 2026). */
+.bg-contacto {
+  background-image: url("/contacto.jpg");
+}
+@supports (background-image: image-set(url("/contacto.webp") type("image/webp"))) {
+  .bg-contacto {
+    background-image: image-set(url("/contacto.webp") type("image/webp"));
+  }
+}
+
 /* Ajustes adicionales */
 #root {
   width: 100%;

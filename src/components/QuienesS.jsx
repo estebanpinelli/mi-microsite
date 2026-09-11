@@ -1,3 +1,5 @@
+import { toWebp } from "../utils/images";
+
 const QuienesS = () => {
   return (
     <section className="relative overflow-hidden rounded-2xl border border-slate-200 bg-gradient-to-br from-white to-slate-50">
@@ -9,19 +11,25 @@ const QuienesS = () => {
         {/* Columna logos */}
      <aside className="flex lg:flex-col items-center lg:items-start justify-center gap-6 lg:gap-8">
   <div className="group rounded-2xl border border-slate-300 bg-slate-900 px-6 py-5 shadow-sm transition-all duration-300 hover:shadow-md hover:-translate-y-0.5">
-    <img
-      src="/Logo1.png"
-      alt="Logo Lomas Turismo"
-      className="h-auto w-[140px] md:w-[160px] object-contain"
-    />
+    <picture>
+      <source srcSet={toWebp("/Logo1.png")} type="image/webp" />
+      <img
+        src="/Logo1.png"
+        alt="Logo Lomas Turismo"
+        className="h-auto w-[140px] md:w-[160px] object-contain"
+      />
+    </picture>
   </div>
 
   <div className="group rounded-2xl border border-slate-300 bg-slate-900 px-6 py-5 shadow-sm transition-all duration-300 hover:shadow-md hover:-translate-y-0.5">
-    <img
-      src="/Logo2.png"
-      alt="Logo marca especializada en viajes"
-      className="h-auto w-[140px] md:w-[160px] object-contain"
-    />
+    <picture>
+      <source srcSet={toWebp("/Logo2.png")} type="image/webp" />
+      <img
+        src="/Logo2.png"
+        alt="Logo marca especializada en viajes"
+        className="h-auto w-[140px] md:w-[160px] object-contain"
+      />
+    </picture>
   </div>
 </aside>
 

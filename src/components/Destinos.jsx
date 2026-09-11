@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { isLocalImage, toWebp } from "../utils/images";
 
 const Destinos = () => {
   const [destinos, setDestinos] = useState([]);
@@ -42,12 +43,17 @@ const Destinos = () => {
           to={`/destino/${destinosVisibles[0].id}`}
           className="relative md:w-1/2 h-[60vh] md:h-[120vh] hover:opacity-90 transition-opacity"
         >
-          <img
-            src={destinosVisibles[0].imagen}
-            alt={destinosVisibles[0].nombre}
-            loading="lazy"
-            className="w-full h-full object-cover rounded-lg"
-          />
+          <picture>
+            {isLocalImage(destinosVisibles[0].imagen) && (
+              <source srcSet={toWebp(destinosVisibles[0].imagen)} type="image/webp" />
+            )}
+            <img
+              src={destinosVisibles[0].imagen}
+              alt={destinosVisibles[0].nombre}
+              loading="lazy"
+              className="w-full h-full object-cover rounded-lg"
+            />
+          </picture>
 
           {/* Texto: overlay SOLO en mobile, fuera en desktop */}
           <div
@@ -73,12 +79,17 @@ const Destinos = () => {
               key={destino.id}
               className="flex flex-col items-center hover:opacity-90 transition-opacity"
             >
-              <img
-                src={destino.imagen}
-                alt={destino.nombre}
-                loading="lazy"
-                className="w-full h-[250px] object-cover rounded-lg"
-              />
+              <picture>
+                {isLocalImage(destino.imagen) && (
+                  <source srcSet={toWebp(destino.imagen)} type="image/webp" />
+                )}
+                <img
+                  src={destino.imagen}
+                  alt={destino.nombre}
+                  loading="lazy"
+                  className="w-full h-[250px] object-cover rounded-lg"
+                />
+              </picture>
               <h4 className="text-lg font-semibold text-gray-800 mt-3">
                 {destino.nombre}
               </h4>

@@ -13,6 +13,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Footer from '../components/Footer';
+import { isLocalImage, toWebp } from '../utils/images';
 
 const DestinationDetail = () => {
   const { id } = useParams();
@@ -61,11 +62,16 @@ const DestinationDetail = () => {
     <div className="font-sans antialiased text-slate-800 bg-slate-50">
       {/* HERO */}
       <header className="relative isolate h-[78vh] min-h-[520px] overflow-hidden">
-        <img
-          src={destino.imagenBanner}
-          alt={destino.nombre}
-          className="absolute inset-0 h-full w-full object-cover"
-        />
+        <picture>
+          {isLocalImage(destino.imagenBanner) && (
+            <source srcSet={toWebp(destino.imagenBanner)} type="image/webp" />
+          )}
+          <img
+            src={destino.imagenBanner}
+            alt={destino.nombre}
+            className="absolute inset-0 h-full w-full object-cover"
+          />
+        </picture>
         <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-900/45 to-slate-900/20" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(255,255,255,0.18),transparent_40%)]" />
 
@@ -166,12 +172,17 @@ const DestinationDetail = () => {
               >
                 {destino.imagenes?.map((img, index) => (
                   <div key={index} className="relative h-[260px] sm:h-[360px] md:h-[430px] lg:h-[500px]">
-                    <img
-                      src={img}
-                      alt={`${destino.nombre} - imagen ${index + 1}`}
-                      loading={index === 0 ? "eager" : "lazy"}
-                      className="h-full w-full object-cover"
-                    />
+                    <picture>
+                      {isLocalImage(img) && (
+                        <source srcSet={toWebp(img)} type="image/webp" />
+                      )}
+                      <img
+                        src={img}
+                        alt={`${destino.nombre} - imagen ${index + 1}`}
+                        loading={index === 0 ? "eager" : "lazy"}
+                        className="h-full w-full object-cover"
+                      />
+                    </picture>
                     <button
                       onClick={() => window.open(img, "_blank")}
                       className="absolute bottom-4 right-4 rounded-full bg-white/90 px-4 py-2 text-xs font-semibold text-slate-800 shadow hover:bg-white"
