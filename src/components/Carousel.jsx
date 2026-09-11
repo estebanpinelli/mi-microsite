@@ -2,6 +2,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { FaWhatsapp } from "react-icons/fa";
+import { toWebp } from "../utils/images";
 
 const Carousel = () => {
   const settings = {
@@ -81,18 +82,24 @@ const Carousel = () => {
           />
         </div>
         <div>
-          <img
-            src="/desierto.jpg"
-            alt="Imagen 2"
-            style={{ width: "100%", height: "100vh", objectFit: "cover" }}
-          />
+          <picture>
+            <source srcSet={toWebp("/desierto.jpg")} type="image/webp" />
+            <img
+              src="/desierto.jpg"
+              alt="Imagen 2"
+              style={{ width: "100%", height: "100vh", objectFit: "cover" }}
+            />
+          </picture>
         </div>
         <div>
-          <img
-            src="/japon.jpg"
-            alt="Imagen 3"
-            style={{ width: "100%", height: "100vh", objectFit: "cover" }}
-          />
+          <picture>
+            <source srcSet={toWebp("/japon.jpg")} type="image/webp" />
+            <img
+              src="/japon.jpg"
+              alt="Imagen 3"
+              style={{ width: "100%", height: "100vh", objectFit: "cover" }}
+            />
+          </picture>
         </div>
       </Slider>
     </div>

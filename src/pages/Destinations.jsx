@@ -3,6 +3,7 @@ import { useState, useEffect, useRef } from "react";
 import { FiChevronLeft, FiChevronRight, FiArrowRight } from "react-icons/fi";
 import Footer from "../components/Footer";
 import MundialBanner from "../components/MundialBanner";
+import { isLocalImage, toWebp } from "../utils/images";
 
 const Destinations = () => {
   const [destinos, setDestinos] = useState([]);
@@ -89,11 +90,16 @@ const Destinations = () => {
               index === currentBannerIndex ? "opacity-100" : "opacity-0"
             }`}
           >
-            <img
-              src={image}
-              alt={`Banner ${index + 1}`}
-              className="w-full h-full object-cover scale-[1.02]"
-            />
+            <picture>
+              {isLocalImage(image) && (
+                <source srcSet={toWebp(image)} type="image/webp" />
+              )}
+              <img
+                src={image}
+                alt={`Banner ${index + 1}`}
+                className="w-full h-full object-cover scale-[1.02]"
+              />
+            </picture>
             <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/35 to-black/60" />
           </div>
         ))}
@@ -206,12 +212,17 @@ const Destinations = () => {
                   className="block rounded-2xl overflow-hidden border border-slate-200 bg-white shadow-[0_10px_30px_rgba(15,23,42,0.08)] transition-all duration-500 hover:-translate-y-1.5 hover:shadow-[0_20px_42px_rgba(15,23,42,0.14)]"
                 >
                   <div className="relative h-[28rem] overflow-hidden">
-                    <img
-                      src={destino.imagen}
-                      alt={destino.nombre}
-                      loading="lazy"
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                    />
+                    <picture>
+                      {isLocalImage(destino.imagen) && (
+                        <source srcSet={toWebp(destino.imagen)} type="image/webp" />
+                      )}
+                      <img
+                        src={destino.imagen}
+                        alt={destino.nombre}
+                        loading="lazy"
+                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                      />
+                    </picture>
                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
 
                     {/* badge precio opcional */}
