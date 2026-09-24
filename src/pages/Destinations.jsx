@@ -4,6 +4,8 @@ import { FiChevronLeft, FiChevronRight, FiArrowRight } from "react-icons/fi";
 import Footer from "../components/Footer";
 import MundialBanner from "../components/MundialBanner";
 import { isLocalImage, toWebp } from "../utils/images";
+import Seo from "../components/Seo";
+import { SITE_URL } from "../config/site";
 
 const Destinations = () => {
   const [destinos, setDestinos] = useState([]);
@@ -53,34 +55,56 @@ const Destinations = () => {
     }
   };
 
+  // Título/descripción fijos de esta página (no dependen de si los datos
+  // ya cargaron), para que se vean bien desde el primer instante, incluso
+  // durante el "Cargando destinos...".
+  const seo = (
+    <Seo
+      title="Destinos | Exóticos - Viajes privados y en grupos reducidos"
+      description="Descubrí nuestros viajes privados y en grupos reducidos a Japón, Sudáfrica, Australia, Nueva Zelanda, Gran Bretaña, Irlanda y China. Experiencias diseñadas a medida."
+      image={`${SITE_URL}/fotobannerborneo.jpg`}
+      path="/destinos"
+    />
+  );
+
   if (loading)
     return (
-      <div className="min-h-[50vh] grid place-items-center px-6">
-        <div className="text-center">
-          <div className="w-10 h-10 border-2 border-blue-900/30 border-t-blue-900 rounded-full animate-spin mx-auto mb-4" />
-          <p className="text-gray-600 text-lg">Cargando destinos...</p>
+      <>
+        {seo}
+        <div className="min-h-[50vh] grid place-items-center px-6">
+          <div className="text-center">
+            <div className="w-10 h-10 border-2 border-blue-900/30 border-t-blue-900 rounded-full animate-spin mx-auto mb-4" />
+            <p className="text-gray-600 text-lg">Cargando destinos...</p>
+          </div>
         </div>
-      </div>
+      </>
     );
 
   if (error)
     return (
-      <div className="min-h-[50vh] grid place-items-center px-6">
-        <div className="text-center bg-red-50 border border-red-200 rounded-2xl px-8 py-6">
-          <p className="text-red-700 font-medium">Error: {error}</p>
+      <>
+        {seo}
+        <div className="min-h-[50vh] grid place-items-center px-6">
+          <div className="text-center bg-red-50 border border-red-200 rounded-2xl px-8 py-6">
+            <p className="text-red-700 font-medium">Error: {error}</p>
+          </div>
         </div>
-      </div>
+      </>
     );
 
   if (destinos.length === 0)
     return (
-      <div className="min-h-[50vh] grid place-items-center px-6">
-        <p className="text-gray-500 text-lg">No hay destinos disponibles</p>
-      </div>
+      <>
+        {seo}
+        <div className="min-h-[50vh] grid place-items-center px-6">
+          <p className="text-gray-500 text-lg">No hay destinos disponibles</p>
+        </div>
+      </>
     );
 
   return (
     <div className="w-full bg-[#F8FAFC] text-slate-900">
+      {seo}
       {/* HERO BANNER */}
       <section className="relative h-[72vh] min-h-[540px] overflow-hidden">
         {bannerImages.map((image, index) => (

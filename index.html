@@ -5,15 +5,23 @@
     <meta name="color-scheme" content="light">
     <link rel="icon" type="image/png" href="/logo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Exóticos | Viajes privados y de lujo a Japón, Islandia, Egipto, China, Bali y África</title>
-    <meta name="description" content="Exóticos diseña viajes privados y en grupos reducidos a destinos como Japón, Islandia, Egipto, China, Bali y safaris africanos, para viajeros que buscan experiencias auténticas y a medida." />
+    <!-- Estas etiquetas de acá abajo (title + description + Open Graph) son
+         el "respaldo de fábrica": lo que ve cualquiera que NO ejecute el
+         JavaScript del sitio (buscadores viejos, o el instante antes de que
+         React termine de cargar) — todas marcadas con data-default="true".
+         Apenas React arranca, src/components/Seo.jsx las reemplaza por la
+         versión específica de la página en la que estás (ver ese archivo
+         para el porqué). Si algún día se suma pre-renderizado, estas mismas
+         etiquetas pasan a ser las reales para Home. -->
+    <title data-default="true">Exóticos | Viajes privados y de lujo a Japón, Islandia, Egipto, China, Bali y África</title>
+    <meta data-default="true" name="description" content="Exóticos diseña viajes privados y en grupos reducidos a destinos como Japón, Islandia, Egipto, China, Bali y safaris africanos, para viajeros que buscan experiencias auténticas y a medida." />
 
     <!-- Open Graph -->
-    <meta property="og:type" content="website" />
+    <meta data-default="true" property="og:type" content="website" />
     <meta property="og:site_name" content="Exóticos" />
-    <meta property="og:title" content="Exóticos | Viajes privados y de lujo a destinos exóticos" />
-    <meta property="og:description" content="Viajes privados y en grupos reducidos a Japón, Islandia, Egipto, China, Bali y safaris africanos. Experiencias a medida para viajeros exigentes." />
-    <meta property="og:image" content="/desierto.jpg" />
+    <meta data-default="true" property="og:title" content="Exóticos | Viajes privados y de lujo a destinos exóticos" />
+    <meta data-default="true" property="og:description" content="Viajes privados y en grupos reducidos a Japón, Islandia, Egipto, China, Bali y safaris africanos. Experiencias a medida para viajeros exigentes." />
+    <meta data-default="true" property="og:image" content="/desierto.jpg" />
 
     <!-- Datos estructurados (schema.org): le dicen a Google, en un formato
          que entiende directamente (no tiene que "adivinar" leyendo el
