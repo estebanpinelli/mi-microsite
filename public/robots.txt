@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://viajesexoticoslt.com/sitemap.xml
