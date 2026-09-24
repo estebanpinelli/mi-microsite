@@ -1,10 +1,18 @@
 import Footer from "../components/Footer";
 import ContactForm from "../components/ContactForm";
 import BotonWhats from "../components/BotonWhats";
+import Seo from "../components/Seo";
+import { SITE_URL } from "../config/site";
 
 const Contact = () => {
   return (
     <>
+      <Seo
+        title="Contacto | Exóticos"
+        description="Contactate con Exóticos para planificar tu próximo viaje privado o en grupo reducido. Te respondemos en 24-48 hs hábiles con una propuesta a medida."
+        image={`${SITE_URL}/contacto.jpg`}
+        path="/contacto"
+      />
       {/* Sección de contacto con imagen de fondo */}
       <div
         className="bg-contacto relative h-[75vh] bg-cover bg-center flex flex-col items-center justify-center text-white"

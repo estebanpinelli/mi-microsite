@@ -2,10 +2,18 @@ import Carousel from "../components/Carousel";
 import Destinos from "../components/Destinos";
 import Footer from "../components/Footer";
 import QuienesS from "../components/QuienesS";
+import Seo from "../components/Seo";
+import { SITE_URL } from "../config/site";
 
 const Home = () => {
   return (
     <div className="min-h-screen bg-slate-50 text-slate-800 antialiased">
+      <Seo
+        title="Exóticos | Viajes privados y de lujo a Japón, Islandia, Egipto, China, Bali y África"
+        description="Exóticos diseña viajes privados y en grupos reducidos a destinos como Japón, Islandia, Egipto, China, Bali y safaris africanos, para viajeros que buscan experiencias auténticas y a medida."
+        image={`${SITE_URL}/desierto.jpg`}
+        path="/"
+      />
       {/* HERO / CAROUSEL */}
       <section className="relative">
         <Carousel />

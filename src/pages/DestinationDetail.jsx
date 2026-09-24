@@ -16,6 +16,17 @@ import Footer from '../components/Footer';
 import { isLocalImage, toWebp } from '../utils/images';
 import { setPageStructuredData, clearPageStructuredData } from '../utils/structuredData';
 import { SITE_URL } from '../config/site';
+import Seo from '../components/Seo';
+
+// Google recomienda que una meta descripción no pase de unos 155-160
+// caracteres (si es más larga, la recorta él mismo en los resultados de
+// búsqueda, a veces en un punto feo). Las descripciones de destinations.json
+// están pensadas para leerse en la página, no como meta descripción, así
+// que las acortamos acá.
+const truncar = (texto, max = 155) => {
+  if (!texto || texto.length <= max) return texto;
+  return texto.slice(0, max - 1).trimEnd() + '…';
+};
 
 const DestinationDetail = () => {
   const { id } = useParams();
@@ -92,6 +103,16 @@ const DestinationDetail = () => {
 
   return (
     <div className="font-sans antialiased text-slate-800 bg-slate-50">
+      <Seo
+        title={`${destino.nombre} | Exóticos`}
+        description={truncar(destino.descripcion)}
+        image={
+          isLocalImage(destino.imagenBanner)
+            ? `${SITE_URL}${destino.imagenBanner}`
+            : destino.imagenBanner
+        }
+        path={`/destino/${destino.id}`}
+      />
       {/* HERO */}
       <header className="relative isolate h-[78vh] min-h-[520px] overflow-hidden">
         <picture>

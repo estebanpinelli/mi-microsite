@@ -1,4 +1,5 @@
 import Footer from '../components/Footer';
+import Seo from './Seo';
 
 const paquetes = [
   {
@@ -54,6 +55,12 @@ const paquetes = [
 const Mundial = () => {
   return (
     <div className="max-w-full mx-auto bg-white">
+      <Seo
+        title="Mundial FIFA 2026 | Paquetes con entradas y alojamiento | Exóticos"
+        description="Paquetes para el Mundial FIFA 2026 con entradas, alojamiento, traslados al estadio y acompañante en destino. Fase de grupos, semifinal y final."
+        image="https://res.cloudinary.com/dtcjnhb0v/image/upload/v1756218196/seleccion-argentina-con-trofeo-copa-mundial-fifa-11268_c93h3l.jpg"
+        path="/mundial"
+      />
       {/* Banner */}
       <div className="relative h-[60vh] overflow-hidden">
         <img
