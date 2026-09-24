@@ -14,6 +14,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Footer from '../components/Footer';
 import { isLocalImage, toWebp } from '../utils/images';
+import { setPageStructuredData, clearPageStructuredData } from '../utils/structuredData';
+import { SITE_URL } from '../config/site';
 
 const DestinationDetail = () => {
   const { id } = useParams();
@@ -38,6 +40,36 @@ const DestinationDetail = () => {
     };
     fetchDestino();
   }, [id]);
+
+  // Una vez que sabemos qué destino se está mostrando, le agregamos al
+  // <head> los datos estructurados (schema.org) de ESE destino puntual:
+  // nombre, descripción, precio. El cleanup (el "return" de abajo) los
+  // saca del <head> si el visitante navega a otra página sin recargar,
+  // para que no queden mezclados con la próxima ruta.
+  useEffect(() => {
+    if (!destino) return;
+    setPageStructuredData({
+      "@context": "https://schema.org",
+      "@type": "TouristTrip",
+      name: destino.nombre,
+      description: destino.descripcion,
+      // schema.org / Google esperan una URL absoluta acá. Las fotos que
+      // vienen de Cloudinary ya lo son; las locales (ej. /Japonfotos/...)
+      // les faltaba el dominio.
+      image: isLocalImage(destino.imagenBanner)
+        ? `${SITE_URL}${destino.imagenBanner}`
+        : destino.imagenBanner,
+      touristType: destino.modalidad || undefined,
+      offers: {
+        "@type": "Offer",
+        price: destino.precio,
+        priceCurrency: "USD",
+        url: `${SITE_URL}/destino/${destino.id}`,
+        availability: "https://schema.org/InStock",
+      },
+    });
+    return () => clearPageStructuredData();
+  }, [destino]);
 
   if (loading) {
     return (
