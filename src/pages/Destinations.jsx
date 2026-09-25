@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import { useState, useEffect, useRef } from "react";
 import { FiChevronLeft, FiChevronRight, FiArrowRight } from "react-icons/fi";
 import Footer from "../components/Footer";
-import MundialBanner from "../components/MundialBanner";
 import { isLocalImage, toWebp } from "../utils/images";
 import Seo from "../components/Seo";
 import { SITE_URL } from "../config/site";
@@ -185,8 +184,6 @@ const Destinations = () => {
           ))}
         </div>
       </section>
-
-      <MundialBanner />
 
       {/* DESTINOS */}
       <section id="destinos-section" className="relative py-16 md:py-24">
