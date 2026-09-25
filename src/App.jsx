@@ -8,13 +8,12 @@ import PageLoader from "./components/PageLoader";
 // entero apenas alguien entra al sitio), React.lazy() le dice a Vite que
 // genere un archivo .js aparte por cada página, y ese archivo recién se
 // pide de la red cuando el visitante navega a esa ruta. Por ejemplo,
-// alguien que entra a Home y nunca visita /mundial jamás descarga el
-// código de Mundial.
+// alguien que entra a Home y nunca visita /contacto jamás descarga el
+// código de Contact.
 const Home = lazy(() => import("./pages/Home"));
 const Destinations = lazy(() => import("./pages/Destinations"));
 const DestinationDetail = lazy(() => import("./pages/DestinationDetail"));
 const Contact = lazy(() => import("./pages/Contact"));
-const Mundial = lazy(() => import("./components/Mundial"));
 
 function App() {
   return (
@@ -31,7 +30,6 @@ function App() {
             <Route path="/destinos" element={<Destinations />} />
             <Route path="/destino/:id" element={<DestinationDetail />} />
             <Route path="/contacto" element={<Contact />} />
-            <Route path="/mundial" element={<Mundial />} />   {/* ✅ AÑADIR */}
 
             {/* Ruta adicional para manejar IDs malformados */}
             <Route path="/destino/*" element={<h2 className="text-center mt-8">ID de destino inválido</h2>} />

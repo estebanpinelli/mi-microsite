@@ -49,7 +49,6 @@ const rutasFijas = [
   { loc: "/", changefreq: "weekly", priority: "1.0" },
   { loc: "/destinos", changefreq: "weekly", priority: "0.9" },
   { loc: "/contacto", changefreq: "monthly", priority: "0.5" },
-  { loc: "/mundial", changefreq: "weekly", priority: "0.6" },
 ];
 
 const rutasDestinos = destinosPublicados.map((d) => ({
