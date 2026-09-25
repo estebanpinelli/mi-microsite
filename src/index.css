@@ -13,6 +13,14 @@
    - filete: bordes sutiles (reemplaza a slate-200/slate-300)
    - naranja: el naranja de marca, más profundo que el #FE9E32 anterior
    - naranja-tinte: el mismo naranja pero bien clarito, para fondos suaves
+   - naranja-texto: versión más oscura del naranja, solo para texto chico
+     sobre fondos claros (papel/blanco). El naranja de marca (#C1631E) en
+     sí mismo nunca llega a 4.5:1 sobre ningún fondo claro (4.14 sobre
+     blanco puro, en el mejor de los casos), así que como texto de cuerpo
+     queda siempre por debajo del mínimo de WCAG AA. Se usa naranja-texto
+     en esos casos puntuales (ej. las etiquetas y el link "Ver itinerario"
+     de las tarjetas de destino) y se deja naranja sin tocar para todo lo
+     demás (botones, fondos, íconos, bordes) donde no es texto de lectura.
    - muted: texto secundario/de apoyo (reemplaza a slate-500/slate-600) */
 @theme {
   --color-tinta: #1b1b18;
@@ -20,6 +28,7 @@
   --color-filete: #e4dfd6;
   --color-naranja: #c1631e;
   --color-naranja-tinte: #f1d9be;
+  --color-naranja-texto: #a8531a;
   --color-muted: #6b6558;
 
   /* Fraunces (serif editorial) para títulos, Work Sans (sans limpia) para

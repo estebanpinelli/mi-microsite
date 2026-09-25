@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { useState, useEffect, useRef } from "react";
 import { FiChevronLeft, FiChevronRight, FiArrowRight } from "react-icons/fi";
 import Footer from "../components/Footer";
+import DestinoCard from "../components/DestinoCard";
 import { isLocalImage, toWebp } from "../utils/images";
 import Seo from "../components/Seo";
 import { SITE_URL } from "../config/site";
@@ -105,7 +106,13 @@ const Destinations = () => {
     <div className="w-full bg-papel text-tinta">
       {seo}
       {/* HERO BANNER */}
-      <section className="relative h-[72vh] min-h-[540px] overflow-hidden">
+      {/* En mobile el contenido (título grande + párrafo + dos botones
+          apilados) no entra en 72vh sin pisar el navbar fijo de arriba —
+          apenas se notó al revisar en mobile, porque antes solo se había
+          probado en desktop. Por eso en mobile la sección usa una altura
+          de pantalla completa (con un piso en px para celulares chicos) y
+          recién de md en adelante vuelve al 72vh original. */}
+      <section className="relative h-screen min-h-[680px] md:h-[72vh] md:min-h-[540px] overflow-hidden">
         {bannerImages.map((image, index) => (
           <div
             key={index}
@@ -226,48 +233,9 @@ const Destinations = () => {
             {destinos.map((destino) => (
               <article
                 key={destino.id}
-                className="group relative flex-shrink-0 w-[86vw] sm:w-[70vw] md:w-[34rem] lg:w-[36rem] snap-start"
+                className="flex-shrink-0 w-[78vw] sm:w-[22rem] md:w-[24rem] snap-start"
               >
-                <Link
-                  to={`/destino/${destino.id}`}
-                  className="block rounded-2xl overflow-hidden border border-filete bg-white text-tinta shadow-[0_10px_30px_rgba(15,23,42,0.08)] transition-all duration-500 hover:-translate-y-1.5 hover:shadow-[0_20px_42px_rgba(15,23,42,0.14)]"
-                >
-                  <div className="relative h-[28rem] overflow-hidden">
-                    <picture>
-                      {isLocalImage(destino.imagen) && (
-                        <source srcSet={toWebp(destino.imagen)} type="image/webp" />
-                      )}
-                      <img
-                        src={destino.imagen}
-                        alt={destino.nombre}
-                        loading="lazy"
-                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                      />
-                    </picture>
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-
-                    {/* badge precio opcional */}
-                    {destino.precio && (
-                      <div className="absolute top-4 left-4 bg-white/92 backdrop-blur px-3 py-1.5 rounded-full text-xs font-medium text-tinta border border-white/70">
-                        Desde USD {destino.precio.toLocaleString()}
-                      </div>
-                    )}
-
-                    <div className="absolute bottom-0 left-0 right-0 p-6 md:p-7">
-                      <h3 className="text-2xl md:text-3xl font-semibold text-white mb-3 leading-tight">
-                        {destino.nombre}
-                      </h3>
-
-                      <div className="inline-flex items-center gap-2 text-white/95 text-sm font-medium">
-                        <span className="relative">
-                          Ver viaje
-                          <span className="absolute left-0 -bottom-1 h-[1px] w-full bg-white/80 origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300" />
-                        </span>
-                        <FiArrowRight className="transition-transform duration-300 group-hover:translate-x-1" />
-                      </div>
-                    </div>
-                  </div>
-                </Link>
+                <DestinoCard destino={destino} />
               </article>
             ))}
           </div>
