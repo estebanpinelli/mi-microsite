@@ -46,13 +46,13 @@ const Contact = () => {
       </div>
 
       {/* Sección de formulario */}
-      <div className="container mx-auto p-8 min-h-screen text-gray-800">
-        
+      <div className="container mx-auto p-8 min-h-screen bg-papel text-tinta">
+
         <h2 className="text-5xl font-bold text-center mt-16">
           Contáctanos
         </h2>
 
-        <p className="text-center mt-6 mb-12 text-xl max-w-2xl mx-auto">
+        <p className="text-center mt-6 mb-12 text-xl max-w-2xl mx-auto text-muted">
           Si tienes alguna consulta, rellena el formulario a continuación.
         </p>
 

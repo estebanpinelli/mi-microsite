@@ -84,10 +84,10 @@ const DestinationDetail = () => {
 
   if (loading) {
     return (
-      <div className="min-h-[60vh] grid place-items-center bg-slate-50">
+      <div className="min-h-[60vh] grid place-items-center bg-papel">
         <div className="text-center">
-          <div className="mx-auto h-10 w-10 rounded-full border-4 border-blue-200 border-t-blue-700 animate-spin" />
-          <p className="mt-4 text-slate-600">Cargando destino...</p>
+          <div className="mx-auto h-10 w-10 rounded-full border-4 border-filete border-t-naranja animate-spin" />
+          <p className="mt-4 text-muted">Cargando destino...</p>
         </div>
       </div>
     );
@@ -98,11 +98,11 @@ const DestinationDetail = () => {
   }
 
   if (!destino) {
-    return <div className="text-center py-12 text-slate-700">Destino no encontrado</div>;
+    return <div className="text-center py-12 text-muted">Destino no encontrado</div>;
   }
 
   return (
-    <div className="font-sans antialiased text-slate-800 bg-slate-50">
+    <div className="font-sans antialiased text-tinta bg-papel">
       <Seo
         title={`${destino.nombre} | Exóticos`}
         description={truncar(destino.descripcion)}
@@ -125,13 +125,13 @@ const DestinationDetail = () => {
             className="absolute inset-0 h-full w-full object-cover"
           />
         </picture>
-        <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-900/45 to-slate-900/20" />
+        <div className="absolute inset-0 bg-gradient-to-t from-tinta/80 via-tinta/45 to-tinta/20" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(255,255,255,0.18),transparent_40%)]" />
 
         <div className="relative mx-auto flex h-full max-w-7xl items-end px-4 sm:px-6 lg:px-8 pb-14 md:pb-20">
           <div className="max-w-3xl">
             <span className="inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/10 px-4 py-1 text-xs tracking-[0.18em] text-white/90 uppercase backdrop-blur">
-              <FiStar className="text-amber-300" />
+              <FiStar className="text-naranja-tinte" />
               Experiencia seleccionada
             </span>
 
@@ -147,7 +147,7 @@ const DestinationDetail = () => {
             <div className="mt-8 flex flex-wrap items-center gap-3">
               <Link
                 to="/contacto"
-                className="group inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-semibold text-slate-900 transition hover:bg-slate-100 active:scale-[0.98]"
+                className="group inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-semibold text-tinta transition hover:bg-naranja-tinte active:scale-[0.98]"
               >
                 Reservar ahora
                 <FiArrowRight className="transition-transform group-hover:translate-x-0.5" />
@@ -166,42 +166,42 @@ const DestinationDetail = () => {
 
       <main className="relative mx-auto -mt-12 max-w-7xl px-4 sm:px-6 lg:px-8 pb-20">
         {/* STRIP DE DATOS */}
-        <section className="rounded-2xl border border-slate-200/80 bg-white/95 shadow-xl shadow-slate-900/5 backdrop-blur">
+        <section className="rounded-2xl border border-filete bg-white/95 shadow-xl shadow-tinta/5 backdrop-blur">
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4 p-4 sm:p-6">
-            <article className="rounded-xl border border-slate-200 bg-slate-50 p-4">
-              <div className="mb-2 inline-flex rounded-lg bg-blue-100 p-2 text-blue-800">
+            <article className="rounded-xl border border-filete bg-papel p-4">
+              <div className="mb-2 inline-flex rounded-lg bg-naranja-tinte p-2 text-naranja">
                 <FiDollarSign />
               </div>
-              <p className="text-xs uppercase tracking-wide text-slate-500">Tarifa base</p>
-              <p className="mt-1 text-xl font-semibold text-slate-900">
+              <p className="text-xs uppercase tracking-wide text-muted">Tarifa base</p>
+              <p className="mt-1 text-xl font-semibold text-tinta">
                 USD {destino.precio?.toLocaleString()}
               </p>
             </article>
 
-            <article className="rounded-xl border border-slate-200 bg-slate-50 p-4">
-              <div className="mb-2 inline-flex rounded-lg bg-indigo-100 p-2 text-indigo-700">
+            <article className="rounded-xl border border-filete bg-papel p-4">
+              <div className="mb-2 inline-flex rounded-lg bg-naranja-tinte p-2 text-naranja">
                 <FiCalendar />
               </div>
-              <p className="text-xs uppercase tracking-wide text-slate-500">Duración</p>
-              <p className="mt-1 text-xl font-semibold text-slate-900">{destino.duracion}</p>
+              <p className="text-xs uppercase tracking-wide text-muted">Duración</p>
+              <p className="mt-1 text-xl font-semibold text-tinta">{destino.duracion}</p>
             </article>
 
-            <article className="rounded-xl border border-slate-200 bg-slate-50 p-4">
-              <div className="mb-2 inline-flex rounded-lg bg-cyan-100 p-2 text-cyan-700">
+            <article className="rounded-xl border border-filete bg-papel p-4">
+              <div className="mb-2 inline-flex rounded-lg bg-naranja-tinte p-2 text-naranja">
                 <FiMapPin />
               </div>
-              <p className="text-xs uppercase tracking-wide text-slate-500">Modalidad</p>
-              <p className="mt-1 text-xl font-semibold text-slate-900">
+              <p className="text-xs uppercase tracking-wide text-muted">Modalidad</p>
+              <p className="mt-1 text-xl font-semibold text-tinta">
                 {destino.modalidad || 'Personalizable'}
               </p>
             </article>
 
-            <article className="rounded-xl border border-slate-200 bg-slate-50 p-4">
-              <div className="mb-2 inline-flex rounded-lg bg-emerald-100 p-2 text-emerald-700">
+            <article className="rounded-xl border border-filete bg-papel p-4">
+              <div className="mb-2 inline-flex rounded-lg bg-naranja-tinte p-2 text-naranja">
                 <FiClock />
               </div>
-              <p className="text-xs uppercase tracking-wide text-slate-500">Planificación</p>
-              <p className="mt-1 text-xl font-semibold text-slate-900">Asesoría completa</p>
+              <p className="text-xs uppercase tracking-wide text-muted">Planificación</p>
+              <p className="mt-1 text-xl font-semibold text-tinta">Asesoría completa</p>
             </article>
           </div>
         </section>
@@ -209,7 +209,7 @@ const DestinationDetail = () => {
         {/* CONTENIDO PRINCIPAL */}
         <section id="detalle" className="mt-10 grid grid-cols-1 gap-8 lg:grid-cols-12">
           {/* CARRUSEL */}
-          <article className="lg:col-span-7 rounded-2xl border border-slate-200 bg-white p-3 sm:p-4 shadow-sm">
+          <article className="lg:col-span-7 rounded-2xl border border-filete bg-white p-3 sm:p-4 shadow-sm">
             <div className="overflow-hidden rounded-xl">
               <Slider
                 {...{
@@ -238,7 +238,7 @@ const DestinationDetail = () => {
                     </picture>
                     <button
                       onClick={() => window.open(img, "_blank")}
-                      className="absolute bottom-4 right-4 rounded-full bg-white/90 px-4 py-2 text-xs font-semibold text-slate-800 shadow hover:bg-white"
+                      className="absolute bottom-4 right-4 rounded-full bg-white/90 px-4 py-2 text-xs font-semibold text-tinta shadow hover:bg-white"
                     >
                       Ver en grande
                     </button>
@@ -250,37 +250,37 @@ const DestinationDetail = () => {
 
           {/* DESCRIPCIÓN + LISTAS */}
           <article className="lg:col-span-5 space-y-6">
-            <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
-              <h2 className="text-2xl sm:text-3xl font-semibold text-slate-900">
+            <div className="rounded-2xl border border-filete bg-white p-6 shadow-sm">
+              <h2 className="text-2xl sm:text-3xl font-semibold text-tinta">
                 Detalles del viaje
               </h2>
-              <p className="mt-4 text-[15px] leading-relaxed text-slate-700 whitespace-pre-line">
+              <p className="mt-4 text-[15px] leading-relaxed text-tinta whitespace-pre-line">
                 {destino.descriptivoCompleto}
               </p>
             </div>
 
-            <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
-              <h3 className="text-sm font-semibold uppercase tracking-[0.14em] text-slate-500 mb-3">
+            <div className="rounded-2xl border border-filete bg-white p-6 shadow-sm">
+              <h3 className="text-sm font-semibold uppercase tracking-[0.14em] text-muted mb-3">
                 Incluye
               </h3>
               <ul className="space-y-2">
                 {destino.incluye?.map((item, i) => (
-                  <li key={i} className="flex items-start gap-2 text-slate-700">
-                    <FiCheckCircle className="mt-0.5 text-blue-700 shrink-0" />
+                  <li key={i} className="flex items-start gap-2 text-tinta">
+                    <FiCheckCircle className="mt-0.5 text-naranja shrink-0" />
                     <span className="text-sm sm:text-[15px]">{item}</span>
                   </li>
                 ))}
               </ul>
             </div>
 
-            <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
-              <h3 className="text-sm font-semibold uppercase tracking-[0.14em] text-slate-500 mb-3">
+            <div className="rounded-2xl border border-filete bg-white p-6 shadow-sm">
+              <h3 className="text-sm font-semibold uppercase tracking-[0.14em] text-muted mb-3">
                 Lo más destacado
               </h3>
               <ul className="space-y-2">
                 {destino.highlight?.map((item, i) => (
-                  <li key={i} className="flex items-start gap-2 text-slate-700">
-                    <FiCheckCircle className="mt-0.5 text-indigo-700 shrink-0" />
+                  <li key={i} className="flex items-start gap-2 text-tinta">
+                    <FiCheckCircle className="mt-0.5 text-naranja shrink-0" />
                     <span className="text-sm sm:text-[15px]">{item}</span>
                   </li>
                 ))}
@@ -291,16 +291,16 @@ const DestinationDetail = () => {
 
         {/* CTA FINAL */}
         <section className="mt-12">
-          <div className="relative overflow-hidden rounded-3xl border border-blue-200/60 bg-gradient-to-br from-blue-600 to-indigo-700 px-6 py-10 sm:p-10 text-white shadow-2xl shadow-blue-900/20">
+          <div className="relative overflow-hidden rounded-3xl border border-tinta bg-tinta px-6 py-10 sm:p-10 text-papel shadow-2xl shadow-tinta/20">
             <div className="absolute -right-16 -top-16 h-48 w-48 rounded-full bg-white/10 blur-2xl" />
-            <div className="absolute -left-10 -bottom-14 h-44 w-44 rounded-full bg-cyan-300/20 blur-2xl" />
+            <div className="absolute -left-10 -bottom-14 h-44 w-44 rounded-full bg-naranja/20 blur-2xl" />
 
             <div className="relative z-10 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
               <div className="max-w-2xl">
                 <h3 className="text-2xl sm:text-3xl font-semibold">
                   ¿Listo para vivir esta experiencia?
                 </h3>
-                <p className="mt-3 text-white/90">
+                <p className="mt-3 text-papel/90">
                   Te ayudamos a personalizar fechas, actividades y tipo de viaje según tu estilo.
                 </p>
               </div>
@@ -308,7 +308,7 @@ const DestinationDetail = () => {
               <div className="flex flex-col sm:flex-row gap-3">
                 <Link
                   to="/contacto"
-                  className="inline-flex items-center justify-center gap-2 rounded-full bg-white px-7 py-3 text-sm font-semibold text-blue-800 transition hover:bg-blue-50 active:scale-[0.98]"
+                  className="inline-flex items-center justify-center gap-2 rounded-full bg-papel px-7 py-3 text-sm font-semibold text-tinta transition hover:bg-naranja-tinte active:scale-[0.98]"
                 >
                   Solicitar cotización
                   <FiArrowRight />

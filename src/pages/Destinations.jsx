@@ -72,8 +72,8 @@ const Destinations = () => {
         {seo}
         <div className="min-h-[50vh] grid place-items-center px-6">
           <div className="text-center">
-            <div className="w-10 h-10 border-2 border-blue-900/30 border-t-blue-900 rounded-full animate-spin mx-auto mb-4" />
-            <p className="text-gray-600 text-lg">Cargando destinos...</p>
+            <div className="w-10 h-10 border-2 border-filete border-t-naranja rounded-full animate-spin mx-auto mb-4" />
+            <p className="text-muted text-lg">Cargando destinos...</p>
           </div>
         </div>
       </>
@@ -96,13 +96,13 @@ const Destinations = () => {
       <>
         {seo}
         <div className="min-h-[50vh] grid place-items-center px-6">
-          <p className="text-gray-500 text-lg">No hay destinos disponibles</p>
+          <p className="text-muted text-lg">No hay destinos disponibles</p>
         </div>
       </>
     );
 
   return (
-    <div className="w-full bg-[#F8FAFC] text-slate-900">
+    <div className="w-full bg-papel text-tinta">
       {seo}
       {/* HERO BANNER */}
       <section className="relative h-[72vh] min-h-[540px] overflow-hidden">
@@ -148,7 +148,7 @@ const Destinations = () => {
               <div className="mt-8 flex flex-wrap items-center gap-4">
                 <Link
                   to="/contacto"
-                  className="inline-flex items-center gap-2 bg-white text-slate-900 px-6 py-3 rounded-full font-medium hover:bg-blue-50 transition-all duration-300 hover:-translate-y-0.5"
+                  className="inline-flex items-center gap-2 bg-white text-tinta px-6 py-3 rounded-full font-medium hover:bg-naranja-tinte transition-all duration-300 hover:-translate-y-0.5"
                 >
                   Planear mi viaje
                   <FiArrowRight className="text-base" />
@@ -191,10 +191,10 @@ const Destinations = () => {
           {/* Header sección */}
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-10">
             <div>
-              <p className="uppercase tracking-[0.22em] text-xs text-slate-500 mb-3">
+              <p className="uppercase tracking-[0.22em] text-xs text-muted mb-3">
                 Selección destacada
               </p>
-              <h2 className="text-3xl md:text-5xl font-semibold text-slate-900">
+              <h2 className="text-3xl md:text-5xl font-semibold text-tinta">
                 Nuestros destinos
               </h2>
             </div>
@@ -202,14 +202,14 @@ const Destinations = () => {
             <div className="hidden md:flex items-center gap-3">
               <button
                 onClick={() => scrollCarousel("left")}
-                className="w-11 h-11 rounded-full border border-slate-300 bg-white text-slate-800 grid place-items-center hover:bg-slate-50 hover:-translate-y-0.5 transition-all duration-300 shadow-sm"
+                className="w-11 h-11 rounded-full border border-filete bg-white text-tinta grid place-items-center hover:bg-naranja-tinte hover:-translate-y-0.5 transition-all duration-300 shadow-sm"
                 aria-label="Desplazar a la izquierda"
               >
                 <FiChevronLeft className="w-5 h-5" />
               </button>
               <button
                 onClick={() => scrollCarousel("right")}
-                className="w-11 h-11 rounded-full border border-slate-300 bg-white text-slate-800 grid place-items-center hover:bg-slate-50 hover:-translate-y-0.5 transition-all duration-300 shadow-sm"
+                className="w-11 h-11 rounded-full border border-filete bg-white text-tinta grid place-items-center hover:bg-naranja-tinte hover:-translate-y-0.5 transition-all duration-300 shadow-sm"
                 aria-label="Desplazar a la derecha"
               >
                 <FiChevronRight className="w-5 h-5" />
@@ -230,7 +230,7 @@ const Destinations = () => {
               >
                 <Link
                   to={`/destino/${destino.id}`}
-                  className="block rounded-2xl overflow-hidden border border-slate-200 bg-white shadow-[0_10px_30px_rgba(15,23,42,0.08)] transition-all duration-500 hover:-translate-y-1.5 hover:shadow-[0_20px_42px_rgba(15,23,42,0.14)]"
+                  className="block rounded-2xl overflow-hidden border border-filete bg-white text-tinta shadow-[0_10px_30px_rgba(15,23,42,0.08)] transition-all duration-500 hover:-translate-y-1.5 hover:shadow-[0_20px_42px_rgba(15,23,42,0.14)]"
                 >
                   <div className="relative h-[28rem] overflow-hidden">
                     <picture>
@@ -248,7 +248,7 @@ const Destinations = () => {
 
                     {/* badge precio opcional */}
                     {destino.precio && (
-                      <div className="absolute top-4 left-4 bg-white/92 backdrop-blur px-3 py-1.5 rounded-full text-xs font-medium text-slate-800 border border-white/70">
+                      <div className="absolute top-4 left-4 bg-white/92 backdrop-blur px-3 py-1.5 rounded-full text-xs font-medium text-tinta border border-white/70">
                         Desde USD {destino.precio.toLocaleString()}
                       </div>
                     )}
@@ -276,14 +276,14 @@ const Destinations = () => {
           <div className="md:hidden flex justify-center gap-3 mt-8">
             <button
               onClick={() => scrollCarousel("left")}
-              className="w-11 h-11 rounded-full border border-slate-300 bg-white text-slate-800 grid place-items-center active:scale-95 transition"
+              className="w-11 h-11 rounded-full border border-filete bg-white text-tinta grid place-items-center active:scale-95 transition"
               aria-label="Desplazar a la izquierda"
             >
               <FiChevronLeft className="w-5 h-5" />
             </button>
             <button
               onClick={() => scrollCarousel("right")}
-              className="w-11 h-11 rounded-full border border-slate-300 bg-white text-slate-800 grid place-items-center active:scale-95 transition"
+              className="w-11 h-11 rounded-full border border-filete bg-white text-tinta grid place-items-center active:scale-95 transition"
               aria-label="Desplazar a la derecha"
             >
               <FiChevronRight className="w-5 h-5" />

@@ -4,12 +4,12 @@ const Footer = () => {
   return (
     <footer
       style={{
-        backgroundColor: "#ffffff",
+        backgroundColor: "#F7F4EF",
         padding: "20px",
         textAlign: "center",
         fontSize: "14px",
-        color: "#333",
-        borderTop: "1px solid #ccc",
+        color: "#6B6558",
+        borderTop: "1px solid #E4DFD6",
       }}
     >
       {/* Información de dirección y legajo */}
@@ -49,7 +49,7 @@ const Footer = () => {
           style={{
             margin: "0 10px",
             textDecoration: "none",
-            color: "#333",
+            color: "#1B1B18",
           }}
         >
           Contacto
@@ -59,7 +59,7 @@ const Footer = () => {
           style={{
             margin: "0 10px",
             textDecoration: "none",
-            color: "#333",
+            color: "#1B1B18",
           }}
         >
           Legales
@@ -69,7 +69,7 @@ const Footer = () => {
           style={{
             margin: "0 10px",
             textDecoration: "none",
-            color: "#333",
+            color: "#1B1B18",
           }}
         >
           Condiciones Generales
