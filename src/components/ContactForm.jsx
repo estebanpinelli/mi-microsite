@@ -78,22 +78,18 @@ const ContactForm = () => {
   };
 
   const inputBase =
-    "w-full rounded-xl border border-filete bg-papel px-4 py-3 text-tinta placeholder-muted shadow-sm transition duration-200 focus:outline-none focus:ring-2 focus:ring-naranja focus:border-naranja";
+    "w-full rounded-sm border border-filete bg-papel px-4 py-3 text-tinta placeholder-muted transition duration-200 focus:outline-none focus:ring-2 focus:ring-naranja focus:border-naranja";
   const labelBase = "mb-2 block text-sm font-semibold text-tinta";
 
   return (
-    <section className="relative mx-auto max-w-4xl px-4 md:px-6 py-10">
-      {/* Glow decor sutil */}
-      <div className="pointer-events-none absolute -top-14 -right-10 h-40 w-40 rounded-full bg-naranja-tinte/60 blur-2xl" />
-      <div className="pointer-events-none absolute -bottom-14 -left-10 h-40 w-40 rounded-full bg-naranja-tinte/60 blur-2xl" />
-
-      <div className="relative overflow-hidden rounded-2xl border border-filete bg-white shadow-[0_12px_40px_rgba(2,6,23,0.08)]">
+    <section className="relative mx-auto max-w-4xl py-10">
+      <div className="relative overflow-hidden rounded-sm border border-filete bg-white">
         {/* Header */}
         <div className="border-b border-filete px-6 md:px-8 py-6">
           <p className="text-xs md:text-sm uppercase tracking-[0.18em] text-muted font-semibold">
             Planifica tu próxima experiencia
           </p>
-          <h2 className="mt-2 text-2xl md:text-3xl font-bold text-tinta">
+          <h2 className="mt-2 text-2xl md:text-3xl font-semibold text-tinta">
             Solicita tu viaje a medida
           </h2>
           <p className="mt-2 text-sm md:text-base text-muted">
@@ -229,13 +225,24 @@ const ContactForm = () => {
               Te responderemos dentro de las próximas 24–48 hs hábiles.
             </p>
 
+            {/* font-bold (no font-semibold) es a propósito acá, aunque
+                Work Sans solo tenga cargados los pesos 400/500/600: tinta
+                sobre naranja a este tamaño (20px) solo pasa WCAG AA por la
+                excepción de "texto grande en negrita" (mínimo 3:1 en vez
+                de 4.5:1), y esa excepción la decide el font-weight
+                DECLARADO en el CSS (lo que lee axe/los navegadores para
+                accesibilidad), no qué archivo de fuente termina
+                usándose. Con font-synthesis:none no hay negrita falsa, así
+                que se ve exactamente igual que font-semibold — pero
+                declarado en 600 en vez de 700 pierde la excepción y el
+                botón vuelve a fallar el contraste (ver auditoría). */}
             <button
               type="submit"
               disabled={isSending}
-              className={`inline-flex items-center justify-center rounded-xl px-6 py-3 text-xl font-bold text-tinta transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-naranja ${
+              className={`inline-flex items-center justify-center rounded-sm px-6 py-3 text-xl font-bold text-tinta transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-naranja ${
                 isSending
                   ? "bg-filete text-muted cursor-not-allowed"
-                  : "bg-naranja hover:bg-naranja/90 active:scale-95 shadow-md hover:shadow-lg"
+                  : "bg-naranja hover:bg-naranja/90 active:scale-95"
               }`}
             >
               {isSending ? "Enviando..." : "Solicitar Presupuesto"}

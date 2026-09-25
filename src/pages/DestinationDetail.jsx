@@ -114,7 +114,18 @@ const DestinationDetail = () => {
         path={`/destino/${destino.id}`}
       />
       {/* HERO */}
-      <header className="relative isolate h-[78vh] min-h-[520px] overflow-hidden">
+      {/* La altura ya no es fija (antes h-[78vh] min-h-[520px]): en
+          pantallas mobile bajas, esa altura fija hacía que el título
+          terminara tapado por el Navbar fijo cuando el contenido de
+          adentro (badge + título + párrafo + botones) necesitaba más
+          alto del que el header tenía disponible. Mismo patrón que
+          Hero.jsx: el header no fuerza su propia altura, sino que la
+          hereda del div de contenido (min-h-screen, en flujo normal),
+          y la foto de fondo (position absolute inset-0) se estira para
+          cubrir lo que el header termine midiendo. pt-24 en mobile le
+          deja lugar al Navbar fijo por arriba; en desktop no hace
+          falta porque el Navbar queda transparente sobre la foto. */}
+      <header className="relative isolate overflow-hidden">
         <picture>
           {isLocalImage(destino.imagenBanner) && (
             <source srcSet={toWebp(destino.imagenBanner)} type="image/webp" />
@@ -125,10 +136,40 @@ const DestinationDetail = () => {
             className="absolute inset-0 h-full w-full object-cover"
           />
         </picture>
-        <div className="absolute inset-0 bg-gradient-to-t from-tinta/80 via-tinta/45 to-tinta/20" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(255,255,255,0.18),transparent_40%)]" />
+        {/* Mismos valores de degradé que Hero.jsx (Home), verificados ahí
+            con muestreo de píxeles reales sobre foto clara y oscura: el
+            bloque de texto (badge + título + párrafo + botones) ocupa
+            buena parte de la mitad inferior, así que el degradé llega
+            bien oscuro (75-90%) en toda esa franja y no solo en el
+            borde. Se sacó el resplandor radial que había antes
+            (rgba(255,255,255,0.18) cerca de la esquina superior
+            izquierda): aclaraba la foto justo donde puede caer el
+            badge/título en pantallas bajas, y ya sin él el degradé por sí
+            solo da suficiente contraste. */}
+        <div
+          className="pointer-events-none absolute inset-0"
+          style={{
+            backgroundImage:
+              "linear-gradient(to top, rgba(0,0,0,0.90) 0%, rgba(0,0,0,0.75) 55%, rgba(0,0,0,0.25) 80%, rgba(0,0,0,0) 100%)",
+          }}
+        />
+        {/* Refuerzo puntual arriba de todo: el degradé de arriba deja la
+            parte superior de la foto casi sin oscurecer a propósito (para
+            que la foto respire), pero justo ahí es donde se superpone el
+            Navbar fijo con "Destinos" / "Contacto" en blanco. Con
+            banners claros (cielos, playas) eso no alcanza para 4.5:1 — se
+            midió con muestreo de píxeles reales sobre el banner de Japón
+            y daba ~2.7:1. Esta franja extra (~144px, más alta que el
+            navbar) es independiente del degradé principal para no
+            oscurecer el resto de la foto de arriba. Se dejó con margen
+            (85% en vez de 75%, 144px en vez de 112px): con el banner de
+            Japón el punto más ajustado daba 4.53 sobre un mínimo de 4.5,
+            demasiado justo para confiar en el resto del catálogo, cuyas
+            fotos no se pudieron probar acá por una restricción de red
+            del entorno (Cloudinary bloqueado), pero sí en producción. */}
+        <div className="pointer-events-none absolute inset-x-0 top-0 h-36 bg-gradient-to-b from-tinta/85 to-transparent" />
 
-        <div className="relative mx-auto flex h-full max-w-7xl items-end px-4 sm:px-6 lg:px-8 pb-14 md:pb-20">
+        <div className="relative z-10 mx-auto flex min-h-screen max-w-7xl flex-col justify-end px-4 sm:px-6 lg:px-8 pb-14 pt-24 md:pb-20 md:pt-0">
           <div className="max-w-3xl">
             <span className="inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/10 px-4 py-1 text-xs tracking-[0.18em] text-white/90 uppercase backdrop-blur">
               <FiStar className="text-naranja-tinte" />
@@ -166,10 +207,10 @@ const DestinationDetail = () => {
 
       <main className="relative mx-auto -mt-12 max-w-7xl px-4 sm:px-6 lg:px-8 pb-20">
         {/* STRIP DE DATOS */}
-        <section className="rounded-2xl border border-filete bg-white/95 shadow-xl shadow-tinta/5 backdrop-blur">
+        <section className="rounded-sm border border-filete bg-white/95 backdrop-blur">
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4 p-4 sm:p-6">
-            <article className="rounded-xl border border-filete bg-papel p-4">
-              <div className="mb-2 inline-flex rounded-lg bg-naranja-tinte p-2 text-naranja">
+            <article className="rounded-sm border border-filete bg-papel p-4">
+              <div className="mb-2 inline-flex rounded-sm bg-naranja-tinte p-2 text-naranja">
                 <FiDollarSign />
               </div>
               <p className="text-xs uppercase tracking-wide text-muted">Tarifa base</p>
@@ -178,16 +219,16 @@ const DestinationDetail = () => {
               </p>
             </article>
 
-            <article className="rounded-xl border border-filete bg-papel p-4">
-              <div className="mb-2 inline-flex rounded-lg bg-naranja-tinte p-2 text-naranja">
+            <article className="rounded-sm border border-filete bg-papel p-4">
+              <div className="mb-2 inline-flex rounded-sm bg-naranja-tinte p-2 text-naranja">
                 <FiCalendar />
               </div>
               <p className="text-xs uppercase tracking-wide text-muted">Duración</p>
               <p className="mt-1 text-xl font-semibold text-tinta">{destino.duracion}</p>
             </article>
 
-            <article className="rounded-xl border border-filete bg-papel p-4">
-              <div className="mb-2 inline-flex rounded-lg bg-naranja-tinte p-2 text-naranja">
+            <article className="rounded-sm border border-filete bg-papel p-4">
+              <div className="mb-2 inline-flex rounded-sm bg-naranja-tinte p-2 text-naranja">
                 <FiMapPin />
               </div>
               <p className="text-xs uppercase tracking-wide text-muted">Modalidad</p>
@@ -196,8 +237,8 @@ const DestinationDetail = () => {
               </p>
             </article>
 
-            <article className="rounded-xl border border-filete bg-papel p-4">
-              <div className="mb-2 inline-flex rounded-lg bg-naranja-tinte p-2 text-naranja">
+            <article className="rounded-sm border border-filete bg-papel p-4">
+              <div className="mb-2 inline-flex rounded-sm bg-naranja-tinte p-2 text-naranja">
                 <FiClock />
               </div>
               <p className="text-xs uppercase tracking-wide text-muted">Planificación</p>
@@ -209,8 +250,8 @@ const DestinationDetail = () => {
         {/* CONTENIDO PRINCIPAL */}
         <section id="detalle" className="mt-10 grid grid-cols-1 gap-8 lg:grid-cols-12">
           {/* CARRUSEL */}
-          <article className="lg:col-span-7 rounded-2xl border border-filete bg-white p-3 sm:p-4 shadow-sm">
-            <div className="overflow-hidden rounded-xl">
+          <article className="lg:col-span-7 rounded-sm border border-filete bg-white p-3 sm:p-4">
+            <div className="overflow-hidden rounded-sm">
               <Slider
                 {...{
                   dots: true,
@@ -238,7 +279,7 @@ const DestinationDetail = () => {
                     </picture>
                     <button
                       onClick={() => window.open(img, "_blank")}
-                      className="absolute bottom-4 right-4 rounded-full bg-white/90 px-4 py-2 text-xs font-semibold text-tinta shadow hover:bg-white"
+                      className="absolute bottom-4 right-4 rounded-full bg-white/90 px-4 py-2 text-xs font-semibold text-tinta hover:bg-white"
                     >
                       Ver en grande
                     </button>
@@ -250,7 +291,7 @@ const DestinationDetail = () => {
 
           {/* DESCRIPCIÓN + LISTAS */}
           <article className="lg:col-span-5 space-y-6">
-            <div className="rounded-2xl border border-filete bg-white p-6 shadow-sm">
+            <div className="rounded-sm border border-filete bg-white p-6">
               <h2 className="text-2xl sm:text-3xl font-semibold text-tinta">
                 Detalles del viaje
               </h2>
@@ -259,8 +300,14 @@ const DestinationDetail = () => {
               </p>
             </div>
 
-            <div className="rounded-2xl border border-filete bg-white p-6 shadow-sm">
-              <h3 className="text-sm font-semibold uppercase tracking-[0.14em] text-muted mb-3">
+            {/* "Incluye" y "Lo más destacado" son etiquetas chicas tipo
+                eyebrow, no títulos — van en font-sans (Work Sans) a
+                propósito, para no heredar la Fraunces que la regla global
+                le pone a todo h1/h2/h3. Quedaron en serif por error en la
+                tanda de fundamentos (se aplicó "todos los h1/h2/h3" al
+                pie de la letra sin pensar en estas etiquetas puntuales). */}
+            <div className="rounded-sm border border-filete bg-white p-6">
+              <h3 className="font-sans text-sm font-semibold uppercase tracking-[0.14em] text-muted mb-3">
                 Incluye
               </h3>
               <ul className="space-y-2">
@@ -273,8 +320,8 @@ const DestinationDetail = () => {
               </ul>
             </div>
 
-            <div className="rounded-2xl border border-filete bg-white p-6 shadow-sm">
-              <h3 className="text-sm font-semibold uppercase tracking-[0.14em] text-muted mb-3">
+            <div className="rounded-sm border border-filete bg-white p-6">
+              <h3 className="font-sans text-sm font-semibold uppercase tracking-[0.14em] text-muted mb-3">
                 Lo más destacado
               </h3>
               <ul className="space-y-2">
@@ -291,7 +338,7 @@ const DestinationDetail = () => {
 
         {/* CTA FINAL */}
         <section className="mt-12">
-          <div className="relative overflow-hidden rounded-3xl border border-tinta bg-tinta px-6 py-10 sm:p-10 text-papel shadow-2xl shadow-tinta/20">
+          <div className="relative overflow-hidden rounded-sm border border-tinta bg-tinta px-6 py-10 sm:p-10 text-papel">
             <div className="absolute -right-16 -top-16 h-48 w-48 rounded-full bg-white/10 blur-2xl" />
             <div className="absolute -left-10 -bottom-14 h-44 w-44 rounded-full bg-naranja/20 blur-2xl" />
 
