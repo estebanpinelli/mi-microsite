@@ -1,7 +1,39 @@
 @import "tailwindcss";
 
+/* Paleta de la nueva dirección visual (inspirada en el minimalismo
+   editorial de Black Tomato). Están acá, en un @theme, en vez de puestas
+   a mano en cada componente, porque @theme es cómo Tailwind v4 arma su
+   propia paleta desde CSS (sin archivo de configuración aparte): cada
+   variable de acá genera solas las clases de Tailwind que la usan
+   (--color-naranja da bg-naranja, text-naranja, border-naranja, etc.),
+   así que para cambiar un color de marca alcanza con tocarlo en un solo
+   lugar y se actualiza en todo el sitio.
+   - tinta: texto principal (reemplaza a los negros/grises tipo slate-900)
+   - papel: fondo principal (reemplaza al blanco/slate-50 de antes)
+   - filete: bordes sutiles (reemplaza a slate-200/slate-300)
+   - naranja: el naranja de marca, más profundo que el #FE9E32 anterior
+   - naranja-tinte: el mismo naranja pero bien clarito, para fondos suaves
+   - muted: texto secundario/de apoyo (reemplaza a slate-500/slate-600) */
+@theme {
+  --color-tinta: #1b1b18;
+  --color-papel: #f7f4ef;
+  --color-filete: #e4dfd6;
+  --color-naranja: #c1631e;
+  --color-naranja-tinte: #f1d9be;
+  --color-muted: #6b6558;
+
+  /* Fraunces (serif editorial) para títulos, Work Sans (sans limpia) para
+     el cuerpo. --font-sans es el nombre que ya usa Tailwind para su fuente
+     "de fábrica", así que sobreescribirlo hace que la clase font-sans (ya
+     usada en el sitio, ej. Navbar.jsx) pase a ser Work Sans sin tener que
+     salir a cambiar esas clases una por una. --font-display es nueva, para
+     cuando se necesite pedir Fraunces a mano con la clase font-display. */
+  --font-sans: "Work Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Fraunces", Georgia, serif;
+}
+
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Work Sans", system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
   color-scheme: light;
@@ -12,6 +44,19 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* Fraunces en todos los títulos del sitio (h1, h2, h3), sin tener que
+   salir a agregar font-display en cada uno. Va en @layer base por la
+   misma razón que la regla de "a" de acá abajo: así cualquier clase de
+   Tailwind que alguna vez pida otra tipografía en un título puntual
+   (font-sans, por ejemplo) puede seguir ganando por encima de esto. */
+@layer base {
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+  }
 }
 
 /* Estas dos reglas quedaron del scaffold original de Vite. Van adentro de
@@ -46,7 +91,7 @@ body {
   flex-direction: column;
   align-items: center;
   overflow-x: hidden;
-  background-color: #ffffff; /* Fondo blanco */
+  background-color: #f7f4ef; /* Papel */
 }
 
 h1 {

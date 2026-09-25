@@ -78,25 +78,25 @@ const ContactForm = () => {
   };
 
   const inputBase =
-    "w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-slate-800 placeholder-slate-400 shadow-sm transition duration-200 focus:outline-none focus:ring-2 focus:ring-[#FE9E32] focus:border-[#FE9E32]";
-  const labelBase = "mb-2 block text-sm font-semibold text-slate-700";
+    "w-full rounded-xl border border-filete bg-papel px-4 py-3 text-tinta placeholder-muted shadow-sm transition duration-200 focus:outline-none focus:ring-2 focus:ring-naranja focus:border-naranja";
+  const labelBase = "mb-2 block text-sm font-semibold text-tinta";
 
   return (
     <section className="relative mx-auto max-w-4xl px-4 md:px-6 py-10">
       {/* Glow decor sutil */}
-      <div className="pointer-events-none absolute -top-14 -right-10 h-40 w-40 rounded-full bg-orange-200/40 blur-2xl" />
-      <div className="pointer-events-none absolute -bottom-14 -left-10 h-40 w-40 rounded-full bg-amber-200/40 blur-2xl" />
+      <div className="pointer-events-none absolute -top-14 -right-10 h-40 w-40 rounded-full bg-naranja-tinte/60 blur-2xl" />
+      <div className="pointer-events-none absolute -bottom-14 -left-10 h-40 w-40 rounded-full bg-naranja-tinte/60 blur-2xl" />
 
-      <div className="relative overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-[0_12px_40px_rgba(2,6,23,0.08)]">
+      <div className="relative overflow-hidden rounded-2xl border border-filete bg-white shadow-[0_12px_40px_rgba(2,6,23,0.08)]">
         {/* Header */}
-        <div className="border-b border-slate-200 px-6 md:px-8 py-6">
-          <p className="text-xs md:text-sm uppercase tracking-[0.18em] text-orange-700 font-semibold">
+        <div className="border-b border-filete px-6 md:px-8 py-6">
+          <p className="text-xs md:text-sm uppercase tracking-[0.18em] text-muted font-semibold">
             Planifica tu próxima experiencia
           </p>
-          <h2 className="mt-2 text-2xl md:text-3xl font-bold text-slate-900">
+          <h2 className="mt-2 text-2xl md:text-3xl font-bold text-tinta">
             Solicita tu viaje a medida
           </h2>
-          <p className="mt-2 text-sm md:text-base text-slate-600">
+          <p className="mt-2 text-sm md:text-base text-muted">
             Cuéntanos tu idea y te enviamos una propuesta personalizada.
           </p>
         </div>
@@ -225,17 +225,17 @@ const ContactForm = () => {
           </div>
 
           <div className="mt-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-            <p className="text-xs text-slate-500">
+            <p className="text-xs text-muted">
               Te responderemos dentro de las próximas 24–48 hs hábiles.
             </p>
 
             <button
               type="submit"
               disabled={isSending}
-              className={`inline-flex items-center justify-center rounded-xl px-6 py-3 font-bold text-slate-900 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#FE9E32] ${
+              className={`inline-flex items-center justify-center rounded-xl px-6 py-3 text-xl font-bold text-tinta transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-naranja ${
                 isSending
-                  ? "bg-slate-400 cursor-not-allowed"
-                  : "bg-[#FE9E32] hover:bg-orange-600 active:scale-95 shadow-md hover:shadow-lg"
+                  ? "bg-filete text-muted cursor-not-allowed"
+                  : "bg-naranja hover:bg-naranja/90 active:scale-95 shadow-md hover:shadow-lg"
               }`}
             >
               {isSending ? "Enviando..." : "Solicitar Presupuesto"}

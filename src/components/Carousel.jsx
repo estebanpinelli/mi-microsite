@@ -42,10 +42,10 @@ const Carousel = () => {
           style={{
             marginTop: "20px",
             padding: "12px 24px",
-            fontSize: "18px",
+            fontSize: "20px",
             fontWeight: "bold",
-            color: "#fff",
-            backgroundColor: "#c75000",
+            color: "#1B1B18",
+            backgroundColor: "#C1631E",
             border: "none",
             borderRadius: "8px",
             cursor: "pointer",

@@ -23,17 +23,17 @@ const Destinos = () => {
     fetchDestinations();
   }, []);
 
-  if (loading) return <p className="text-center mt-8">Cargando destinos...</p>;
+  if (loading) return <p className="text-center mt-8 text-muted">Cargando destinos...</p>;
   if (error) return <p className="text-center mt-8 text-red-500">Error: {error}</p>;
   if (destinos.length === 0) {
-    return <p className="text-center mt-8 text-gray-500">No hay destinos disponibles aún.</p>;
+    return <p className="text-center mt-8 text-muted">No hay destinos disponibles aún.</p>;
   }
 
   const destinosVisibles = destinos.slice(0, 4);
 
   return (
     <div className="max-w-5xl mx-auto p-6 bg-white">
-      <h2 className="text-center text-3xl font-bold mb-8 text-gray-800">
+      <h2 className="text-center text-3xl font-bold mb-8 text-tinta">
         Experiencias Destacadas
       </h2>
 
@@ -41,7 +41,7 @@ const Destinos = () => {
         {/* Destino principal */}
         <Link
           to={`/destino/${destinosVisibles[0].id}`}
-          className="relative md:w-1/2 h-[60vh] md:h-[120vh] hover:opacity-90 transition-opacity"
+          className="relative md:w-1/2 h-[60vh] md:h-[120vh] text-tinta hover:opacity-90 transition-opacity"
         >
           <picture>
             {isLocalImage(destinosVisibles[0].imagen) && (
@@ -62,10 +62,10 @@ const Destinos = () => {
               md:static md:bg-none md:p-0 md:mt-4
             "
           >
-            <h3 className="text-xl font-semibold text-white md:text-gray-800">
+            <h3 className="text-xl font-semibold text-white md:text-tinta">
               {destinosVisibles[0].nombre}
             </h3>
-            <p className="text-gray-200 text-sm md:text-gray-600 md:mt-1">
+            <p className="text-gray-200 text-sm md:text-muted md:mt-1">
               {destinosVisibles[0].descripcion}
             </p>
           </div>
@@ -77,7 +77,7 @@ const Destinos = () => {
             <Link
               to={`/destino/${destino.id}`}
               key={destino.id}
-              className="flex flex-col items-center hover:opacity-90 transition-opacity"
+              className="flex flex-col items-center text-tinta hover:opacity-90 transition-opacity"
             >
               <picture>
                 {isLocalImage(destino.imagen) && (
@@ -90,10 +90,10 @@ const Destinos = () => {
                   className="w-full h-[250px] object-cover rounded-lg"
                 />
               </picture>
-              <h4 className="text-lg font-semibold text-gray-800 mt-3">
+              <h4 className="text-lg font-semibold text-tinta mt-3">
                 {destino.nombre}
               </h4>
-              <p className="text-gray-600 text-sm text-center">{destino.descripcion}</p>
+              <p className="text-muted text-sm text-center">{destino.descripcion}</p>
             </Link>
           ))}
         </div>

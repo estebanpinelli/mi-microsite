@@ -7,7 +7,7 @@ import { SITE_URL } from "../config/site";
 
 const Home = () => {
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-800 antialiased">
+    <div className="min-h-screen bg-papel text-tinta antialiased">
       <Seo
         title="Exóticos | Viajes privados y de lujo a Japón, Islandia, Egipto, China, Bali y África"
         description="Exóticos diseña viajes privados y en grupos reducidos a destinos como Japón, Islandia, Egipto, China, Bali y safaris africanos, para viajeros que buscan experiencias auténticas y a medida."
@@ -19,7 +19,7 @@ const Home = () => {
         <Carousel />
 
         {/* Degradado inferior para unir con la siguiente sección */}
-        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-b from-transparent to-slate-50" />
+        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-b from-transparent to-papel" />
       </section>
 
   
@@ -29,16 +29,16 @@ const Home = () => {
         <div className="mx-auto max-w-7xl space-y-6">
           <div className="flex items-end justify-between gap-4">
             <div>
-              <p className="text-xs md:text-sm uppercase tracking-[0.2em] text-blue-700/90 font-semibold">
+              <p className="text-xs md:text-sm uppercase tracking-[0.2em] text-muted font-semibold">
                 Inspírate y elegí tu próximo viaje
               </p>
-              <h2 className="text-2xl md:text-4xl font-bold text-slate-900 mt-2">
+              <h2 className="text-2xl md:text-4xl font-bold text-tinta mt-2">
                 Destinos recomendados
               </h2>
             </div>
           </div>
 
-          <div className="rounded-2xl border border-slate-200 bg-white shadow-sm p-2 md:p-4">
+          <div className="rounded-2xl border border-filete bg-white shadow-sm p-2 md:p-4">
             <Destinos />
           </div>
         </div>
@@ -46,12 +46,12 @@ const Home = () => {
 
       {/* QUIÉNES SOMOS */}
       <section className="px-4 md:px-8 lg:px-12 pb-16 md:pb-20">
-        <div className="mx-auto max-w-7xl overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
-          <div className="border-b border-slate-200 px-6 md:px-10 py-6 md:py-8">
-            <p className="text-xs md:text-sm uppercase tracking-[0.2em] text-blue-700/80 font-semibold">
+        <div className="mx-auto max-w-7xl overflow-hidden rounded-2xl border border-filete bg-white shadow-sm">
+          <div className="border-b border-filete px-6 md:px-10 py-6 md:py-8">
+            <p className="text-xs md:text-sm uppercase tracking-[0.2em] text-muted font-semibold">
               Nuestra esencia
             </p>
-            <h2 className="text-2xl md:text-4xl font-bold text-slate-900 mt-2">
+            <h2 className="text-2xl md:text-4xl font-bold text-tinta mt-2">
               Quiénes somos
             </h2>
           </div>

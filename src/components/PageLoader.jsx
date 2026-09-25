@@ -5,7 +5,7 @@
 // para que se sienta parte del mismo sitio y no un loader genérico.
 const PageLoader = () => (
   <div className="min-h-[60vh] grid place-items-center">
-    <div className="h-10 w-10 rounded-full border-4 border-blue-200 border-t-blue-700 animate-spin" />
+    <div className="h-10 w-10 rounded-full border-4 border-filete border-t-naranja animate-spin" />
   </div>
 );
 
