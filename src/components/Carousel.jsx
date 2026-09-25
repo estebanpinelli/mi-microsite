@@ -45,7 +45,7 @@ const Carousel = () => {
             fontSize: "18px",
             fontWeight: "bold",
             color: "#fff",
-            backgroundColor: "#ff6600",
+            backgroundColor: "#c75000",
             border: "none",
             borderRadius: "8px",
             cursor: "pointer",

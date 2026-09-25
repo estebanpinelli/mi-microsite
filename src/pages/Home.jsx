@@ -29,7 +29,7 @@ const Home = () => {
         <div className="mx-auto max-w-7xl space-y-6">
           <div className="flex items-end justify-between gap-4">
             <div>
-              <p className="text-xs md:text-sm uppercase tracking-[0.2em] text-blue-700/80 font-semibold">
+              <p className="text-xs md:text-sm uppercase tracking-[0.2em] text-blue-700/90 font-semibold">
                 Inspírate y elegí tu próximo viaje
               </p>
               <h2 className="text-2xl md:text-4xl font-bold text-slate-900 mt-2">

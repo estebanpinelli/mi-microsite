@@ -14,14 +14,27 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
+/* Estas dos reglas quedaron del scaffold original de Vite. Van adentro de
+   @layer base (que es donde Tailwind espera los estilos "por defecto" de
+   cada etiqueta) para que actúen solo como valor de arranque: cualquier
+   clase de Tailwind puesta a propósito en un <a> (text-slate-900,
+   text-black, text-blue-800, etc.) debe ganar por encima de esto. Sin el
+   @layer, esta regla quedaba "por fuera" de las capas de Tailwind y por
+   eso terminaba ganando ella siempre, sin importar qué clase de color se
+   le pusiera al link — así se detectaron, en la auditoría de contraste,
+   varios enlaces que en el código pedían un color (por ejemplo
+   text-slate-900) pero se veían con este violeta en vez del color
+   pedido. */
+@layer base {
+  a {
+    font-weight: 500;
+    color: #646cff;
+    text-decoration: inherit;
+  }
 
-a:hover {
-  color: #535bf2;
+  a:hover {
+    color: #535bf2;
+  }
 }
 
 body {

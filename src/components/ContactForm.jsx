@@ -90,7 +90,7 @@ const ContactForm = () => {
       <div className="relative overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-[0_12px_40px_rgba(2,6,23,0.08)]">
         {/* Header */}
         <div className="border-b border-slate-200 px-6 md:px-8 py-6">
-          <p className="text-xs md:text-sm uppercase tracking-[0.18em] text-orange-500 font-semibold">
+          <p className="text-xs md:text-sm uppercase tracking-[0.18em] text-orange-700 font-semibold">
             Planifica tu próxima experiencia
           </p>
           <h2 className="mt-2 text-2xl md:text-3xl font-bold text-slate-900">
@@ -232,7 +232,7 @@ const ContactForm = () => {
             <button
               type="submit"
               disabled={isSending}
-              className={`inline-flex items-center justify-center rounded-xl px-6 py-3 font-bold text-white transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#FE9E32] ${
+              className={`inline-flex items-center justify-center rounded-xl px-6 py-3 font-bold text-slate-900 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#FE9E32] ${
                 isSending
                   ? "bg-slate-400 cursor-not-allowed"
                   : "bg-[#FE9E32] hover:bg-orange-600 active:scale-95 shadow-md hover:shadow-lg"
