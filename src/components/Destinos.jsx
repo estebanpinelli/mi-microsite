@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import { isLocalImage, toWebp } from "../utils/images";
+import DestinoCard from "./DestinoCard";
 
 const Destinos = () => {
   const [destinos, setDestinos] = useState([]);
@@ -32,72 +31,10 @@ const Destinos = () => {
   const destinosVisibles = destinos.slice(0, 4);
 
   return (
-    <div className="max-w-5xl mx-auto p-6 bg-white">
-      <h2 className="text-center text-3xl font-bold mb-8 text-tinta">
-        Experiencias Destacadas
-      </h2>
-
-      <div className="flex flex-col md:flex-row gap-6">
-        {/* Destino principal */}
-        <Link
-          to={`/destino/${destinosVisibles[0].id}`}
-          className="relative md:w-1/2 h-[60vh] md:h-[120vh] text-tinta hover:opacity-90 transition-opacity"
-        >
-          <picture>
-            {isLocalImage(destinosVisibles[0].imagen) && (
-              <source srcSet={toWebp(destinosVisibles[0].imagen)} type="image/webp" />
-            )}
-            <img
-              src={destinosVisibles[0].imagen}
-              alt={destinosVisibles[0].nombre}
-              loading="lazy"
-              className="w-full h-full object-cover rounded-lg"
-            />
-          </picture>
-
-          {/* Texto: overlay SOLO en mobile, fuera en desktop */}
-          <div
-            className="
-              absolute bottom-0 left-0 w-full p-4 rounded-b-lg bg-gradient-to-t from-black/70 to-transparent
-              md:static md:bg-none md:p-0 md:mt-4
-            "
-          >
-            <h3 className="text-xl font-semibold text-white md:text-tinta">
-              {destinosVisibles[0].nombre}
-            </h3>
-            <p className="text-gray-200 text-sm md:text-muted md:mt-1">
-              {destinosVisibles[0].descripcion}
-            </p>
-          </div>
-        </Link>
-
-        {/* Destinos secundarios */}
-        <div className="md:w-1/2 flex flex-col gap-6">
-          {destinosVisibles.slice(1).map((destino) => (
-            <Link
-              to={`/destino/${destino.id}`}
-              key={destino.id}
-              className="flex flex-col items-center text-tinta hover:opacity-90 transition-opacity"
-            >
-              <picture>
-                {isLocalImage(destino.imagen) && (
-                  <source srcSet={toWebp(destino.imagen)} type="image/webp" />
-                )}
-                <img
-                  src={destino.imagen}
-                  alt={destino.nombre}
-                  loading="lazy"
-                  className="w-full h-[250px] object-cover rounded-lg"
-                />
-              </picture>
-              <h4 className="text-lg font-semibold text-tinta mt-3">
-                {destino.nombre}
-              </h4>
-              <p className="text-muted text-sm text-center">{destino.descripcion}</p>
-            </Link>
-          ))}
-        </div>
-      </div>
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+      {destinosVisibles.map((destino) => (
+        <DestinoCard key={destino.id} destino={destino} />
+      ))}
     </div>
   );
 };

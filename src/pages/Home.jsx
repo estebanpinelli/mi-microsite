@@ -1,4 +1,4 @@
-import Carousel from "../components/Carousel";
+import Hero from "../components/Hero";
 import Destinos from "../components/Destinos";
 import Footer from "../components/Footer";
 import QuienesS from "../components/QuienesS";
@@ -14,16 +14,8 @@ const Home = () => {
         image={`${SITE_URL}/desierto.jpg`}
         path="/"
       />
-      {/* HERO / CAROUSEL */}
-      <section className="relative">
-        <Carousel />
-
-        {/* Degradado inferior para unir con la siguiente sección */}
-        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-b from-transparent to-papel" />
-      </section>
-
-  
-
+      {/* HERO */}
+      <Hero />
       {/* DESTINOS */}
       <section className="px-4 md:px-8 lg:px-12 py-14 md:py-16">
         <div className="mx-auto max-w-7xl space-y-6">
@@ -38,9 +30,7 @@ const Home = () => {
             </div>
           </div>
 
-          <div className="rounded-2xl border border-filete bg-white shadow-sm p-2 md:p-4">
-            <Destinos />
-          </div>
+          <Destinos />
         </div>
       </section>
 
