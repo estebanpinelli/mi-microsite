@@ -1,50 +1,34 @@
-import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { FaWhatsapp } from "react-icons/fa";
-import { isLocalImage, toWebp } from "../utils/images";
 
-// Hero de Home: una sola foto grande a pantalla completa (estilo Black
-// Tomato), en vez del carrusel anterior. La foto no está hardcodeada acá:
-// se toma de destinations.json (el "imagenBanner" del primer destino
-// destacado y publicado), para que sea siempre una foto real del catálogo
-// y no un placeholder — y para que, si el destino destacado cambia más
-// adelante, el hero lo siga automáticamente sin tocar este componente.
+// Hero de Home: un video a pantalla completa (estilo Black Tomato) como
+// fondo, en vez de la foto fija anterior. El video está alojado en
+// Cloudinary; el póster es el primer cuadro del mismo video (Cloudinary lo
+// genera cambiando la extensión a .jpg con so_0), así mientras el video
+// carga —o si el navegador no lo reproduce— se ve una imagen coherente en
+// vez de un fondo vacío.
+const HERO_VIDEO =
+  "https://res.cloudinary.com/dtcjnhb0v/video/upload/v1790349907/0925_1_uvsoaf.mp4";
+const HERO_POSTER =
+  "https://res.cloudinary.com/dtcjnhb0v/video/upload/so_0/v1790349907/0925_1_uvsoaf.jpg";
+
 const Hero = () => {
-  const [heroDestino, setHeroDestino] = useState(null);
-
-  useEffect(() => {
-    const fetchHeroDestino = async () => {
-      try {
-        const res = await fetch("/data/destinations.json");
-        if (!res.ok) throw new Error("Error en la respuesta del servidor");
-        const data = await res.json();
-        const destacado = data.find(
-          (d) => d.publicado !== false && d.destacado
-        );
-        setHeroDestino(destacado || null);
-      } catch (error) {
-        console.error("No se pudo cargar la foto del hero:", error);
-      }
-    };
-    fetchHeroDestino();
-  }, []);
-
-  const imagen = heroDestino?.imagenBanner || heroDestino?.imagen;
-
   return (
     <section className="relative w-full overflow-hidden bg-tinta">
-      {imagen && (
-        <picture>
-          {isLocalImage(imagen) && (
-            <source srcSet={toWebp(imagen)} type="image/webp" />
-          )}
-          <img
-            src={imagen}
-            alt={heroDestino?.nombre || "Exóticos"}
-            className="absolute inset-0 h-full w-full object-cover"
-          />
-        </picture>
-      )}
+      {/* muted + playsInline son obligatorios para que el autoplay funcione
+          en mobile (iOS/Android bloquean el autoplay con sonido). Es
+          decorativo, por eso aria-hidden. */}
+      <video
+        className="absolute inset-0 h-full w-full object-cover"
+        src={HERO_VIDEO}
+        poster={HERO_POSTER}
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="auto"
+        aria-hidden="true"
+      />
 
       {/* Degradé oscuro para que el texto se lea bien sobre cualquier foto
           (clara u oscura). No alcanza con oscurecer solo una franja fina
