@@ -17,8 +17,6 @@ const Home = () => {
       />
       {/* HERO */}
       <Hero />
-      {/* POR QUÉ EXÓTICOS */}
-      <PorQueNosotros />
       {/* DESTINOS */}
       <section className="px-4 md:px-8 lg:px-12 py-14 md:py-16">
         <div className="mx-auto max-w-7xl space-y-6">
@@ -37,8 +35,11 @@ const Home = () => {
         </div>
       </section>
 
+      {/* POR QUÉ EXÓTICOS */}
+      <PorQueNosotros />
+
       {/* QUIÉNES SOMOS */}
-      <section className="px-4 md:px-8 lg:px-12 pb-16 md:pb-20">
+      <section className="px-4 md:px-8 lg:px-12 py-16 md:py-20">
         <div className="mx-auto max-w-7xl overflow-hidden rounded-2xl border border-filete bg-white shadow-sm">
           <div className="border-b border-filete px-6 md:px-10 py-6 md:py-8">
             <p className="text-xs md:text-sm uppercase tracking-[0.2em] text-muted font-semibold">

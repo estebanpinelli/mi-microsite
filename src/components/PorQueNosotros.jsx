@@ -21,7 +21,7 @@ const BENEFICIOS = [
 
 const PorQueNosotros = () => {
   return (
-    <section className="px-4 md:px-8 lg:px-12 py-14 md:py-20 bg-white border-b border-filete">
+    <section className="px-4 md:px-8 lg:px-12 py-14 md:py-20 bg-white border-y border-filete">
       <div className="mx-auto max-w-7xl text-center">
         <h2 className="font-display uppercase tracking-[0.08em] text-3xl md:text-5xl font-medium text-tinta">
           ¿Por qué Exóticos?
