@@ -1,5 +1,6 @@
 import Hero from "../components/Hero";
 import Destinos from "../components/Destinos";
+import PorQueNosotros from "../components/PorQueNosotros";
 import Footer from "../components/Footer";
 import QuienesS from "../components/QuienesS";
 import Seo from "../components/Seo";
@@ -16,6 +17,8 @@ const Home = () => {
       />
       {/* HERO */}
       <Hero />
+      {/* POR QUÉ EXÓTICOS */}
+      <PorQueNosotros />
       {/* DESTINOS */}
       <section className="px-4 md:px-8 lg:px-12 py-14 md:py-16">
         <div className="mx-auto max-w-7xl space-y-6">
