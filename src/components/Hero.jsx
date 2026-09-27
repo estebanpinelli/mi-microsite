@@ -45,7 +45,7 @@ const Hero = () => {
         className="pointer-events-none absolute inset-0"
         style={{
           backgroundImage:
-            "linear-gradient(to top, rgba(0,0,0,0.90) 0%, rgba(0,0,0,0.75) 55%, rgba(0,0,0,0.25) 80%, rgba(0,0,0,0) 100%)",
+            "linear-gradient(to top, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0.20) 55%, rgba(0,0,0,0.05) 80%, rgba(0,0,0,0) 100%)",
         }}
       />
 

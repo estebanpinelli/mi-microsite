@@ -10,7 +10,7 @@ const QuienesS = () => {
       <div className="relative grid lg:grid-cols-[260px_1fr] gap-10 p-8 md:p-12 lg:p-14">
         {/* Columna logos */}
      <aside className="flex lg:flex-col items-center lg:items-start justify-center gap-6 lg:gap-8">
-  <div className="group rounded-2xl border border-filete bg-tinta px-6 py-5 shadow-sm transition-all duration-300 hover:shadow-md hover:-translate-y-0.5">
+  <div className="group rounded-2xl border border-filete bg-[#FF9900] px-6 py-5 shadow-sm transition-all duration-300 hover:shadow-md hover:-translate-y-0.5">
     <picture>
       <source srcSet={toWebp("/Logo1.png")} type="image/webp" />
       <img
@@ -21,7 +21,7 @@ const QuienesS = () => {
     </picture>
   </div>
 
-  <div className="group rounded-2xl border border-filete bg-tinta px-6 py-5 shadow-sm transition-all duration-300 hover:shadow-md hover:-translate-y-0.5">
+  <div className="group rounded-2xl border border-filete bg-[#FF9900] px-6 py-5 shadow-sm transition-all duration-300 hover:shadow-md hover:-translate-y-0.5">
     <picture>
       <source srcSet={toWebp("/Logo2.png")} type="image/webp" />
       <img
