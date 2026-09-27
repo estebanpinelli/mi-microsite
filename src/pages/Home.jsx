@@ -1,5 +1,6 @@
 import Hero from "../components/Hero";
 import Destinos from "../components/Destinos";
+import PorQueNosotros from "../components/PorQueNosotros";
 import Footer from "../components/Footer";
 import QuienesS from "../components/QuienesS";
 import Seo from "../components/Seo";
@@ -51,6 +52,9 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      {/* POR QUÉ EXÓTICOS */}
+      <PorQueNosotros />
 
       {/* FOOTER */}
       <Footer />
