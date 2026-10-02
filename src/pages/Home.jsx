@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
 import Hero from "../components/Hero";
 import Destinos from "../components/Destinos";
 import PorQueNosotros from "../components/PorQueNosotros";
@@ -32,6 +34,20 @@ const Home = () => {
           </div>
 
           <Destinos />
+
+          {/* Botón a la página de destinos, centrado debajo de las tarjetas.
+              Va en tinta (oscuro) con texto blanco y no en naranja: el
+              naranja de marca es claro y con texto blanco encima no se
+              lee bien. */}
+          <div className="flex justify-center pt-4">
+            <Link
+              to="/destinos"
+              className="inline-flex items-center gap-2 bg-tinta text-white px-8 py-3.5 rounded-full font-semibold shadow-sm hover:bg-naranja hover:text-tinta transition-all duration-300 hover:-translate-y-0.5"
+            >
+              Todos nuestros destinos
+              <ArrowRight className="h-4 w-4" aria-hidden="true" />
+            </Link>
+          </div>
         </div>
       </section>
 
