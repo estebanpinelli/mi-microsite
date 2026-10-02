@@ -187,6 +187,43 @@
             "https://res.cloudinary.com/dtcjnhb0v/image/upload/v1757341207/photo-1603120527222-33f28c2ce89e_igt12e.avif"
         ]
     },
+    {
+        "id": 7,
+        "nombre": "Filipinas: Paraíso entre Islas",
+        "descripcion": "Un viaje privado por las islas más impactantes de Filipinas. De las lagunas escondidas de El Nido a las aguas cristalinas de Coron, terminando en las olas y palmeras de Siargao. Island hopping, snorkel entre corales y playas de arena blanca en un archipiélago de más de 7000 islas. ¿Te animás a descubrirlo?",
+        "imagen": "https://res.cloudinary.com/dtcjnhb0v/image/upload/v1790932802/Filipinas_wcdmhc.jpg",
+        "destacado": true,
+        "modalidad": "Privado",
+        "precio": 5200,
+        "duracion": "14 días",
+        "highlight": [
+            "Navegar entre las lagunas escondidas de El Nido: Small, Big y Secret Lagoon",
+            "Nadar en el lago Kayangan, con las aguas más puras de Filipinas",
+            "Snorkel entre corales en los Siete Pecados y el arrecife de Coron",
+            "Island hopping por Guyam, Daku y Naked Island en Siargao",
+            "Bañarse en las piscinas naturales de Magpupungko con la marea baja",
+            "Fotografiarse con la palmera más icónica de Filipinas, junto al río Maasin"
+        ],
+        "descriptivoCompleto": "Filipinas es un país insular que se alza sobre el océano Pacífico, formado por más de 7000 islas, cada una con su propia personalidad. Su gente, su clima, su diversidad cultural y sus paisajes únicos lo convierten en un destino genuino y todavía por descubrir, perfecto para amantes de la naturaleza, el mar, la fotografía, la aventura, las playas y los atardeceres. En 14 días recorreremos tres de sus rincones más espectaculares: las formaciones rocosas de El Nido, las aguas cristalinas de Coron y las olas perfectas de Siargao.\n\nMANILA\nEl viaje comienza en la capital filipina, con recepción en el aeropuerto y traslado privado al hotel. Al día siguiente volaremos a El Nido, la puerta de entrada al paraíso de Palawan.\n\nEL NIDO\nAcantilados de piedra caliza que se hunden en un mar turquesa. Dedicaremos dos días a navegar entre sus islas: en el primero recorreremos Small Lagoon, Big Lagoon y Secret Lagoon, además de Shimizu Island y 7 Commando Beach; en el segundo exploraremos el archipiélago de Bacuit, con el santuario de Matinloc, Helicopter Island, Hidden Beach, Secret Beach y Star Beach. Almuerzo a bordo durante las excursiones.\n\nCORON\nLlegaremos a Coron en ferry o vuelo, según disponibilidad. En embarcación privada visitaremos el lago Kayangan, el lugar más emblemático de la isla, con paredes de piedra caliza que se sumergen en aguas de una claridad prístina, reputadas como las más puras de Filipinas. Seguiremos por Twin Lagoon, Bibian Beach, Coral Garden y los Siete Pecados, ideales para hacer snorkel entre corales y vida marina. Otro día navegaremos hasta la isla Malcapuya, con playas de arena blanca y vegetación frondosa, haremos snorkel en el arrecife de Coron y terminaremos en la isla Ditaytayan, una extensa franja de arena rodeada de aguas turquesas poco profundas.\n\nCEBÚ\nUna noche de conexión en Cebú antes de seguir viaje hacia Siargao.\n\nSIARGAO\nLa isla del surf y de las palmeras infinitas. Haremos island hopping por Guyam Island, el epítome de la isla tropical; Daku Island, hogar de una comunidad de pescadores, y Naked Island, una lengua de arena blanca sin vegetación. En un recorrido terrestre conoceremos la laguna de Sugba, rodeada de selva tropical, las piscinas naturales de Magpupungko, que emergen con la marea baja, y la palmera más icónica de Filipinas, cerca del río Maasin, entre un mar de cocoteros. Un día libre para disfrutar la isla a tu ritmo cierra la estadía.\n\nREGRESO\nVuelo doméstico a Cebú o Manila, según corresponda, con una última noche allí y traslado privado al aeropuerto para el vuelo de salida de Filipinas.",
+        "incluye": [
+            "Vuelos internacionales y domésticos",
+            "Todos los traslados entre hoteles e islas",
+            "Alojamiento en hoteles 4* y lodges exclusivos",
+            "Desayunos diarios + 6 almuerzos",
+            "Excursiones durante todo el itinerario",
+            "Seguro de viaje y asistencia 24h"
+        ],
+        "imagenBanner": "https://res.cloudinary.com/dtcjnhb0v/image/upload/v1790932802/Filipinas_n6igof.avif",
+        "imagenes": [
+            "https://res.cloudinary.com/dtcjnhb0v/image/upload/v1790932801/Filipinas_2_snkupr.jpg",
+            "https://res.cloudinary.com/dtcjnhb0v/image/upload/v1790932801/jan-ledermann-ixpRUH2uTfM-unsplash_zlj623.jpg",
+            "https://res.cloudinary.com/dtcjnhb0v/image/upload/v1790932801/jahcordova-water-3224282_1920_y7qwu6.jpg",
+            "https://res.cloudinary.com/dtcjnhb0v/image/upload/v1790932801/SIARGAO_aooexf.jpg",
+            "https://res.cloudinary.com/dtcjnhb0v/image/upload/v1790932801/jahcordova-sand-3289126_1920_onv9rx.jpg",
+            "https://res.cloudinary.com/dtcjnhb0v/image/upload/v1790932800/michaelcatadman-festival-10332845_1920_pqgxep.jpg",
+            "https://res.cloudinary.com/dtcjnhb0v/image/upload/v1790932800/thewildprimate-tarsier-10327055_1920_mlkhjm.jpg"
+        ]
+    },
         {
         "id": 6,
         "publicado": false,
