@@ -11,24 +11,28 @@
    - tinta: texto principal (reemplaza a los negros/grises tipo slate-900)
    - papel: fondo principal (reemplaza al blanco/slate-50 de antes)
    - filete: bordes sutiles (reemplaza a slate-200/slate-300)
-   - naranja: el naranja de marca, más profundo que el #FE9E32 anterior
+   - naranja: el naranja de marca (#FF9900)
    - naranja-tinte: el mismo naranja pero bien clarito, para fondos suaves
-   - naranja-texto: versión más oscura del naranja, solo para texto chico
-     sobre fondos claros (papel/blanco). El naranja de marca (#C1631E) en
-     sí mismo nunca llega a 4.5:1 sobre ningún fondo claro (4.14 sobre
-     blanco puro, en el mejor de los casos), así que como texto de cuerpo
-     queda siempre por debajo del mínimo de WCAG AA. Se usa naranja-texto
-     en esos casos puntuales (ej. las etiquetas y el link "Ver itinerario"
-     de las tarjetas de destino) y se deja naranja sin tocar para todo lo
-     demás (botones, fondos, íconos, bordes) donde no es texto de lectura.
+   - naranja-texto: versión más oscura del mismo naranja, solo para texto
+     chico sobre fondos claros (papel/blanco). El naranja de marca es muy
+     claro: sobre papel da 1.95:1 y sobre blanco 2.14:1, lejos del 4.5:1
+     que pide WCAG AA para texto. naranja-texto (#995c00, mismo tono)
+     da 4.93:1 sobre papel y 5.40:1 sobre blanco. Se usa en esos casos
+     puntuales (ej. las etiquetas y el link "Ver itinerario" de las
+     tarjetas de destino) y se deja naranja para todo lo demás (fondos
+     con texto tinta encima, íconos decorativos, bordes). Nunca va texto
+     blanco sobre naranja: no se lee (2.14:1); encima del naranja, el
+     texto va en tinta (8.06:1).
+     Los tres tonos salen del mismo #FF9900: si se cambia el naranja de
+     marca, hay que recalcular también tinte y texto.
    - muted: texto secundario/de apoyo (reemplaza a slate-500/slate-600) */
 @theme {
   --color-tinta: #1b1b18;
   --color-papel: #f7f4ef;
   --color-filete: #e4dfd6;
   --color-naranja: #FF9900;
-  --color-naranja-tinte: #f1d9be;
-  --color-naranja-texto: #a8531a;
+  --color-naranja-tinte: #ffebcc;
+  --color-naranja-texto: #995c00;
   --color-muted: #6b6558;
 
   /* Fraunces (serif editorial) para títulos, Work Sans (sans limpia) para
@@ -135,121 +139,4 @@ button:focus-visible {
   max-width: 100%;
   margin: 0;
   padding: 0;
-}
-
-/* ------------------------------- */
-/* Estilos para la sección del video */
-/* ------------------------------- */
-.home-video {
-  position: relative;
-  width: 100%;
-  height: 100vh; /* Ocupa toda la pantalla */
-  overflow: hidden;
-}
-
-.video-background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 50;
-  object-fit: cover;
-}
-
-.content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 1;
-  color: white;
-  text-align: center;
-  padding: 20px;
-  border-radius: 10px;
-}
-
-/* ------------------------------- */
-/* Estilos para la sección de destinos */
-/* ------------------------------- */
-.destinos-container {
-  width: 100%;
-  background-color: white;
-  padding: 50px 20px;
-  box-sizing: border-box;
-}
-
-.carousel-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px 0;
-  background-color: #f8f8f8; /* Color de fondo opcional */
-}
-
-/* ------------------------------- */
-/* Estilos para la sección del banner (QuienesS) */
-/* ------------------------------- */
-/* Contenedor principal del banner */
-.quienesS-banner {
-  background-color: #29272733; /* fondo */
-  color: #fff;              /* Texto en blanco */
-  padding: 100px 100px;
-  text-align: center;
-}
-
-/* Contenedor para los dos logos */
-.quienesS-logos {
-  display: flex;
-  justify-content: center;   /* Logos centrados para estar más juntos */
-  align-items: center;
-  gap: 50px;                 /* Espacio reducido entre logos */
-  margin-bottom: 50px;
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;        /* Centra los logos horizontalmente */
-}
-
-/* Clase para los logos individuales */
-.quienesS-logo {
-  height: 80px;        /* Alto del logo */
-  object-fit: contain; /* Ajuste de imagen */
-}
-
-/* Contenido principal (título + texto) */
-.quienesS-content {
-  max-width: 800px;    /* Ancho máximo del texto */
-  margin: 0 auto;      /* Centra el contenido */
-}
-
-/* Estilos para los títulos */
-.quienesS-content h2 {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-  font-weight: normal;
-}
-
-.quienesS-content h3 {
-  font-size: 2rem;
-  margin: 10px 0;
-  font-weight: bold;
-}
-
-/* Estilo del párrafo */
-.quienesS-content p {
-  font-size: 1.1rem;
-  line-height: 1.5;
-  margin: 0 10px;
-}
-.navbar-menu {
-  display: flex;
-  flex-direction: column;
-  gap: 16px; /* Ajusta el espacio entre los enlaces */
-  align-items: start; /* Alinea los enlaces a la izquierda */
-}
-
-.navbar-menu a {
-  color: white !important; /* Asegura que el texto sea blanco */
-  text-decoration: none;
-  font-size: 1.2rem;
-  padding: 4px 0; /* Añade espacio arriba y abajo */
 }
