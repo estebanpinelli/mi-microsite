@@ -249,8 +249,13 @@ const DestinationDetail = () => {
 
         {/* CONTENIDO PRINCIPAL */}
         <section id="detalle" className="mt-10 grid grid-cols-1 gap-8 lg:grid-cols-12">
-          {/* CARRUSEL */}
-          <article className="lg:col-span-7 rounded-sm border border-filete bg-white p-3 sm:p-4">
+          {/* CARRUSEL
+              self-start: en CSS Grid cada celda se estira por defecto
+              hasta el alto de la fila, y la fila la marca la columna de
+              texto (mucho más larga). Sin esto, la tarjeta blanca de la
+              foto se estiraba hasta ese alto y quedaba un hueco vacío
+              debajo de la imagen. */}
+          <article className="lg:col-span-7 self-start rounded-sm border border-filete bg-white p-3 sm:p-4">
             <div className="overflow-hidden rounded-sm">
               <Slider
                 {...{
