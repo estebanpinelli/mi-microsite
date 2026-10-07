@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
-import WhatsAppButton from "../components/BotonWhats";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -71,7 +70,6 @@ const Navbar = () => {
         >
           Contacto
         </Link>
-        <WhatsAppButton />
       </div>
 
       {/* Drawer menú móvil */}
@@ -101,7 +99,6 @@ const Navbar = () => {
             >
               Contacto
             </Link>
-            <WhatsAppButton />
           </div>
         </div>
       )}

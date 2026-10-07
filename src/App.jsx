@@ -2,6 +2,7 @@ import { lazy, Suspense } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import PageLoader from "./components/PageLoader";
+import WhatsAppButton from "./components/BotonWhats";
 
 // Code splitting por ruta: en vez de importar cada página arriba (lo que
 // las mete a TODAS dentro de un único archivo .js gigante que se descarga
@@ -35,6 +36,7 @@ function App() {
             <Route path="/destino/*" element={<h2 className="text-center mt-8">ID de destino inválido</h2>} />
           </Routes>
         </Suspense>
+        <WhatsAppButton />
       </Router>
     </div>
   );

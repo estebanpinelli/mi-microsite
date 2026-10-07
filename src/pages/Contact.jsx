@@ -29,7 +29,7 @@ const Contact = () => {
 
           {/* Vías de contacto: antes acá adentro se repetía el botón
               flotante de WhatsApp (BotonWhats, que es position:fixed y ya
-              se muestra en TODAS las páginas desde el Navbar) — quedaba
+              se muestra en TODAS las páginas desde App.jsx) — quedaba
               duplicado exactamente en el mismo lugar de la pantalla, sin
               cumplir ninguna función acá. Se reemplaza por dos accesos
               directos reales: WhatsApp (mismo número, como link inline) y

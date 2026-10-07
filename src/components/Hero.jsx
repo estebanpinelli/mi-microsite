@@ -1,34 +1,77 @@
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { FaWhatsapp } from "react-icons/fa";
 
 // Hero de Home: un video a pantalla completa (estilo Black Tomato) como
-// fondo, en vez de la foto fija anterior. El video está alojado en
-// Cloudinary; el póster es el primer cuadro del mismo video (Cloudinary lo
-// genera cambiando la extensión a .jpg con so_0), así mientras el video
-// carga —o si el navegador no lo reproduce— se ve una imagen coherente en
-// vez de un fondo vacío.
-const HERO_VIDEO =
-  "https://res.cloudinary.com/dtcjnhb0v/video/upload/v1790349907/0925_1_uvsoaf.mp4";
-const HERO_POSTER =
-  "https://res.cloudinary.com/dtcjnhb0v/video/upload/so_0/v1790349907/0925_1_uvsoaf.jpg";
+// fondo. El video está alojado en Cloudinary, y el archivo original pesa
+// mucho (~44MB) para un fondo decorativo, así que no se pide tal cual:
+// se pide con transformaciones de Cloudinary en la URL, que lo comprimen
+// al vuelo:
+//   - q_auto: Cloudinary elige la compresión justa para que no se note
+//   - w_1920,c_limit: lo achica a 1920px de ancho como máximo (nunca lo
+//     agranda si ya es más chico)
+//   - ac_none: le saca el audio (el video va siempre muteado)
+// El original queda como segunda <source>: si Cloudinary no pudiera
+// generar la versión comprimida, el navegador pasa solo al original en
+// vez de dejar el hero sin video.
+const CLOUDINARY_VIDEO = "https://res.cloudinary.com/dtcjnhb0v/video/upload";
+const VIDEO_ID = "v1790349907/0925_1_uvsoaf";
+const HERO_VIDEO = `${CLOUDINARY_VIDEO}/q_auto,w_1920,c_limit,ac_none/${VIDEO_ID}.mp4`;
+const HERO_VIDEO_ORIGINAL = `${CLOUDINARY_VIDEO}/${VIDEO_ID}.mp4`;
+// Póster: el primer cuadro del mismo video como imagen (so_0 + .jpg), y
+// f_auto para que Cloudinary la sirva en WebP/AVIF si el navegador puede.
+const HERO_POSTER = `${CLOUDINARY_VIDEO}/so_0,q_auto,f_auto,w_1920,c_limit/${VIDEO_ID}.jpg`;
+
+// El video solo se carga en pantallas de 768px o más (tablet/escritorio),
+// y nunca si el visitante pidió menos movimiento (prefers-reduced-motion)
+// o activó el ahorro de datos. En celular se muestra solo el póster: un
+// video de fondo ahí gasta datos móviles y batería para algo decorativo.
+// Arranca en false y recién se decide en el useEffect, así en celular el
+// <video> nunca llega a montarse y el navegador ni empieza a bajarlo.
+const QUERY_VIDEO =
+  "(min-width: 768px) and (prefers-reduced-motion: no-preference)";
+
+const puedeMostrarVideo = () =>
+  window.matchMedia(QUERY_VIDEO).matches && !navigator.connection?.saveData;
 
 const Hero = () => {
+  const [mostrarVideo, setMostrarVideo] = useState(false);
+
+  useEffect(() => {
+    const media = window.matchMedia(QUERY_VIDEO);
+    const actualizar = () => setMostrarVideo(puedeMostrarVideo());
+    actualizar();
+    media.addEventListener("change", actualizar);
+    return () => media.removeEventListener("change", actualizar);
+  }, []);
+
   return (
     <section className="relative w-full overflow-hidden bg-tinta">
-      {/* muted + playsInline son obligatorios para que el autoplay funcione
-          en mobile (iOS/Android bloquean el autoplay con sonido). Es
-          decorativo, por eso aria-hidden. */}
-      <video
-        className="absolute inset-0 h-full w-full object-cover"
-        src={HERO_VIDEO}
-        poster={HERO_POSTER}
-        autoPlay
-        muted
-        loop
-        playsInline
-        preload="auto"
-        aria-hidden="true"
-      />
+      {mostrarVideo ? (
+        // muted + playsInline son obligatorios para que el autoplay
+        // funcione (los navegadores bloquean el autoplay con sonido). Es
+        // decorativo, por eso aria-hidden.
+        <video
+          className="absolute inset-0 h-full w-full object-cover"
+          poster={HERO_POSTER}
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+          aria-hidden="true"
+        >
+          <source src={HERO_VIDEO} type="video/mp4" />
+          <source src={HERO_VIDEO_ORIGINAL} type="video/mp4" />
+        </video>
+      ) : (
+        <img
+          src={HERO_POSTER}
+          alt=""
+          aria-hidden="true"
+          className="absolute inset-0 h-full w-full object-cover"
+        />
+      )}
 
       {/* Degradé oscuro para que el texto se lea bien sobre cualquier foto
           (clara u oscura). No alcanza con oscurecer solo una franja fina
@@ -61,13 +104,10 @@ const Hero = () => {
         <div className="w-full max-w-7xl mx-auto px-6 md:px-10 pb-16 md:pb-24">
           <div className="max-w-2xl text-white">
             {/* El eyebrow va en blanco, no en naranja: el naranja de marca
-                (#C1631E) es un tono medio que, como texto chico, nunca
-                llega a 4.5:1 sobre una foto clara (4.14 en el mejor caso,
-                contra blanco puro) por más oscuro que se ponga el degradé
-                — llegar a un contraste seguro ahí exigiría un degradé casi
-                negro sólido, lo que taparía la foto. La marca sigue
-                presente con la rayita naranja (decorativa, no es texto que
-                deba leerse) antes de la etiqueta. */}
+                es muy claro y, como texto chico, se pierde sobre los
+                cuadros claros del video. La marca sigue presente con la
+                rayita naranja (decorativa, no es texto que deba leerse)
+                antes de la etiqueta. */}
             <div className="flex items-center gap-3 mb-5">
               <span className="h-[2px] w-8 bg-naranja" aria-hidden="true" />
               <p className="uppercase tracking-[0.28em] text-xs md:text-sm font-semibold text-white/95">

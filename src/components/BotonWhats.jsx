@@ -1,8 +1,16 @@
 import { FaWhatsapp } from "react-icons/fa";
 
+// Botón flotante de WhatsApp, abajo a la derecha. Se monta una sola vez
+// en App.jsx (no dentro del Navbar): antes vivía en el Navbar, y como en
+// mobile los links del Navbar están dentro del menú desplegable, en el
+// celular el botón solo aparecía con el menú abierto. Montado en App se
+// ve igual en todas las pantallas.
+// Color: el verde oficial de WhatsApp (#25D366) con el ícono blanco, a
+// propósito fuera de la paleta del sitio: es el verde que la gente
+// reconoce al instante como "WhatsApp".
 const WhatsAppButton = () => {
   // El número debe ir como string y SIN el símbolo "+" para la URL de wa.me
-  const phoneNumber = "5491166194844"; 
+  const phoneNumber = "5491166194844";
   const message = "Hola, me gustaría más información.";
   const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
@@ -11,31 +19,10 @@ const WhatsAppButton = () => {
       href={url}
       target="_blank"
       rel="noopener noreferrer"
-      style={{
-        // Propiedades para hacerlo flotante
-        position: "fixed",
-        bottom: "20px",
-        right: "20px",
-        zIndex: 1000,
-        
-        // Estilo visual
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        backgroundColor: "#25d366",
-        color: "white",
-        width: "60px",
-        height: "60px",
-        borderRadius: "50%", // Lo hace circular
-        boxShadow: "2px 2px 10px rgba(0,0,0,0.3)",
-        textDecoration: "none",
-        transition: "transform 0.3s ease"
-      }}
-      // Efecto simple de hover al pasar el mouse
-      onMouseEnter={(e) => (e.currentTarget.style.transform = "scale(1.1)")}
-      onMouseLeave={(e) => (e.currentTarget.style.transform = "scale(1)")}
+      aria-label="Escribinos por WhatsApp"
+      className="fixed bottom-5 right-5 z-40 flex h-15 w-15 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg transition-transform duration-300 hover:scale-110"
     >
-      <FaWhatsapp size={35} />
+      <FaWhatsapp size={35} aria-hidden="true" />
     </a>
   );
 };
