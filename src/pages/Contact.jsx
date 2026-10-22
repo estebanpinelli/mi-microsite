@@ -37,7 +37,7 @@ const Contact = () => {
               que ya usamos en el hero del home y en /destinos. */}
           <div className="flex flex-wrap items-center justify-center gap-4 mt-8">
             <a
-              href="https://wa.me/5491166194844?text=Hola%2C%20me%20gustar%C3%ADa%20m%C3%A1s%20informaci%C3%B3n."
+              href="https://wa.me/5491164498183?text=Hola%2C%20me%20gustar%C3%ADa%20m%C3%A1s%20informaci%C3%B3n."
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-white text-tinta px-6 py-3 rounded-full font-medium hover:bg-naranja-tinte transition-all duration-300 hover:-translate-y-0.5"

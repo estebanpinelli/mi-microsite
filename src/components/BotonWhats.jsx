@@ -10,7 +10,7 @@ import { FaWhatsapp } from "react-icons/fa";
 // reconoce al instante como "WhatsApp".
 const WhatsAppButton = () => {
   // El número debe ir como string y SIN el símbolo "+" para la URL de wa.me
-  const phoneNumber = "5491166194844";
+  const phoneNumber = "5491164498183";
   const message = "Hola, me gustaría más información.";
   const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 

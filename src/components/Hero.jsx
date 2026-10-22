@@ -4,7 +4,7 @@ import { FaWhatsapp } from "react-icons/fa";
 
 // Hero de Home: un video a pantalla completa (estilo Black Tomato) como
 // fondo. El video está alojado en Cloudinary, y el archivo original pesa
-// mucho (~44MB) para un fondo decorativo, así que no se pide tal cual:
+// demasiado para un fondo decorativo, así que no se pide tal cual:
 // se pide con transformaciones de Cloudinary en la URL, que lo comprimen
 // al vuelo:
 //   - q_auto: Cloudinary elige la compresión justa para que no se note
@@ -15,12 +15,14 @@ import { FaWhatsapp } from "react-icons/fa";
 // generar la versión comprimida, el navegador pasa solo al original en
 // vez de dejar el hero sin video.
 const CLOUDINARY_VIDEO = "https://res.cloudinary.com/dtcjnhb0v/video/upload";
-const VIDEO_ID = "v1790349907/0925_1_uvsoaf";
+const VIDEO_ID = "v1792683973/montaje_viajes_ijshb3";
 const HERO_VIDEO = `${CLOUDINARY_VIDEO}/q_auto,w_1920,c_limit,ac_none/${VIDEO_ID}.mp4`;
 const HERO_VIDEO_ORIGINAL = `${CLOUDINARY_VIDEO}/${VIDEO_ID}.mp4`;
-// Póster: el primer cuadro del mismo video como imagen (so_0 + .jpg), y
-// f_auto para que Cloudinary la sirva en WebP/AVIF si el navegador puede.
-const HERO_POSTER = `${CLOUDINARY_VIDEO}/so_0,q_auto,f_auto,w_1920,c_limit/${VIDEO_ID}.jpg`;
+// Póster: una foto fija (no un cuadro del video), que se ve mientras el
+// video carga y en celular, donde el video no se carga. Con q_auto,f_auto
+// Cloudinary la comprime y la sirve en WebP/AVIF si el navegador puede.
+const HERO_POSTER =
+  "https://res.cloudinary.com/dtcjnhb0v/image/upload/q_auto,f_auto,w_1920,c_limit/v1752938788/tobin-rogers-kdTjNVs0wQ8-unsplash_mf7nfi.jpg";
 
 // El video solo se carga en pantallas de 768px o más (tablet/escritorio),
 // y nunca si el visitante pidió menos movimiento (prefers-reduced-motion)
@@ -125,7 +127,7 @@ const Hero = () => {
 
             <div className="flex flex-wrap items-center gap-4">
               <a
-                href="https://wa.me/+5491166194844"
+                href="https://wa.me/5491164498183"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-white text-tinta px-6 py-3 rounded-full font-semibold hover:bg-naranja-tinte transition-all duration-300 hover:-translate-y-0.5"
