@@ -16,7 +16,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Footer from '../components/Footer';
-import { isLocalImage, toWebp } from '../utils/images';
+import { isLocalImage, toWebp, ogImage, optimizada } from '../utils/images';
 import { setPageStructuredData, clearPageStructuredData } from '../utils/structuredData';
 import { parseItinerario, truncar } from '../utils/itinerario';
 import { buildDestinoStructuredData, destinoPath, destinoSeoTitle } from '../utils/destinoSeo';
@@ -105,7 +105,7 @@ const DestinationDetail = () => {
         image={
           isLocalImage(destino.imagenBanner)
             ? `${SITE_URL}${destino.imagenBanner}`
-            : destino.imagenBanner
+            : ogImage(destino.imagenBanner)
         }
         path={destinoPath(destino)}
       />
@@ -127,7 +127,7 @@ const DestinationDetail = () => {
             <source srcSet={toWebp(destino.imagenBanner)} type="image/webp" />
           )}
           <img
-            src={destino.imagenBanner}
+            src={optimizada(destino.imagenBanner, 2000)}
             alt={destino.nombre}
             className="absolute inset-0 h-full w-full object-cover"
           />
@@ -274,7 +274,7 @@ const DestinationDetail = () => {
                         <source srcSet={toWebp(img)} type="image/webp" />
                       )}
                       <img
-                        src={img}
+                        src={optimizada(img, 1400)}
                         alt={`${destino.nombre} - imagen ${index + 1}`}
                         loading={index === 0 ? "eager" : "lazy"}
                         className="h-full w-full object-cover"
