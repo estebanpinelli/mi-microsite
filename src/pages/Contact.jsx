@@ -47,10 +47,10 @@ const Contact = () => {
               <FiArrowRight className="text-base" />
             </a>
             <a
-              href="mailto:exoticos@lomasturismo.com"
+              href="mailto:exoticos@lomasturismo.com.ar"
               className="inline-flex items-center gap-2 border border-white/50 text-white px-6 py-3 rounded-full font-medium hover:bg-white/10 transition-all duration-300"
             >
-              exoticos@lomasturismo.com
+              exoticos@lomasturismo.com.ar
             </a>
           </div>
         </div>

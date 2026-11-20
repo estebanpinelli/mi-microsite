@@ -38,6 +38,24 @@
             "/Japonfotos/japon7.jpg",
             "/Japonfotos/japon8.jpg",
             "/Japonfotos/japon9.jpg"
+        ],
+        "faq": [
+            {
+                "pregunta": "¿Necesito visa para viajar a Japón con pasaporte argentino?",
+                "respuesta": "No. Los argentinos pueden ingresar a Japón como turistas sin visa por hasta 90 días. Se necesita el pasaporte vigente. Requisitos vigentes a noviembre de 2026 para pasaporte argentino; pueden cambiar, así que te los confirmamos al momento de reservar."
+            },
+            {
+                "pregunta": "¿Cuántas personas viajan en el grupo?",
+                "respuesta": "Es un viaje en grupo reducido de hasta 16 personas, acompañado por un guía en español durante el viaje y en las excursiones."
+            },
+            {
+                "pregunta": "¿El precio incluye los vuelos desde Argentina?",
+                "respuesta": "Sí. El viaje incluye los vuelos internacionales, con salida desde Buenos Aires, además de hoteles 4 estrellas con desayuno, traslados, envío de maletas de Tokio a Kioto y seguro médico."
+            },
+            {
+                "pregunta": "¿Cuál es la mejor época para viajar a Japón?",
+                "respuesta": "La primavera (marzo a mayo, la temporada de los cerezos en flor) y el otoño (octubre y noviembre, con el follaje rojo) son las épocas más lindas y templadas para recorrer el país."
+            }
         ]
     },
     {
@@ -83,6 +101,24 @@
             "https://res.cloudinary.com/dtcjnhb0v/image/upload/v1752938758/lion-5311194_1280_p1fpsm.jpg",
             "https://res.cloudinary.com/dtcjnhb0v/image/upload/v1752142012/pexels-op23-13791865_wwt7oh.jpg",
             "https://res.cloudinary.com/dtcjnhb0v/image/upload/v1752142011/pexels-klusted24-12720285_tkvfe6.jpg"
+        ],
+        "faq": [
+            {
+                "pregunta": "¿Necesito visa para viajar a Sudáfrica con pasaporte argentino?",
+                "respuesta": "No para turismo. Sí hay que revisar la vacuna contra la fiebre amarilla: Sudáfrica puede pedir el certificado internacional a quienes llegan desde países con zonas de riesgo, y la vacuna se aplica al menos 10 días antes del viaje. Requisitos vigentes a noviembre de 2026 para pasaporte argentino; pueden cambiar, así que te los confirmamos al momento de reservar."
+            },
+            {
+                "pregunta": "¿Los safaris son con guía en español?",
+                "respuesta": "Sí. Los safaris en 4x4 son con guías en español. Los traslados por carretera son con chofer de habla inglesa."
+            },
+            {
+                "pregunta": "¿Cuál es la mejor época para hacer un safari en Kruger?",
+                "respuesta": "El invierno austral (mayo a septiembre) es la temporada seca: la vegetación es más baja y los animales se concentran cerca del agua, lo que facilita los avistajes."
+            },
+            {
+                "pregunta": "¿El precio incluye los vuelos desde Argentina?",
+                "respuesta": "Sí. Incluye los vuelos internacionales y los domésticos dentro de Sudáfrica, además de alojamiento en hoteles 4* y lodges, pensión completa en la reserva privada y seguro de viaje."
+            }
         ]
     },
     {
@@ -91,7 +127,7 @@
         "slug": "australia-nueva-zelanda",
         "seoTitle": "Viaje a Australia y Nueva Zelanda desde Argentina | Exóticos",
         "seoDescription": "21 días por Sídney, Uluru, Cairns, Melbourne, Auckland, Rotorua y Queenstown. Gran Barrera de Coral y Milford Sound, con vuelos incluidos desde Argentina.",
-        "descripcion": "Un viaje privado por dos países que te van a enamorar. De las playas doradas de la Gran Barrera de Coral a las montañas nevadas de Queenstown, pasando por el desierto rojo del Outback y las cuevas luminosas de Waitomo. Comodidad privada y experiencias compartidas en 21 días inolvidables. ¿Te sumás a descubrir las antípodas?",
+        "descripcion": "Un viaje en grupo reducido por dos países que te van a enamorar. De las playas doradas de la Gran Barrera de Coral a las montañas nevadas de Queenstown, pasando por el desierto rojo del Outback y las cuevas luminosas de Waitomo. Comodidad y experiencias compartidas en 21 días inolvidables. ¿Te sumás a descubrir las antípodas?",
         "imagen": "https://res.cloudinary.com/dtcjnhb0v/image/upload/v1752141847/pexels-petra-nesti-1766376-21273960_spd0tb.jpg",
         "destacado": true,
         "modalidad": "Grupo Reducido",
@@ -127,6 +163,24 @@
             "https://res.cloudinary.com/dtcjnhb0v/image/upload/v1752141834/koon-chakhatrakan-yuitRKBAXAY-unsplash_qlescd.jpg",
             "https://res.cloudinary.com/dtcjnhb0v/image/upload/v1752141832/milford-sound-109918_1280_pc8ell.jpg",
             "https://res.cloudinary.com/dtcjnhb0v/image/upload/v1752141832/milford-sound-109918_1280_pc8ell.jpg"
+        ],
+        "faq": [
+            {
+                "pregunta": "¿Necesito visa para viajar a Australia y Nueva Zelanda con pasaporte argentino?",
+                "respuesta": "Para Australia sí: hay que tramitar online la visa de visitante (subclase 600) antes de viajar, y conviene hacerlo con varias semanas de anticipación. Para Nueva Zelanda no hace falta visa, pero sí la autorización electrónica NZeTA, que también se pide online antes del viaje. Requisitos vigentes a noviembre de 2026 para pasaporte argentino; pueden cambiar, así que te los confirmamos al momento de reservar."
+            },
+            {
+                "pregunta": "¿El precio incluye los vuelos desde Argentina?",
+                "respuesta": "Sí. Incluye los vuelos internacionales y los vuelos internos entre ciudades, hoteles 3* y 4* con desayuno, traslados y las excursiones principales del itinerario."
+            },
+            {
+                "pregunta": "¿Cuál es la mejor época para viajar a Australia y Nueva Zelanda?",
+                "respuesta": "La primavera y el otoño australes (septiembre a noviembre y marzo a mayo) son un buen equilibrio para combinar ciudades, el desierto rojo, la Gran Barrera de Coral y los fiordos de Nueva Zelanda."
+            },
+            {
+                "pregunta": "¿Las visitas son en español?",
+                "respuesta": "Las visitas guiadas son en español e inglés, según el destino. Además, tenés asistencia telefónica las 24 horas durante todo el viaje."
+            }
         ]
     },
     {
@@ -135,7 +189,7 @@
         "slug": "inglaterra-escocia-irlanda",
         "seoTitle": "Viaje a Inglaterra, Escocia e Irlanda desde Argentina | Exóticos",
         "seoDescription": "18 días por Londres, Edimburgo, las Highlands, Dublín, el Anillo de Kerry y los Acantilados de Moher, con guías en español y vuelos incluidos desde Argentina.",
-        "descripcion": "Un viaje privado por las tierras de castillos y leyendas. De las torres de Londres a los acantilados de Moher, pasando por las Highlands escocesas y los valles irlandeses. Historia milenaria, paisajes de película y cultura celta en 18 días únicos. ¿Te sumás a descubrir las islas británicas?",
+        "descripcion": "Un viaje en grupo reducido por las tierras de castillos y leyendas. De las torres de Londres a los acantilados de Moher, pasando por las Highlands escocesas y los valles irlandeses. Historia milenaria, paisajes de película y cultura celta en 18 días únicos. ¿Te sumás a descubrir las islas británicas?",
         "imagen": "https://res.cloudinary.com/dtcjnhb0v/image/upload/v1752141937/mathias-reding-MjAj56SrqiE-unsplash_umtpsb.jpg",
         "destacado": true,
         "modalidad": "Grupo Reducido",
@@ -149,7 +203,7 @@
             "Visita al último puerto del Titanic en Cobh",
             "Recorrido nocturno por las calles medievales de Edimburgo"
         ],
-        "descriptivoCompleto": "Descubrí las islas británicas en un viaje épico que combina historia milenaria, castillos de leyenda y paisajes que han inspirado a poetas y cineastas. Desde los teatros de Londres hasta los acantilados irlandeses, esta aventura te sumerge en la cultura celta más auténtica.\n\nLONDRES\nLa cosmopolita capital británica, donde la tradición se mezcla con la modernidad. Exploraremos sus barrios históricos, museos mundialmente famosos y los icónicos símbolos como el Big Ben, Tower Bridge y Buckingham Palace. Tiempo libre para teatros y mercados.\n\nEDIMBURGO\nLa majestuosa capital escocesa, dominada por su castillo medieval. Caminaremos por la famosa Royal Mile hasta el Palacio de Holyrood, descubriendo las estrechas calles del Old Town. Desde Calton Hill contemplaremos vistas panorámicas de toda la ciudad.\n\nHIGHLANDS ESCOCESAS\nTierra de clanes y leyendas, donde visitaremos el Castillo de Stirling, el dramático valle de Glencoe y el viaducto de Glenfinnan de Harry Potter. El viaje incluye ferry a la mágica Isla de Skye con sus Fairy Pools y montañas Cuillin.\n\nLAGO NESS E INVERNESS\nEl emblemático lago hogar del monstruo más famoso del mundo, con las ruinas del Castillo de Urquhart. Inverness, capital de las Highlands, nos recibe con su encanto tradicional y cercanía a destilerías de whisky.\n\nST ANDREWS Y CASTILLOS\nLa ciudad real cuna del golf, con su antigua universidad y hermosas playas. Visitaremos el Castillo de Glamis, hogar ancestral de la realeza británica, y el HMS Discovery del Capitán Scott.\n\nDUBLÍN\nLa vibrante capital irlandesa, famosa por sus pubs, la Guinness y el ambiente bohemio de Temple Bar. Exploraremos sus calles georgianasadas, Trinity College y la animada vida nocturna.\n\nWICKLOW Y GLENDALOUGH\nEl 'Jardín de Irlanda' con sus montañas verdes y cascadas cristalinas. Los jardines de Powerscourt y la ciudad monástica de Glendalough del siglo VI nos transportan al pasado céltico.\n\nCORK Y BLARNEY\nEl fascinante puerto de Cobh, último del Titanic, y el legendario Castillo de Blarney donde besarás la piedra de la elocuencia. Cork nos muestra la auténtica hospitalidad irlandesa.\n\nKILLARNEY Y ANILLO DE KERRY\nParque Nacional designado Reserva de la Biosfera por UNESCO. La Mansión Muckross de 'Downtown Abbey' y las vistas espectaculares del Anillo de Kerry a través de Ladies View.\n\nACATILADOS DE MOHER Y CONNEMARA\nLos dramáticos acantilados Patrimonio de la Humanidad que se alzan 120 metros sobre el Atlántico. La poética región de Connemara con la Abadía de Kylemore, antigua mansión en medio del verde irlandés.\n\nGALWAY Y DESTILERÍA TULLAMORE\nLa ciudad estudiantil bohemia con ambiente artístico. El pueblo georgiano de Birr prácticamente intacto y la histórica destilería de whiskey donde conoceremos los secretos del 'agua de la vida'.",
+        "descriptivoCompleto": "Descubrí las islas británicas en un viaje épico que combina historia milenaria, castillos de leyenda y paisajes que han inspirado a poetas y cineastas. Desde los teatros de Londres hasta los acantilados irlandeses, esta aventura te sumerge en la cultura celta más auténtica.\n\nLONDRES\nLa cosmopolita capital británica, donde la tradición se mezcla con la modernidad. Exploraremos sus barrios históricos, museos mundialmente famosos y los icónicos símbolos como el Big Ben, Tower Bridge y Buckingham Palace. Tiempo libre para teatros y mercados.\n\nEDIMBURGO\nLa majestuosa capital escocesa, dominada por su castillo medieval. Caminaremos por la famosa Royal Mile hasta el Palacio de Holyrood, descubriendo las estrechas calles del Old Town. Desde Calton Hill contemplaremos vistas panorámicas de toda la ciudad.\n\nHIGHLANDS ESCOCESAS\nTierra de clanes y leyendas, donde visitaremos el Castillo de Stirling, el dramático valle de Glencoe y el viaducto de Glenfinnan de Harry Potter. El viaje incluye ferry a la mágica Isla de Skye con sus Fairy Pools y montañas Cuillin.\n\nLAGO NESS E INVERNESS\nEl emblemático lago hogar del monstruo más famoso del mundo, con las ruinas del Castillo de Urquhart. Inverness, capital de las Highlands, nos recibe con su encanto tradicional y cercanía a destilerías de whisky.\n\nST ANDREWS Y CASTILLOS\nLa ciudad real cuna del golf, con su antigua universidad y hermosas playas. Visitaremos el Castillo de Glamis, hogar ancestral de la realeza británica, y el HMS Discovery del Capitán Scott.\n\nDUBLÍN\nLa vibrante capital irlandesa, famosa por sus pubs, la Guinness y el ambiente bohemio de Temple Bar. Exploraremos sus calles georgianasadas, Trinity College y la animada vida nocturna.\n\nWICKLOW Y GLENDALOUGH\nEl 'Jardín de Irlanda' con sus montañas verdes y cascadas cristalinas. Los jardines de Powerscourt y la ciudad monástica de Glendalough del siglo VI nos transportan al pasado céltico.\n\nCORK Y BLARNEY\nEl fascinante puerto de Cobh, último del Titanic, y el legendario Castillo de Blarney donde besarás la piedra de la elocuencia. Cork nos muestra la auténtica hospitalidad irlandesa.\n\nKILLARNEY Y ANILLO DE KERRY\nParque Nacional designado Reserva de la Biosfera por UNESCO. La Mansión Muckross de 'Downtown Abbey' y las vistas espectaculares del Anillo de Kerry a través de Ladies View.\n\nACANTILADOS DE MOHER Y CONNEMARA\nLos dramáticos acantilados Patrimonio de la Humanidad que se alzan 120 metros sobre el Atlántico. La poética región de Connemara con la Abadía de Kylemore, antigua mansión en medio del verde irlandés.\n\nGALWAY Y DESTILERÍA TULLAMORE\nLa ciudad estudiantil bohemia con ambiente artístico. El pueblo georgiano de Birr prácticamente intacto y la histórica destilería de whiskey donde conoceremos los secretos del 'agua de la vida'.",
         "incluye": [
             "Vuelos internacionales y vuelos internos",
             "Alojamiento con desayuno en hoteles seleccionados",
@@ -172,6 +226,24 @@
             "https://res.cloudinary.com/dtcjnhb0v/image/upload/v1752141942/bagpipes-215549_1920_hasswq.jpg",
             "https://res.cloudinary.com/dtcjnhb0v/image/upload/v1752141942/pexels-leefinvrede-31208848_hwyb7x.jpg",
             "https://res.cloudinary.com/dtcjnhb0v/image/upload/v1752141944/pexels-mariogomez-6245463_q992oj.jpg"
+        ],
+        "faq": [
+            {
+                "pregunta": "¿Necesito visa para viajar a Inglaterra, Escocia e Irlanda con pasaporte argentino?",
+                "respuesta": "No hace falta visa. Para el Reino Unido (Inglaterra y Escocia), desde enero de 2025 los argentinos tienen que tramitar online la ETA (autorización electrónica de viaje) antes de salir. Requisitos vigentes a noviembre de 2026 para pasaporte argentino; pueden cambiar, así que te los confirmamos al momento de reservar."
+            },
+            {
+                "pregunta": "¿Las visitas son con guía en español?",
+                "respuesta": "Sí. Las visitas guiadas son con guías especializados en español, y hay asistencia telefónica las 24 horas."
+            },
+            {
+                "pregunta": "¿El precio incluye los vuelos desde Argentina?",
+                "respuesta": "Sí. Incluye los vuelos internacionales y los internos, el tren de Londres a Edimburgo, hoteles con desayuno, entradas a castillos y monumentos, y los paseos en barco y ferry a la Isla de Skye."
+            },
+            {
+                "pregunta": "¿Cuál es la mejor época para viajar a las Islas Británicas?",
+                "respuesta": "De mayo a septiembre los días son más largos y el clima más amable, ideal para las Highlands, la Isla de Skye y la costa oeste de Irlanda."
+            }
         ]
     },
     {
@@ -221,6 +293,24 @@
             "https://res.cloudinary.com/dtcjnhb0v/image/upload/v1757341208/hanny-naibaho-mnyJEvSLtvk-unsplash_scatoa.jpg",
             "https://res.cloudinary.com/dtcjnhb0v/image/upload/v1757341208/andres-garcia-OgrfLCYqfVY-unsplash_lyjrbx.jpg",
             "https://res.cloudinary.com/dtcjnhb0v/image/upload/v1757341207/photo-1603120527222-33f28c2ce89e_igt12e.avif"
+        ],
+        "faq": [
+            {
+                "pregunta": "¿Necesito visa para viajar a China con pasaporte argentino?",
+                "respuesta": "Hoy no: los argentinos pueden entrar a China sin visa por hasta 30 días, un beneficio que rige hasta el 31 de diciembre de 2026. Para salidas posteriores, confirmamos si se prorrogó o si corresponde tramitar la visa de turismo en la embajada. Requisitos vigentes a noviembre de 2026 para pasaporte argentino; pueden cambiar, así que te los confirmamos al momento de reservar."
+            },
+            {
+                "pregunta": "¿El viaje es privado?",
+                "respuesta": "Sí. Es un viaje privado con guía de habla hispana o inglesa y traslados privados entre aeropuertos, estaciones, hoteles y excursiones."
+            },
+            {
+                "pregunta": "¿El precio incluye los vuelos desde Argentina?",
+                "respuesta": "Sí. Incluye los vuelos internacionales, los vuelos internos y los trenes de alta velocidad dentro de China, hoteles 4★ con desayuno y las entradas a todas las atracciones del itinerario."
+            },
+            {
+                "pregunta": "¿Cuál es la mejor época para viajar a China?",
+                "respuesta": "La primavera (abril y mayo) y el otoño (septiembre y octubre) tienen temperaturas agradables en casi todo el recorrido, de Beijing a Guilin y Hong Kong."
+            }
         ]
     },
     {
@@ -261,6 +351,24 @@
             "https://res.cloudinary.com/dtcjnhb0v/image/upload/v1790932801/jahcordova-sand-3289126_1920_onv9rx.jpg",
             "https://res.cloudinary.com/dtcjnhb0v/image/upload/v1790932800/michaelcatadman-festival-10332845_1920_pqgxep.jpg",
             "https://res.cloudinary.com/dtcjnhb0v/image/upload/v1790932800/thewildprimate-tarsier-10327055_1920_mlkhjm.jpg"
+        ],
+        "faq": [
+            {
+                "pregunta": "¿Necesito visa para viajar a Filipinas con pasaporte argentino?",
+                "respuesta": "No. Los argentinos pueden ingresar a Filipinas sin visa por hasta 30 días. Antes de llegar hay que completar el registro online eTravel, que es gratuito. Requisitos vigentes a noviembre de 2026 para pasaporte argentino; pueden cambiar, así que te los confirmamos al momento de reservar."
+            },
+            {
+                "pregunta": "¿El viaje es privado?",
+                "respuesta": "Sí. Es un viaje privado, con todos los traslados entre hoteles e islas y las excursiones de island hopping y snorkel incluidas."
+            },
+            {
+                "pregunta": "¿El precio incluye los vuelos desde Argentina?",
+                "respuesta": "Sí. Incluye los vuelos internacionales y los domésticos entre islas, hoteles 4* y lodges con desayuno, 6 almuerzos y seguro de viaje."
+            },
+            {
+                "pregunta": "¿Cuál es la mejor época para viajar a Filipinas?",
+                "respuesta": "La estación seca, de diciembre a mayo, es la mejor para navegar entre islas y hacer snorkel con el mar calmo y buena visibilidad."
+            }
         ]
     },
     {
