@@ -18,6 +18,7 @@ import { writeFileSync, readFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
 import { SITE_URL } from "../src/config/site.js";
+import { destinoPath } from "../src/utils/destinoSeo.js";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, "..");
@@ -52,7 +53,7 @@ const rutasFijas = [
 ];
 
 const rutasDestinos = destinosPublicados.map((d) => ({
-  loc: `/destino/${d.id}`,
+  loc: destinoPath(d),
   changefreq: "monthly",
   priority: "0.8",
 }));

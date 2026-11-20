@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { FiArrowRight } from "react-icons/fi";
 import { isLocalImage, toWebp } from "../utils/images";
+import { destinoPath } from "../utils/destinoSeo";
 
 // Etiqueta chica tipo "JAPÓN · 14 DÍAS": toma el primer segmento del
 // nombre (antes de ":" o ",", que es como están escritos casi todos los
@@ -23,7 +24,7 @@ const buildEyebrow = (destino) => {
 const DestinoCard = ({ destino }) => {
   return (
     <Link
-      to={`/destino/${destino.id}`}
+      to={destinoPath(destino)}
       className="group block text-tinta border border-filete rounded-sm overflow-hidden hover:border-tinta/30 transition-colors duration-300"
     >
       <div className="relative aspect-[3/4] overflow-hidden bg-filete">

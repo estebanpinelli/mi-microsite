@@ -5,6 +5,7 @@ import Footer from "../components/Footer";
 import DestinoCard from "../components/DestinoCard";
 import { isLocalImage, toWebp } from "../utils/images";
 import Seo from "../components/Seo";
+import { PAGINAS } from "../config/paginas";
 import { SITE_URL } from "../config/site";
 
 const Destinations = () => {
@@ -14,11 +15,13 @@ const Destinations = () => {
   const [currentBannerIndex, setCurrentBannerIndex] = useState(0);
   const carouselRef = useRef(null);
 
+  // Cada foto con su texto alternativo: Google Imágenes y los lectores de
+  // pantalla leen el "alt", y "Banner 1" no le decía nada a ninguno.
   const bannerImages = [
-    "/fotobannerborneo.jpg",
-    "/fotobanneribiza.jpg",
-    "/fotobannernoruega.jpg",
-    "/fotobannertoscana.jpg",
+    { src: "/fotobannerborneo.jpg", alt: "Selva y río en Borneo" },
+    { src: "/fotobanneribiza.jpg", alt: "Costa de Ibiza" },
+    { src: "/fotobannernoruega.jpg", alt: "Fiordos de Noruega" },
+    { src: "/fotobannertoscana.jpg", alt: "Colinas de la Toscana" },
   ];
 
   useEffect(() => {
@@ -60,10 +63,10 @@ const Destinations = () => {
   // durante el "Cargando destinos...".
   const seo = (
     <Seo
-      title="Destinos | Exóticos - Viajes privados y en grupos reducidos"
-      description="Descubrí nuestros viajes privados y en grupos reducidos a Japón, Sudáfrica, Australia, Nueva Zelanda, Gran Bretaña, Irlanda y China. Experiencias diseñadas a medida."
-      image={`${SITE_URL}/fotobannerborneo.jpg`}
-      path="/destinos"
+      title={PAGINAS.destinos.title}
+      description={PAGINAS.destinos.description}
+      image={`${SITE_URL}${PAGINAS.destinos.image}`}
+      path={PAGINAS.destinos.path}
     />
   );
 
@@ -121,12 +124,12 @@ const Destinations = () => {
             }`}
           >
             <picture>
-              {isLocalImage(image) && (
-                <source srcSet={toWebp(image)} type="image/webp" />
+              {isLocalImage(image.src) && (
+                <source srcSet={toWebp(image.src)} type="image/webp" />
               )}
               <img
-                src={image}
-                alt={`Banner ${index + 1}`}
+                src={image.src}
+                alt={image.alt}
                 className="w-full h-full object-cover scale-[1.02]"
               />
             </picture>
