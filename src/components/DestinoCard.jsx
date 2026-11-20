@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { FiArrowRight } from "react-icons/fi";
-import { isLocalImage, toWebp } from "../utils/images";
+import { isLocalImage, toWebp, optimizada } from "../utils/images";
 import { destinoPath } from "../utils/destinoSeo";
 
 // Etiqueta chica tipo "JAPÓN · 14 DÍAS": toma el primer segmento del
@@ -33,7 +33,7 @@ const DestinoCard = ({ destino }) => {
             <source srcSet={toWebp(destino.imagen)} type="image/webp" />
           )}
           <img
-            src={destino.imagen}
+            src={optimizada(destino.imagen, 800)}
             alt={destino.nombre}
             loading="lazy"
             className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"

@@ -37,6 +37,7 @@ import { readFileSync, writeFileSync, mkdirSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
 import { SITE_URL } from "../src/config/site.js";
+import { ogImage } from "../src/utils/images.js";
 import { PAGINAS } from "../src/config/paginas.js";
 import { parseItinerario, truncar } from "../src/utils/itinerario.js";
 import {
@@ -234,7 +235,7 @@ for (const d of destinos) {
       path: destinoPath(d),
       title: destinoSeoTitle(d),
       description: truncar(d.seoDescription || d.descripcion),
-      image: d.imagenBanner,
+      image: ogImage(d.imagenBanner),
       jsonLd: buildDestinoStructuredData(d),
       contenido: `<main><nav><a href="/">Inicio</a> › <a href="/destinos">Destinos</a></nav><article>${secciones}</article>${navDestinos()}</main>`,
     })

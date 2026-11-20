@@ -5,6 +5,7 @@
 
 import { SITE_URL } from "../config/site.js";
 import { parseItinerario, truncar } from "./itinerario.js";
+import { optimizada } from "./images.js";
 
 export const destinoPath = (d) => `/destino/${d.slug || d.id}`;
 
@@ -26,7 +27,7 @@ export function buildDestinoStructuredData(d) {
     name: d.nombre,
     description: d.seoDescription || d.descripcion,
     url,
-    image: [d.imagenBanner, ...(d.imagenes || [])].filter(Boolean).slice(0, 6).map(absoluta),
+    image: [d.imagenBanner, ...(d.imagenes || [])].filter(Boolean).slice(0, 6).map((src) => absoluta(optimizada(src, 1600))),
     touristType: d.modalidad || undefined,
     provider: { "@id": `${SITE_URL}/#agencia` },
     offers: {
