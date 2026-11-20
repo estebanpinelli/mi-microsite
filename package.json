@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "dev:clean": "rm -rf node_modules/.vite && vite",
-    "build": "node scripts/generate-seo-files.mjs && vite build",
+    "build": "node scripts/generate-seo-files.mjs && vite build && node scripts/prerender.mjs",
     "seo:generate": "node scripts/generate-seo-files.mjs",
     "lint": "eslint .",
     "preview": "vite preview"

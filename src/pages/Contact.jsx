@@ -2,16 +2,17 @@ import { FiArrowRight } from "react-icons/fi";
 import Footer from "../components/Footer";
 import ContactForm from "../components/ContactForm";
 import Seo from "../components/Seo";
+import { PAGINAS } from "../config/paginas";
 import { SITE_URL } from "../config/site";
 
 const Contact = () => {
   return (
     <>
       <Seo
-        title="Contacto | Exóticos"
-        description="Contactate con Exóticos para planificar tu próximo viaje privado o en grupo reducido. Te respondemos en 24-48 hs hábiles con una propuesta a medida."
-        image={`${SITE_URL}/contacto.jpg`}
-        path="/contacto"
+        title={PAGINAS.contacto.title}
+        description={PAGINAS.contacto.description}
+        image={`${SITE_URL}${PAGINAS.contacto.image}`}
+        path={PAGINAS.contacto.path}
       />
       {/* Sección de contacto con imagen de fondo */}
       <div className="bg-contacto relative h-[75vh] min-h-[520px] bg-cover bg-center flex flex-col items-center justify-center text-white">
@@ -46,10 +47,10 @@ const Contact = () => {
               <FiArrowRight className="text-base" />
             </a>
             <a
-              href="mailto:exoticos@lomasturismo.com"
+              href="mailto:exoticos@lomasturismo.com.ar"
               className="inline-flex items-center gap-2 border border-white/50 text-white px-6 py-3 rounded-full font-medium hover:bg-white/10 transition-all duration-300"
             >
-              exoticos@lomasturismo.com
+              exoticos@lomasturismo.com.ar
             </a>
           </div>
         </div>

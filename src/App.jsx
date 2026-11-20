@@ -18,7 +18,11 @@ const Contact = lazy(() => import("./pages/Contact"));
 
 function App() {
   return (
-    <div style={{ width: "100vw", minHeight: "100vh", overflowX: "hidden" }}>
+    // overflowX "clip" en vez de "hidden": recorta igual lo que se sale de
+    // costado, pero "hidden" convertía a este div en un contenedor con
+    // scroll propio y eso rompía cualquier elemento "sticky" de adentro
+    // (el índice de secciones y el resumen lateral de cada destino).
+    <div style={{ width: "100vw", minHeight: "100vh", overflowX: "clip" }}>
       <Router>
         <Navbar />
         {/* Suspense es obligatorio junto con lazy(): mientras el archivo .js

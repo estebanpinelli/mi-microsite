@@ -2,15 +2,31 @@
     {
         "id": 1,
         "nombre": "Japon, de Tokio a Hiroshima",
+        "slug": "japon-tokio-kioto-hiroshima",
+        "seoTitle": "Viaje a Japón en grupo reducido desde Argentina | Exóticos",
+        "seoDescription": "Japón en 14 días con salida desde Buenos Aires: Tokio, Takayama, Kioto, Osaka, Nara e Hiroshima. Grupo de hasta 16 personas, guía en español y ryokan.",
         "descripcion": "Un viaje en grupo reducido por el corazón de Japón . De la energía de Tokio a la tradición de Kioto, pasando por los Alpes Japoneses y la mágica isla de Miyajima. Cultura, paisajes y gastronomía en un recorrido único. ¿Te sumás a la aventura? ",
         "imagen": "/japon1.jpg",
         "destacado": true,
-        "modalidad":"Grupo Reducido",
+        "modalidad": "Grupo Reducido",
         "precio": 5190,
         "duracion": "14 días",
-        "highlight": ["Grupo de hasta 16 personas", "Experiencia en Ryokan con Onsen", "Guia en español durante el viaje y en excursiones"],
+        "highlight": [
+            "Grupo de hasta 16 personas",
+            "Experiencia en Ryokan con Onsen",
+            "Guia en español durante el viaje y en excursiones"
+        ],
         "descriptivoCompleto": "Día 1: Salida de Buenos Aires hacia Tokio\nRecomendamos acudir al aeropuerto unas 3hs antes. Vuelo con destino a Tokio. Noche a bordo.\n\nDía 2: Tokio\nArribo y recepción por nuestro asistente local. Traslado al hotel. Por la tarde/noche recorreremos el barrio de Shibuya y su icónico cruce peatonal.\n\nDía 3: Tokio\nVisitaremos el Templo Asakusa (Senso-ji), el Parque de Ueno y el mercado Ameyoko. Tarde en el elegante distrito de Ginza y visita a la isla artificial de Odaiba vía el tren Yurikamome.\n\nDía 4: Tokio\nRecorrido por Harajuku (calle Takeshita), Santuario Meiji y el barrio tecnológico de Akihabara. Terminaremos en Shinjuku subiendo al mirador del Edificio del Gobierno Metropolitano.\n\nDía 5: Excursión a Kamakura\nVisita a la ciudad samurái: Santuario Tsurugaoka Hachimangu, Templo Hase y el famoso Gran Buda de Kotoku-in.\n\nDía 6: Tokio a Takayama\nViaje en tren a los Alpes Japoneses. Recorrido por el casco antiguo y destilerías de sake. Alojamiento en ryokan tradicional.\n\nDía 7: Takayama a Kioto\nMercados matutinos y tiempo libre. Por la tarde, viaje en tren hacia Kioto, la antigua capital imperial.\n\nDía 8: Kioto\nVisita al Castillo de Nijo, Pabellón de Oro (Kinkakuji), Pabellón de Plata (Ginkakuji) y paseo por Gion, el barrio de las geishas.\n\nDía 9: Excursión a Osaka\nRecorrido por el Castillo de Osaka, el distrito financiero de Umeda y los vibrantes barrios de Shinsekai y Dotonbori.\n\nDía 10: Excursión a Nara e Inari\nVisita a los miles de torii rojos en Fushimi Inari. En Nara, visitaremos el Templo Todai-ji y el parque de los ciervos.\n\nDía 11: Excursión a Hiroshima y Miyajima\nViaje en tren bala para visitar el Parque Conmemorativo de la Paz y la isla de Miyajima con su famoso torii sobre el agua.\n\nDía 12: Kioto a Tokio\nMañana libre en Kioto y regreso a Tokio en tren bala Shinkansen.\n\nDía 13: Tokio\nDía libre para actividades personales, compras o seguir explorando la capital.\n\nDía 14: Tokio – Regreso a Buenos Aires\nTraslado al aeropuerto para tomar el vuelo de regreso. Noche a bordo.",
-        "incluye": ["Vuelos internacionales", "Hoteles 4 estrellas", "Desayunos diarios", "Guía en Español.","Todos los traslados y transportes públicos necesarios para las visitas","Envío de maletas desde Tokio a Kioto ","Seguro médico y de asistencia","Teléfono de emergencia"],
+        "incluye": [
+            "Vuelos internacionales",
+            "Hoteles 4 estrellas",
+            "Desayunos diarios",
+            "Guía en Español.",
+            "Todos los traslados y transportes públicos necesarios para las visitas",
+            "Envío de maletas desde Tokio a Kioto ",
+            "Seguro médico y de asistencia",
+            "Teléfono de emergencia"
+        ],
         "imagenBanner": "/Japonfotos/japonbanner.jpg",
         "imagenes": [
             "/Japonfotos/japon1.jpg",
@@ -22,37 +38,58 @@
             "/Japonfotos/japon7.jpg",
             "/Japonfotos/japon8.jpg",
             "/Japonfotos/japon9.jpg"
+        ],
+        "faq": [
+            {
+                "pregunta": "¿Necesito visa para viajar a Japón con pasaporte argentino?",
+                "respuesta": "No. Los argentinos pueden ingresar a Japón como turistas sin visa por hasta 90 días. Se necesita el pasaporte vigente. Requisitos vigentes a noviembre de 2026 para pasaporte argentino; pueden cambiar, así que te los confirmamos al momento de reservar."
+            },
+            {
+                "pregunta": "¿Cuántas personas viajan en el grupo?",
+                "respuesta": "Es un viaje en grupo reducido de hasta 16 personas, acompañado por un guía en español durante el viaje y en las excursiones."
+            },
+            {
+                "pregunta": "¿El precio incluye los vuelos desde Argentina?",
+                "respuesta": "Sí. El viaje incluye los vuelos internacionales, con salida desde Buenos Aires, además de hoteles 4 estrellas con desayuno, traslados, envío de maletas de Tokio a Kioto y seguro médico."
+            },
+            {
+                "pregunta": "¿Cuál es la mejor época para viajar a Japón?",
+                "respuesta": "La primavera (marzo a mayo, la temporada de los cerezos en flor) y el otoño (octubre y noviembre, con el follaje rojo) son las épocas más lindas y templadas para recorrer el país."
+            }
         ]
     },
     {
         "id": 2,
         "nombre": "Latidos de África: De Ciudad del Cabo al Kruger",
+        "slug": "sudafrica-ciudad-del-cabo-kruger",
+        "seoTitle": "Viaje a Sudáfrica con safari en Kruger desde Argentina | Exóticos",
+        "seoDescription": "Sudáfrica en grupo reducido: Ciudad del Cabo, St. Lucia, Zululand, safari en Kruger y reserva privada, y la Ruta Panorámica. Vuelos incluidos desde Argentina.",
         "descripcion": "Un viaje en grupo reducido por la esencia de Sudáfrica. De la vibrante Ciudad del Cabo al mítico Kruger, pasando por St. Lucia y la cultura zulú. Safaris, paisajes icónicos y alojamientos exclusivos en una aventura que combina lujo y naturaleza salvaje. ¿Te sumás al safari? ",
         "imagen": "https://res.cloudinary.com/dtcjnhb0v/image/upload/v1752938760/damian-patkowski-T-LfvX-7IVg-unsplash_cfifgn.jpg",
         "destacado": true,
-        "modalidad":"Grupo Reducido",
+        "modalidad": "Grupo Reducido",
         "precio": 3200,
         "duracion": "10 días",
         "highlight": [
-  "Safari al amanecer en una reserva privada",
-  "Encuentro cercano con elefantes en Kruger",
-  "Caminar entre pingüinos en Boulders Beach",
-  "Atardecer en St. Lucia con hipopótamos",
-  "Danza zulú tradicional en una aldea cultural",
-  "Ruta panorámica del Cañón del Río Blyde"
-],
-"descriptivoCompleto": "Descubrí Sudáfrica en un viaje único que combina naturaleza salvaje, cultura ancestral y paisajes inolvidables. Desde la cosmopolita Ciudad del Cabo hasta los safaris en reservas privadas, este recorrido te invita a sumergirte en la esencia de un país vibrante y lleno de contrastes.\n\nCIUDAD DEL CABO\nUna de las ciudades más bellas del mundo, rodeada por el imponente Table Mountain y el océano Atlántico. Recorreremos barrios costeros como Clifton y Camps Bay, navegaremos hasta la isla Duiker para observar focas, y exploraremos el Cabo de Buena Esperanza y Cape Point. También conoceremos la playa de Boulders, hogar de pingüinos africanos, y haremos un tour por el centro histórico con sus coloridas casas de Bo-Kaap, el mercado artesanal de Greenmarket Square y los famosos Company Gardens.\n\nST LUCIA E ISIMANGALISO\nEntre el océano Índico y los estuarios del Parque de iSimangaliso, Patrimonio de la Humanidad, disfrutaremos de un safari rodeados de hipopótamos, cocodrilos y aves. También navegaremos en un crucero por el estuario y llegaremos hasta la paradisíaca playa de Cape Vidal.\n\nZULULAND\nEn el corazón de la cultura zulú, visitaremos una aldea tradicional para descubrir sus costumbres, leyendas, danzas y rituales. Una experiencia que conecta con las raíces más auténticas de Sudáfrica.\n\nPARQUE NACIONAL KRUGER\nUno de los destinos de safari más famosos del mundo. Recorreremos el parque en busca de los Big Five: leones, leopardos, elefantes, búfalos y rinocerontes. Su inmensidad y biodiversidad hacen de cada jornada una aventura inolvidable.\n\nRESERVA PRIVADA DE THORNYBUSH\nLa experiencia de safari se intensifica en una reserva privada, donde los vehículos pueden salir de los caminos para seguir el rastro de los animales. Viviremos safaris al amanecer y al atardecer en vehículos abiertos, con mayores posibilidades de avistar felinos y escenas únicas de la vida salvaje.\n\nPANORAMA ROUTE\nEl viaje culmina con la espectacular Ruta Panorámica: el majestuoso Cañón del Río Blyde, las formaciones de las Tres Rondavels y las Marmitas de la Suerte de Bourke. Un cierre perfecto antes de llegar a Johannesburgo.",
+            "Safari al amanecer en una reserva privada",
+            "Encuentro cercano con elefantes en Kruger",
+            "Caminar entre pingüinos en Boulders Beach",
+            "Atardecer en St. Lucia con hipopótamos",
+            "Danza zulú tradicional en una aldea cultural",
+            "Ruta panorámica del Cañón del Río Blyde"
+        ],
+        "descriptivoCompleto": "Descubrí Sudáfrica en un viaje único que combina naturaleza salvaje, cultura ancestral y paisajes inolvidables. Desde la cosmopolita Ciudad del Cabo hasta los safaris en reservas privadas, este recorrido te invita a sumergirte en la esencia de un país vibrante y lleno de contrastes.\n\nCIUDAD DEL CABO\nUna de las ciudades más bellas del mundo, rodeada por el imponente Table Mountain y el océano Atlántico. Recorreremos barrios costeros como Clifton y Camps Bay, navegaremos hasta la isla Duiker para observar focas, y exploraremos el Cabo de Buena Esperanza y Cape Point. También conoceremos la playa de Boulders, hogar de pingüinos africanos, y haremos un tour por el centro histórico con sus coloridas casas de Bo-Kaap, el mercado artesanal de Greenmarket Square y los famosos Company Gardens.\n\nST LUCIA E ISIMANGALISO\nEntre el océano Índico y los estuarios del Parque de iSimangaliso, Patrimonio de la Humanidad, disfrutaremos de un safari rodeados de hipopótamos, cocodrilos y aves. También navegaremos en un crucero por el estuario y llegaremos hasta la paradisíaca playa de Cape Vidal.\n\nZULULAND\nEn el corazón de la cultura zulú, visitaremos una aldea tradicional para descubrir sus costumbres, leyendas, danzas y rituales. Una experiencia que conecta con las raíces más auténticas de Sudáfrica.\n\nPARQUE NACIONAL KRUGER\nUno de los destinos de safari más famosos del mundo. Recorreremos el parque en busca de los Big Five: leones, leopardos, elefantes, búfalos y rinocerontes. Su inmensidad y biodiversidad hacen de cada jornada una aventura inolvidable.\n\nRESERVA PRIVADA DE THORNYBUSH\nLa experiencia de safari se intensifica en una reserva privada, donde los vehículos pueden salir de los caminos para seguir el rastro de los animales. Viviremos safaris al amanecer y al atardecer en vehículos abiertos, con mayores posibilidades de avistar felinos y escenas únicas de la vida salvaje.\n\nPANORAMA ROUTE\nEl viaje culmina con la espectacular Ruta Panorámica: el majestuoso Cañón del Río Blyde, las formaciones de las Tres Rondavels y las Marmitas de la Suerte de Bourke. Un cierre perfecto antes de llegar a Johannesburgo.",
         "incluye": [
-  "Vuelos internacionales y domésticos",
-  "Traslados con chófer de habla inglesa",
-  "Alojamiento en hoteles 4* y lodges exclusivos",
-  "Desayunos diarios",
-  "Cenas en Kruger",
-  "Pensión completa en la reserva privada",
-  "Safaris en 4x4 con guías en español",
-  "Entradas a parques nacionales y reservas privadas",
-  "Seguro de viaje y asistencia 24h"
-],
+            "Vuelos internacionales y domésticos",
+            "Traslados con chófer de habla inglesa",
+            "Alojamiento en hoteles 4* y lodges exclusivos",
+            "Desayunos diarios",
+            "Cenas en Kruger",
+            "Pensión completa en la reserva privada",
+            "Safaris en 4x4 con guías en español",
+            "Entradas a parques nacionales y reservas privadas",
+            "Seguro de viaje y asistencia 24h"
+        ],
         "imagenBanner": "https://res.cloudinary.com/dtcjnhb0v/image/upload/v1752142009/martijn-vonk-0fmazLsi7Kw-unsplash_vypoma.jpg",
         "imagenes": [
             "https://res.cloudinary.com/dtcjnhb0v/image/upload/v1752939014/WIDEredcharlie-xtvo0ffGKlI-unsplash_krlavj.jpg",
@@ -64,36 +101,57 @@
             "https://res.cloudinary.com/dtcjnhb0v/image/upload/v1752938758/lion-5311194_1280_p1fpsm.jpg",
             "https://res.cloudinary.com/dtcjnhb0v/image/upload/v1752142012/pexels-op23-13791865_wwt7oh.jpg",
             "https://res.cloudinary.com/dtcjnhb0v/image/upload/v1752142011/pexels-klusted24-12720285_tkvfe6.jpg"
+        ],
+        "faq": [
+            {
+                "pregunta": "¿Necesito visa para viajar a Sudáfrica con pasaporte argentino?",
+                "respuesta": "No para turismo. Sí hay que revisar la vacuna contra la fiebre amarilla: Sudáfrica puede pedir el certificado internacional a quienes llegan desde países con zonas de riesgo, y la vacuna se aplica al menos 10 días antes del viaje. Requisitos vigentes a noviembre de 2026 para pasaporte argentino; pueden cambiar, así que te los confirmamos al momento de reservar."
+            },
+            {
+                "pregunta": "¿Los safaris son con guía en español?",
+                "respuesta": "Sí. Los safaris en 4x4 son con guías en español. Los traslados por carretera son con chofer de habla inglesa."
+            },
+            {
+                "pregunta": "¿Cuál es la mejor época para hacer un safari en Kruger?",
+                "respuesta": "El invierno austral (mayo a septiembre) es la temporada seca: la vegetación es más baja y los animales se concentran cerca del agua, lo que facilita los avistajes."
+            },
+            {
+                "pregunta": "¿El precio incluye los vuelos desde Argentina?",
+                "respuesta": "Sí. Incluye los vuelos internacionales y los domésticos dentro de Sudáfrica, además de alojamiento en hoteles 4* y lodges, pensión completa en la reserva privada y seguro de viaje."
+            }
         ]
     },
     {
         "id": 3,
         "nombre": "Océano Infinito: Australia & Nueva Zelanda",
-        "descripcion": "Un viaje privado por dos países que te van a enamorar. De las playas doradas de la Gran Barrera de Coral a las montañas nevadas de Queenstown, pasando por el desierto rojo del Outback y las cuevas luminosas de Waitomo. Comodidad privada y experiencias compartidas en 21 días inolvidables. ¿Te sumás a descubrir las antípodas?",
+        "slug": "australia-nueva-zelanda",
+        "seoTitle": "Viaje a Australia y Nueva Zelanda desde Argentina | Exóticos",
+        "seoDescription": "21 días por Sídney, Uluru, Cairns, Melbourne, Auckland, Rotorua y Queenstown. Gran Barrera de Coral y Milford Sound, con vuelos incluidos desde Argentina.",
+        "descripcion": "Un viaje en grupo reducido por dos países que te van a enamorar. De las playas doradas de la Gran Barrera de Coral a las montañas nevadas de Queenstown, pasando por el desierto rojo del Outback y las cuevas luminosas de Waitomo. Comodidad y experiencias compartidas en 21 días inolvidables. ¿Te sumás a descubrir las antípodas?",
         "imagen": "https://res.cloudinary.com/dtcjnhb0v/image/upload/v1752141847/pexels-petra-nesti-1766376-21273960_spd0tb.jpg",
         "destacado": true,
-        "modalidad":"Grupo Reducido",
+        "modalidad": "Grupo Reducido",
         "precio": 8690,
         "duracion": "21 días",
         "highlight": [
-"Cena bajo las estrellas en el desierto de Uluru",
-"Vuelo en hidroavión sobre la Gran Barrera de Coral",
-"Ceremonia maorí tradicional con hangi en Rotorua",
-"Safari nocturno en Kangaroo Island",
-"Crucero al atardecer por los fiordos de Milford Sound",
-"Caminata entre luciérnagas en las cuevas de Waitomo"
-],
+            "Cena bajo las estrellas en el desierto de Uluru",
+            "Vuelo en hidroavión sobre la Gran Barrera de Coral",
+            "Ceremonia maorí tradicional con hangi en Rotorua",
+            "Safari nocturno en Kangaroo Island",
+            "Crucero al atardecer por los fiordos de Milford Sound",
+            "Caminata entre luciérnagas en las cuevas de Waitomo"
+        ],
         "descriptivoCompleto": "Descubrí Australia y Nueva Zelanda en un viaje épico que fusiona ciudades vibrantes, paisajes ancestrales y naturaleza salvaje. Desde la energía urbana hasta desiertos rojos y bosques milenarios, esta aventura te sumerge en la esencia del Pacífico Sur.\n\nSIDNEY\nLa vibrante capital australiana, donde el icónico Opera House corona la bahía. Exploraremos barrios cosmopolitas, haremos un crucero panorámico y descubriremos las Montañas Azules con sus acantilados y cascadas. No faltarán el Harbour Bridge y la playa de Bondi.\n\nAYERS ROCK\nEl corazón sagrado del Outback, dominado por Uluru. Viviremos el atardecer en el desierto rojo, exploraremos las cúpulas de Kata Tjuta y descubriremos la cultura aborigen bajo un cielo estrellado.\n\nCAIRNS\nPuerta de entrada a la Gran Barrera de Coral y la selva de Daintree. Snorkel entre corales, paseos por la jungla primigenia y encuentros con la fauna única de Queensland.\n\nMELBOURNE\nLa capital cultural, famosa por su arte callejero, cafés bohemios y la arquitectura victoriana. Recorreremos la Great Ocean Road con sus Doce Apóstoles y degustaremos vinos en Yarra Valley.\n\nAUCKLAND\nLa 'Ciudad de las Velas' neozelandesa, entre volcanes y puertos. Visitaremos la Sky Tower, el mercado de Viaduct Harbour y nos adentraremos en las cuevas luminiscentes de Waitomo.\n\nROTORUA\nTierra de géiseres humeantes y cultura maorí. Experimentaremos aguas termales naturales, espectáculos tradicionales y el valle geotérmico de Wai-O-Tapu.\n\nQUEENSTOWN\nCapital de la aventura en los Alpes del Sur. Navegación por el fiordo Milford Sound, deportes extremos y paisajes de película en Middle Earth.",
         "incluye": [
-"Vuelos internacionales y domésticos",
-"Alojamiento en hoteles 3* y 4* con desayuno buffet",
-"Traslados privados en cada ciudad",
-"Excursiones a Blue Mountains, Gran Barrera de Coral y Great Ocean Road",
-"Cruceros panorámicos por Milford Sound con almuerzo",
-"Visitas guiadas en español e inglés",
-"Seguro de viaje con cobertura de anulación",
-"Asistencia telefónica 24h durante el viaje"
-],
+            "Vuelos internacionales y domésticos",
+            "Alojamiento en hoteles 3* y 4* con desayuno buffet",
+            "Traslados privados en cada ciudad",
+            "Excursiones a Blue Mountains, Gran Barrera de Coral y Great Ocean Road",
+            "Cruceros panorámicos por Milford Sound con almuerzo",
+            "Visitas guiadas en español e inglés",
+            "Seguro de viaje con cobertura de anulación",
+            "Asistencia telefónica 24h durante el viaje"
+        ],
         "imagenBanner": "https://res.cloudinary.com/dtcjnhb0v/image/upload/v1752141831/dan-freeman-7Zb7kUyQg1E-unsplash_rrxnyl.jpg",
         "imagenes": [
             "https://res.cloudinary.com/dtcjnhb0v/image/upload/v1752141844/weyne-yew-PCbpcMAY_ew-unsplash_ebwdw2.jpg",
@@ -105,32 +163,58 @@
             "https://res.cloudinary.com/dtcjnhb0v/image/upload/v1752141834/koon-chakhatrakan-yuitRKBAXAY-unsplash_qlescd.jpg",
             "https://res.cloudinary.com/dtcjnhb0v/image/upload/v1752141832/milford-sound-109918_1280_pc8ell.jpg",
             "https://res.cloudinary.com/dtcjnhb0v/image/upload/v1752141832/milford-sound-109918_1280_pc8ell.jpg"
+        ],
+        "faq": [
+            {
+                "pregunta": "¿Necesito visa para viajar a Australia y Nueva Zelanda con pasaporte argentino?",
+                "respuesta": "Para Australia sí: hay que tramitar online la visa de visitante (subclase 600) antes de viajar, y conviene hacerlo con varias semanas de anticipación. Para Nueva Zelanda no hace falta visa, pero sí la autorización electrónica NZeTA, que también se pide online antes del viaje. Requisitos vigentes a noviembre de 2026 para pasaporte argentino; pueden cambiar, así que te los confirmamos al momento de reservar."
+            },
+            {
+                "pregunta": "¿El precio incluye los vuelos desde Argentina?",
+                "respuesta": "Sí. Incluye los vuelos internacionales y los vuelos internos entre ciudades, hoteles 3* y 4* con desayuno, traslados y las excursiones principales del itinerario."
+            },
+            {
+                "pregunta": "¿Cuál es la mejor época para viajar a Australia y Nueva Zelanda?",
+                "respuesta": "La primavera y el otoño australes (septiembre a noviembre y marzo a mayo) son un buen equilibrio para combinar ciudades, el desierto rojo, la Gran Barrera de Coral y los fiordos de Nueva Zelanda."
+            },
+            {
+                "pregunta": "¿Las visitas son en español?",
+                "respuesta": "Las visitas guiadas son en español e inglés, según el destino. Además, tenés asistencia telefónica las 24 horas durante todo el viaje."
+            }
         ]
     },
     {
         "id": 4,
         "nombre": "Leyendas Celtas: Gran Bretaña, Escocia e Irlanda",
-        "descripcion": "Un viaje privado por las tierras de castillos y leyendas. De las torres de Londres a los acantilados de Moher, pasando por las Highlands escocesas y los valles irlandeses. Historia milenaria, paisajes de película y cultura celta en 18 días únicos. ¿Te sumás a descubrir las islas británicas?",
+        "slug": "inglaterra-escocia-irlanda",
+        "seoTitle": "Viaje a Inglaterra, Escocia e Irlanda desde Argentina | Exóticos",
+        "seoDescription": "18 días por Londres, Edimburgo, las Highlands, Dublín, el Anillo de Kerry y los Acantilados de Moher, con guías en español y vuelos incluidos desde Argentina.",
+        "descripcion": "Un viaje en grupo reducido por las tierras de castillos y leyendas. De las torres de Londres a los acantilados de Moher, pasando por las Highlands escocesas y los valles irlandeses. Historia milenaria, paisajes de película y cultura celta en 18 días únicos. ¿Te sumás a descubrir las islas británicas?",
         "imagen": "https://res.cloudinary.com/dtcjnhb0v/image/upload/v1752141937/mathias-reding-MjAj56SrqiE-unsplash_umtpsb.jpg",
         "destacado": true,
-        "modalidad":"Grupo Reducido",
+        "modalidad": "Grupo Reducido",
         "precio": 3900,
         "duracion": "18 días",
-        "highlight": ["Besar la Piedra de Blarney para obtener el don de la elocuencia",
-  "Paseo en barco por Loch Coruisk, lago en cráter volcánico extinguido",
-  "Caminata por el campo de batalla de Culloden, última batalla en suelo británico",
-  "Degustación de whisky en destilerías auténticas de Escocia e Irlanda",
-  "Visita al último puerto del Titanic en Cobh",
-  "Recorrido nocturno por las calles medievales de Edimburgo"],
-        "descriptivoCompleto": "Descubrí las islas británicas en un viaje épico que combina historia milenaria, castillos de leyenda y paisajes que han inspirado a poetas y cineastas. Desde los teatros de Londres hasta los acantilados irlandeses, esta aventura te sumerge en la cultura celta más auténtica.\n\nLONDRES\nLa cosmopolita capital británica, donde la tradición se mezcla con la modernidad. Exploraremos sus barrios históricos, museos mundialmente famosos y los icónicos símbolos como el Big Ben, Tower Bridge y Buckingham Palace. Tiempo libre para teatros y mercados.\n\nEDIMBURGO\nLa majestuosa capital escocesa, dominada por su castillo medieval. Caminaremos por la famosa Royal Mile hasta el Palacio de Holyrood, descubriendo las estrechas calles del Old Town. Desde Calton Hill contemplaremos vistas panorámicas de toda la ciudad.\n\nHIGHLANDS ESCOCESAS\nTierra de clanes y leyendas, donde visitaremos el Castillo de Stirling, el dramático valle de Glencoe y el viaducto de Glenfinnan de Harry Potter. El viaje incluye ferry a la mágica Isla de Skye con sus Fairy Pools y montañas Cuillin.\n\nLAGO NESS E INVERNESS\nEl emblemático lago hogar del monstruo más famoso del mundo, con las ruinas del Castillo de Urquhart. Inverness, capital de las Highlands, nos recibe con su encanto tradicional y cercanía a destilerías de whisky.\n\nST ANDREWS Y CASTILLOS\nLa ciudad real cuna del golf, con su antigua universidad y hermosas playas. Visitaremos el Castillo de Glamis, hogar ancestral de la realeza británica, y el HMS Discovery del Capitán Scott.\n\nDUBLÍN\nLa vibrante capital irlandesa, famosa por sus pubs, la Guinness y el ambiente bohemio de Temple Bar. Exploraremos sus calles georgianasadas, Trinity College y la animada vida nocturna.\n\nWICKLOW Y GLENDALOUGH\nEl 'Jardín de Irlanda' con sus montañas verdes y cascadas cristalinas. Los jardines de Powerscourt y la ciudad monástica de Glendalough del siglo VI nos transportan al pasado céltico.\n\nCORK Y BLARNEY\nEl fascinante puerto de Cobh, último del Titanic, y el legendario Castillo de Blarney donde besarás la piedra de la elocuencia. Cork nos muestra la auténtica hospitalidad irlandesa.\n\nKILLARNEY Y ANILLO DE KERRY\nParque Nacional designado Reserva de la Biosfera por UNESCO. La Mansión Muckross de 'Downtown Abbey' y las vistas espectaculares del Anillo de Kerry a través de Ladies View.\n\nACATILADOS DE MOHER Y CONNEMARA\nLos dramáticos acantilados Patrimonio de la Humanidad que se alzan 120 metros sobre el Atlántico. La poética región de Connemara con la Abadía de Kylemore, antigua mansión en medio del verde irlandés.\n\nGALWAY Y DESTILERÍA TULLAMORE\nLa ciudad estudiantil bohemia con ambiente artístico. El pueblo georgiano de Birr prácticamente intacto y la histórica destilería de whiskey donde conoceremos los secretos del 'agua de la vida'.",
-        "incluye": [ "Vuelos internacionales y vuelos internos",
-  "Alojamiento con desayuno en hoteles seleccionados",
-  "Tren de Londres a Edimburgo",
-  "Entradas a castillos, monumentos y parques nacionales",
-  "Paseos en barco y ferry a la Isla de Skye",
-  "Visitas guiadas con guías especializados en español",
-  "Traslados incluidos en cada destino","Asistencia telefonica 24hs",
-  "Seguro de medico"],
+        "highlight": [
+            "Besar la Piedra de Blarney para obtener el don de la elocuencia",
+            "Paseo en barco por Loch Coruisk, lago en cráter volcánico extinguido",
+            "Caminata por el campo de batalla de Culloden, última batalla en suelo británico",
+            "Degustación de whisky en destilerías auténticas de Escocia e Irlanda",
+            "Visita al último puerto del Titanic en Cobh",
+            "Recorrido nocturno por las calles medievales de Edimburgo"
+        ],
+        "descriptivoCompleto": "Descubrí las islas británicas en un viaje épico que combina historia milenaria, castillos de leyenda y paisajes que han inspirado a poetas y cineastas. Desde los teatros de Londres hasta los acantilados irlandeses, esta aventura te sumerge en la cultura celta más auténtica.\n\nLONDRES\nLa cosmopolita capital británica, donde la tradición se mezcla con la modernidad. Exploraremos sus barrios históricos, museos mundialmente famosos y los icónicos símbolos como el Big Ben, Tower Bridge y Buckingham Palace. Tiempo libre para teatros y mercados.\n\nEDIMBURGO\nLa majestuosa capital escocesa, dominada por su castillo medieval. Caminaremos por la famosa Royal Mile hasta el Palacio de Holyrood, descubriendo las estrechas calles del Old Town. Desde Calton Hill contemplaremos vistas panorámicas de toda la ciudad.\n\nHIGHLANDS ESCOCESAS\nTierra de clanes y leyendas, donde visitaremos el Castillo de Stirling, el dramático valle de Glencoe y el viaducto de Glenfinnan de Harry Potter. El viaje incluye ferry a la mágica Isla de Skye con sus Fairy Pools y montañas Cuillin.\n\nLAGO NESS E INVERNESS\nEl emblemático lago hogar del monstruo más famoso del mundo, con las ruinas del Castillo de Urquhart. Inverness, capital de las Highlands, nos recibe con su encanto tradicional y cercanía a destilerías de whisky.\n\nST ANDREWS Y CASTILLOS\nLa ciudad real cuna del golf, con su antigua universidad y hermosas playas. Visitaremos el Castillo de Glamis, hogar ancestral de la realeza británica, y el HMS Discovery del Capitán Scott.\n\nDUBLÍN\nLa vibrante capital irlandesa, famosa por sus pubs, la Guinness y el ambiente bohemio de Temple Bar. Exploraremos sus calles georgianasadas, Trinity College y la animada vida nocturna.\n\nWICKLOW Y GLENDALOUGH\nEl 'Jardín de Irlanda' con sus montañas verdes y cascadas cristalinas. Los jardines de Powerscourt y la ciudad monástica de Glendalough del siglo VI nos transportan al pasado céltico.\n\nCORK Y BLARNEY\nEl fascinante puerto de Cobh, último del Titanic, y el legendario Castillo de Blarney donde besarás la piedra de la elocuencia. Cork nos muestra la auténtica hospitalidad irlandesa.\n\nKILLARNEY Y ANILLO DE KERRY\nParque Nacional designado Reserva de la Biosfera por UNESCO. La Mansión Muckross de 'Downtown Abbey' y las vistas espectaculares del Anillo de Kerry a través de Ladies View.\n\nACANTILADOS DE MOHER Y CONNEMARA\nLos dramáticos acantilados Patrimonio de la Humanidad que se alzan 120 metros sobre el Atlántico. La poética región de Connemara con la Abadía de Kylemore, antigua mansión en medio del verde irlandés.\n\nGALWAY Y DESTILERÍA TULLAMORE\nLa ciudad estudiantil bohemia con ambiente artístico. El pueblo georgiano de Birr prácticamente intacto y la histórica destilería de whiskey donde conoceremos los secretos del 'agua de la vida'.",
+        "incluye": [
+            "Vuelos internacionales y vuelos internos",
+            "Alojamiento con desayuno en hoteles seleccionados",
+            "Tren de Londres a Edimburgo",
+            "Entradas a castillos, monumentos y parques nacionales",
+            "Paseos en barco y ferry a la Isla de Skye",
+            "Visitas guiadas con guías especializados en español",
+            "Traslados incluidos en cada destino",
+            "Asistencia telefonica 24hs",
+            "Seguro de medico"
+        ],
         "imagenBanner": "https://res.cloudinary.com/dtcjnhb0v/image/upload/v1752141948/connor-mollison-rC2_aH8lAlU-unsplash_xl52ns.jpg",
         "imagenes": [
             "https://res.cloudinary.com/dtcjnhb0v/image/upload/v1752141946/pexels-samuel-wolfl-628277-1427578_h19w92.jpg",
@@ -142,38 +226,62 @@
             "https://res.cloudinary.com/dtcjnhb0v/image/upload/v1752141942/bagpipes-215549_1920_hasswq.jpg",
             "https://res.cloudinary.com/dtcjnhb0v/image/upload/v1752141942/pexels-leefinvrede-31208848_hwyb7x.jpg",
             "https://res.cloudinary.com/dtcjnhb0v/image/upload/v1752141944/pexels-mariogomez-6245463_q992oj.jpg"
+        ],
+        "faq": [
+            {
+                "pregunta": "¿Necesito visa para viajar a Inglaterra, Escocia e Irlanda con pasaporte argentino?",
+                "respuesta": "No hace falta visa. Para el Reino Unido (Inglaterra y Escocia), desde enero de 2025 los argentinos tienen que tramitar online la ETA (autorización electrónica de viaje) antes de salir. Requisitos vigentes a noviembre de 2026 para pasaporte argentino; pueden cambiar, así que te los confirmamos al momento de reservar."
+            },
+            {
+                "pregunta": "¿Las visitas son con guía en español?",
+                "respuesta": "Sí. Las visitas guiadas son con guías especializados en español, y hay asistencia telefónica las 24 horas."
+            },
+            {
+                "pregunta": "¿El precio incluye los vuelos desde Argentina?",
+                "respuesta": "Sí. Incluye los vuelos internacionales y los internos, el tren de Londres a Edimburgo, hoteles con desayuno, entradas a castillos y monumentos, y los paseos en barco y ferry a la Isla de Skye."
+            },
+            {
+                "pregunta": "¿Cuál es la mejor época para viajar a las Islas Británicas?",
+                "respuesta": "De mayo a septiembre los días son más largos y el clima más amable, ideal para las Highlands, la Isla de Skye y la costa oeste de Irlanda."
+            }
         ]
     },
-        {
+    {
         "id": 5,
         "nombre": "China milenaria entre murallas y dragones",
+        "slug": "china-beijing-hong-kong",
+        "seoTitle": "Viaje a China privado desde Argentina | Exóticos",
+        "seoDescription": "China en 16 días con guía privado: Beijing, la Gran Muralla, Xi'an, crucero por el Yangtsé, Shanghái, Guilin y Hong Kong. Vuelos incluidos desde Argentina.",
         "descripcion": "Un viaje privado por el corazón del Gigante Asiático. De la Ciudad Prohibida y la Gran Muralla a los Guerreros de Terracota, pasando por un crucero por el Yangtsé y los paisajes kársticos de Guilin. Historia milenaria, modernidad deslumbrante y contrastes únicos en un recorrido de Beijing a Hong Kong. ¿Te sumás a descubrir China?",
         "imagen": "https://res.cloudinary.com/dtcjnhb0v/image/upload/v1757341207/photo-1603120527222-33f28c2ce89e_igt12e.avif",
         "destacado": true,
-        "modalidad":"Privado",
+        "modalidad": "Privado",
         "precio": 5990,
         "duracion": "16 días",
-        "highlight": [  "Caminar sobre la Gran Muralla de Mutianyu, una de las Siete Maravillas del Mundo",
-  "Recorrer en bicicleta los hutongs centenarios de Beijing",
-  "Contemplar el ejército eterno de los Guerreros de Terracota en Xi’an",
-  "Navegar entre las Tres Gargantas del río Yangtsé en un crucero legendario",
-  "Pasear por los Jardines Yuyuan en el corazón de Shanghái",
-  "Disfrutar un crucero por el río Li entre los paisajes kársticos de Guilin",
-  "Vivir el ambiente bohemio de la Calle del Oeste en Yangshuo",
-  "Subir al Victoria Peak para admirar el skyline de Hong Kong",
-  "Descubrir las aldeas flotantes de pescadores en Aberdeen",
-  "Relajarse en la playa de Repulse Bay en pleno corazón urbano"],
+        "highlight": [
+            "Caminar sobre la Gran Muralla de Mutianyu, una de las Siete Maravillas del Mundo",
+            "Recorrer en bicicleta los hutongs centenarios de Beijing",
+            "Contemplar el ejército eterno de los Guerreros de Terracota en Xi’an",
+            "Navegar entre las Tres Gargantas del río Yangtsé en un crucero legendario",
+            "Pasear por los Jardines Yuyuan en el corazón de Shanghái",
+            "Disfrutar un crucero por el río Li entre los paisajes kársticos de Guilin",
+            "Vivir el ambiente bohemio de la Calle del Oeste en Yangshuo",
+            "Subir al Victoria Peak para admirar el skyline de Hong Kong",
+            "Descubrir las aldeas flotantes de pescadores en Aberdeen",
+            "Relajarse en la playa de Repulse Bay en pleno corazón urbano"
+        ],
         "descriptivoCompleto": "Embárcate en una odisea épica a través del Gigante Asiático, desde la imperial Beijing hasta el cosmopolita Hong Kong. Este viaje te sumergirá en 5.000 años de historia, dinastías milenarias y paisajes que han inspirado poetas durante siglos. Desde la majestuosa Ciudad Prohibida hasta los dramáticos paisajes kársticos de Guilin, descubrirás la auténtica esencia del Reino del Centro.\n\nBEIJING\nLa capital imperial donde late el corazón de China. Exploraremos la inmensa Plaza de Tiananmen, la Ciudad Prohibida con sus 9.999 habitaciones y los tradicionales hutongs centenarios. El Templo del Cielo nos revela los rituales imperiales, mientras que desde el Parque Jingshan contemplaremos vistas panorámicas de la Ciutat Prohibida. La Gran Muralla de Mutianyu, una de las maravillas del mundo, nos espera con su arquitectura milenaria serpenteando por las montañas.\n\nXI'AN\nLa antigua capital de la Ruta de la Seda, guardiana de tesoros arqueológicos únicos. Los legendarios Guerreros de Terracota, ejército eterno del primer emperador, nos reciben en formación de batalla. La muralla medieval mejor conservada de China rodea el casco histórico, mientras que el vibrante Barrio Musulmán nos sumerge en aromas de especias y la cultura hui. El Campanario marca el ritmo de esta ciudad que fue centro del mundo durante trece dinastías.\n\nCRUCERO POR EL RÍO YANGTSÉ\nNavegación épica por el tercer río más largo del mundo, conocido como el \"Río Dorado\" de China. Atravesaremos las espectaculares Tres Gargantas: Qutang, Wu y Xiling, cañones que se elevan hasta 1.200 metros sobre las aguas. La misteriosa Ciudad Fantasma de Fengdu y los templos flotantes del Arroyo de la Diosa nos transportan al China más legendario. La colosal Presa de las Tres Gargantas representa la ingeniería moderna china.\n\nSHANGHAI\nLa \"Perla de Oriente\", metrópolis futurista donde Oriente abraza Occidente. El histórico Bund con su \"galería de arquitectura mundial\" contrasta con los rascacielos de Lujiazui. Los tradicionales jardines Yuyuan del período Ming nos refugian del bullicio urbano, mientras que las casas Shikumen muestran la fusión arquitectónica chino-occidental. La Torre de Shanghai nos eleva a las nubes para contemplar esta megalópolis de 24 millones de habitantes.\n\nGUILIN Y YANGSHUO\nEl paisaje kárstico más bello del planeta, donde montañas de formas caprichosas emergen como torres de piedra verde. El crucero por el Río Li revela panoramas que adornan los billetes chinos, con la Colina de la Trompa del Elefante como símbolo icónico. Yangshuo, con su cosmopolita Calle del Oeste, combina tradición rural con ambiente internacional en un valle rodeado de picos de ensueño.\n\nHONG KONG\nLa \"Fragante Bahía\" donde China se encuentra con el mundo. Desde el Victoria Peak contemplaremos uno de los skylines más espectaculares del planeta. Aberdeen preserva la cultura de los pescadores tradicionales con sus casas flotantes, mientras que Repulse Bay ofrece playas tropicales en el corazón urbano. Stanley Market nos sumerge en el paraíso del shopping, culminando esta travesía donde la tradición china se viste de modernidad cosmopolita.",
         "incluye": [
-    "Vuelos internacionales",
-    "Vuelos internos y trenes de alta velocidad en China",
-    "Traslados privados entre aeropuertos, estaciones, hoteles y excursiones",
-    "Alojamiento en hoteles 4★ con desayuno incluido",
-    "Guía turístico privado de habla hispana o inglesa",
-    "Entradas a todas las atracciones del itinerario",
-    "Comidas locales según el programa",
-    "Seguro médico",
-    "Asistencia telefónica 24hs"],
+            "Vuelos internacionales",
+            "Vuelos internos y trenes de alta velocidad en China",
+            "Traslados privados entre aeropuertos, estaciones, hoteles y excursiones",
+            "Alojamiento en hoteles 4★ con desayuno incluido",
+            "Guía turístico privado de habla hispana o inglesa",
+            "Entradas a todas las atracciones del itinerario",
+            "Comidas locales según el programa",
+            "Seguro médico",
+            "Asistencia telefónica 24hs"
+        ],
         "imagenBanner": "https://res.cloudinary.com/dtcjnhb0v/image/upload/v1757341209/ling-tang-yBroAF1cN3I-unsplash_uj6i0f.jpg",
         "imagenes": [
             "https://res.cloudinary.com/dtcjnhb0v/image/upload/v1757341208/shane-young-hOwGHmNcncg-unsplash_qonuak.jpg",
@@ -185,11 +293,32 @@
             "https://res.cloudinary.com/dtcjnhb0v/image/upload/v1757341208/hanny-naibaho-mnyJEvSLtvk-unsplash_scatoa.jpg",
             "https://res.cloudinary.com/dtcjnhb0v/image/upload/v1757341208/andres-garcia-OgrfLCYqfVY-unsplash_lyjrbx.jpg",
             "https://res.cloudinary.com/dtcjnhb0v/image/upload/v1757341207/photo-1603120527222-33f28c2ce89e_igt12e.avif"
+        ],
+        "faq": [
+            {
+                "pregunta": "¿Necesito visa para viajar a China con pasaporte argentino?",
+                "respuesta": "Hoy no: los argentinos pueden entrar a China sin visa por hasta 30 días, un beneficio que rige hasta el 31 de diciembre de 2026. Para salidas posteriores, confirmamos si se prorrogó o si corresponde tramitar la visa de turismo en la embajada. Requisitos vigentes a noviembre de 2026 para pasaporte argentino; pueden cambiar, así que te los confirmamos al momento de reservar."
+            },
+            {
+                "pregunta": "¿El viaje es privado?",
+                "respuesta": "Sí. Es un viaje privado con guía de habla hispana o inglesa y traslados privados entre aeropuertos, estaciones, hoteles y excursiones."
+            },
+            {
+                "pregunta": "¿El precio incluye los vuelos desde Argentina?",
+                "respuesta": "Sí. Incluye los vuelos internacionales, los vuelos internos y los trenes de alta velocidad dentro de China, hoteles 4★ con desayuno y las entradas a todas las atracciones del itinerario."
+            },
+            {
+                "pregunta": "¿Cuál es la mejor época para viajar a China?",
+                "respuesta": "La primavera (abril y mayo) y el otoño (septiembre y octubre) tienen temperaturas agradables en casi todo el recorrido, de Beijing a Guilin y Hong Kong."
+            }
         ]
     },
     {
         "id": 7,
         "nombre": "Filipinas: Paraíso entre Islas",
+        "slug": "filipinas-el-nido-coron-siargao",
+        "seoTitle": "Viaje a Filipinas desde Argentina: El Nido, Coron, Siargao | Exóticos",
+        "seoDescription": "Viaje privado de 14 días por Filipinas: lagunas de El Nido, snorkel en Coron y playas de Siargao. Vuelos internacionales e internos incluidos desde Argentina.",
         "descripcion": "Un viaje privado por las islas más impactantes de Filipinas. De las lagunas escondidas de El Nido a las aguas cristalinas de Coron, terminando en las olas y palmeras de Siargao. Island hopping, snorkel entre corales y playas de arena blanca en un archipiélago de más de 7000 islas. ¿Te animás a descubrirlo?",
         "imagen": "https://res.cloudinary.com/dtcjnhb0v/image/upload/v1790932802/Filipinas_wcdmhc.jpg",
         "destacado": true,
@@ -222,20 +351,43 @@
             "https://res.cloudinary.com/dtcjnhb0v/image/upload/v1790932801/jahcordova-sand-3289126_1920_onv9rx.jpg",
             "https://res.cloudinary.com/dtcjnhb0v/image/upload/v1790932800/michaelcatadman-festival-10332845_1920_pqgxep.jpg",
             "https://res.cloudinary.com/dtcjnhb0v/image/upload/v1790932800/thewildprimate-tarsier-10327055_1920_mlkhjm.jpg"
+        ],
+        "faq": [
+            {
+                "pregunta": "¿Necesito visa para viajar a Filipinas con pasaporte argentino?",
+                "respuesta": "No. Los argentinos pueden ingresar a Filipinas sin visa por hasta 30 días. Antes de llegar hay que completar el registro online eTravel, que es gratuito. Requisitos vigentes a noviembre de 2026 para pasaporte argentino; pueden cambiar, así que te los confirmamos al momento de reservar."
+            },
+            {
+                "pregunta": "¿El viaje es privado?",
+                "respuesta": "Sí. Es un viaje privado, con todos los traslados entre hoteles e islas y las excursiones de island hopping y snorkel incluidas."
+            },
+            {
+                "pregunta": "¿El precio incluye los vuelos desde Argentina?",
+                "respuesta": "Sí. Incluye los vuelos internacionales y los domésticos entre islas, hoteles 4* y lodges con desayuno, 6 almuerzos y seguro de viaje."
+            },
+            {
+                "pregunta": "¿Cuál es la mejor época para viajar a Filipinas?",
+                "respuesta": "La estación seca, de diciembre a mayo, es la mejor para navegar entre islas y hacer snorkel con el mar calmo y buena visibilidad."
+            }
         ]
     },
-        {
+    {
         "id": 6,
         "publicado": false,
         "nombre": "PROXIMAMENTE NUEVOS DESTINOS",
+        "slug": "proximamente",
         "descripcion": "1",
         "imagen": "https://res.cloudinary.com/dtcjnhb0v/image/upload/v1758270953/Nuevos_viajes_ugjpda.jpg",
         "destacado": true,
         "precio": 0,
         "duracion": "0",
-        "highlight": [""],
+        "highlight": [
+            ""
+        ],
         "descriptivoCompleto": "-",
-        "incluye": [""],
+        "incluye": [
+            ""
+        ],
         "imagenBanner": "https://res.cloudinary.com/dtcjnhb0v/image/upload/v1758271518/Proximamente1_k1bf2k.jpg",
         "imagenes": [
             "https://res.cloudinary.com/dtcjnhb0v/image/upload/v1758271305/Proximamente_f1ht7u.jpg"

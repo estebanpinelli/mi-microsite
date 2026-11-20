@@ -6,16 +6,17 @@ import PorQueNosotros from "../components/PorQueNosotros";
 import Footer from "../components/Footer";
 import QuienesS from "../components/QuienesS";
 import Seo from "../components/Seo";
+import { PAGINAS } from "../config/paginas";
 import { SITE_URL } from "../config/site";
 
 const Home = () => {
   return (
     <div className="min-h-screen bg-papel text-tinta antialiased">
       <Seo
-        title="Exóticos | Viajes privados y de lujo a Japón, Islandia, Egipto, China, Bali y África"
-        description="Exóticos diseña viajes privados y en grupos reducidos a destinos como Japón, Islandia, Egipto, China, Bali y safaris africanos, para viajeros que buscan experiencias auténticas y a medida."
-        image={`${SITE_URL}/desierto.jpg`}
-        path="/"
+        title={PAGINAS.home.title}
+        description={PAGINAS.home.description}
+        image={`${SITE_URL}${PAGINAS.home.image}`}
+        path={PAGINAS.home.path}
       />
       {/* HERO */}
       <Hero />

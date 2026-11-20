@@ -1,8 +1,43 @@
 {
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/destino/1",
+      "destination": "/destino/japon-tokio-kioto-hiroshima",
+      "permanent": true
+    },
+    {
+      "source": "/destino/2",
+      "destination": "/destino/sudafrica-ciudad-del-cabo-kruger",
+      "permanent": true
+    },
+    {
+      "source": "/destino/3",
+      "destination": "/destino/australia-nueva-zelanda",
+      "permanent": true
+    },
+    {
+      "source": "/destino/4",
+      "destination": "/destino/inglaterra-escocia-irlanda",
+      "permanent": true
+    },
+    {
+      "source": "/destino/5",
+      "destination": "/destino/china-beijing-hong-kong",
+      "permanent": true
+    },
+    {
+      "source": "/destino/7",
+      "destination": "/destino/filipinas-el-nido-coron-siargao",
+      "permanent": true
+    }
+  ],
   "rewrites": [
     {
       "source": "/(.*)",
-      "destination": "/index.html"
+      "destination": "/spa"
     }
   ]
 }

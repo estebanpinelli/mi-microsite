@@ -18,7 +18,7 @@ const Footer = () => {
       {/* Información de dirección y legajo */}
       <div className="mb-2.5">
         <p>
-          <strong>Dirección:</strong> Loria 449 (C2587ABC), Lomas de Zamora - Buenos Aires - Argentina
+          <strong>Dirección:</strong> España 255, Lomas de Zamora - Buenos Aires - Argentina
         </p>
         <p>
           <strong>Legajo:</strong> (EVT) 13190 Disp 549
