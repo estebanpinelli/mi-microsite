@@ -7,7 +7,7 @@
 // Google. Tiene que ser el dominio que realmente está activo en Vercel; el
 // otro dominio (viajesexoticoslt.com) conviene configurarlo en Vercel como
 // redirección 301 hacia este.
-export const SITE_URL = "https://exoticoslt.com";
+export const SITE_URL = "https://www.exoticoslt.com";
 
 // Número de WhatsApp en formato internacional, sin "+" ni espacios.
 export const WHATSAPP = "5491164498183";

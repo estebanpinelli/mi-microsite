@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://exoticoslt.com/sitemap.xml
+Sitemap: https://www.exoticoslt.com/sitemap.xml
