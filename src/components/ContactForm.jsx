@@ -1,5 +1,17 @@
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
+
+// Datos de EmailJS escritos acá, en vez de en variables de entorno de
+// Vercel: las variables no estaban cargadas en Vercel, así que la clave
+// llegaba vacía y el envío fallaba con "The public key is required". Los
+// tres son datos públicos por diseño (EmailJS se usa desde el navegador,
+// así que igual terminan dentro del JavaScript del sitio). La Private Key
+// de EmailJS, en cambio, NUNCA va en el código: el formulario no la usa.
+// Para limitar el uso a este sitio, en EmailJS → Account → Security se
+// pueden restringir los dominios permitidos.
+const EMAILJS_SERVICE_ID = "service_aegk1ng";
+const EMAILJS_TEMPLATE_ID = "template_ns3vbtb";
+const EMAILJS_PUBLIC_KEY = "peUUfPm3-6B1deSsD";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -61,10 +73,10 @@ const ContactForm = () => {
 
     try {
       await emailjs.send(
-        import.meta.env.VITE_EMAILJS_SERVICE_ID,
-        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
         templateParams,
-        { publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY }
+        { publicKey: EMAILJS_PUBLIC_KEY }
       );
 
       toast.success("✅ Mensaje enviado correctamente");
